@@ -45,7 +45,12 @@ public interface ORSView {
 	public String SUBJECT_LIST_VIEW = PAGE_FOLDER + "/SubjectListView.jsp";
 	public String PRODUCT_VIEW = PAGE_FOLDER + "/ProductView.jsp";
 	public String PRODUCT_LIST_VIEW = PAGE_FOLDER + "/ProductListView.jsp";
-
+	public String SCHEDULAR_JOB_VIEW = PAGE_FOLDER + "/SchedularView.jsp";
+	public String SCHEDULAR_JOB_LIST_VIEW = PAGE_FOLDER + "/SchedularListView.jsp";
+	public String SETTING_VIEW = PAGE_FOLDER + "/jsp/SettingView.jsp";
+	public String SETTING_LIST_VIEW = PAGE_FOLDER + "/jsp/SettingListView.jsp";
+	public String DRONE_DELIVERY_VIEW = PAGE_FOLDER + "/jsp/DroneDeliveryView.jsp";
+	public String DRONE_DELIVERY_LIST_VIEW = PAGE_FOLDER + "/jsp/DroneDeliveryListView.jsp";
 
 	public String ERROR_CTL = APP_CONTEXT + "/ErrorCtl";
 
@@ -79,5 +84,12 @@ public interface ORSView {
 	public String MY_PROFILE_CTL = APP_CONTEXT + "/ctl/MyProfileCtl";
 	public String FORGET_PASSWORD_CTL = APP_CONTEXT + "/ForgetPasswordCtl";
 	public String MARKSHEET_MERIT_LIST_CTL = APP_CONTEXT + "/ctl/MarksheetMeritListCtl";
+	public String SCHEDULAR_JOB_CTL = APP_CONTEXT + "/ctl/SchedularJobCtl";
+	public String SCHEDULAR_JOB_LIST_CTL = APP_CONTEXT + "/ctl/SchedularJobListCtl";
+
+	public String SETTING_CTL = APP_CONTEXT + "/ctl/SettingCtl";
+	public String SETTING_LIST_CTL = APP_CONTEXT + "/ctl/SettingListCtl";
+	public String DRONE_DELIVERY_CTL = APP_CONTEXT + "/ctl/DroneDeliveryCtl";
+	public String DRONE_DELIVERY_LIST_CTL = APP_CONTEXT + "/ctl/DroneDeliveryListCtl";
 
 }

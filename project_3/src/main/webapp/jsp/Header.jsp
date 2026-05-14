@@ -136,11 +136,25 @@
 							href="<%=ORSView.ROLE_LIST_CTL%>"><i
 							class="fa fa-user-friends"></i>Role List</a>
 					</div></li>
+					
+					<li class="nav-item dropdown" style="padding-left: 5px"><a
+					class="nav-link dropdown-toggle" href="#" id="navbarDropdown"
+					role="button" data-toggle="dropdown" aria-haspopup="true"
+					aria-expanded="false"> <font style="color: white;">Drone Delivery</font>
+				</a>
+					<div class="dropdown-menu" aria-labelledby="navbarDropdown">
+						<a class="dropdown-item" href="<%=ORSView.DRONE_DELIVERY_CTL%>"><i
+							class="fa fa-user-tie"></i>Add Drone Delivery</a> <a class="dropdown-item"
+							href="<%=ORSView.DRONE_DELIVERY_LIST_CTL%>"><i
+							class="fa fa-user-friends"></i>Drone Delivery List</a>
+					</div></li>
+					
 				<li class="nav-item dropdown" style="padding-left: 5px"><a
 					class="nav-link dropdown-toggle" href="#" id="navbarDropdown"
 					role="button" data-toggle="dropdown" aria-haspopup="true"
 					aria-expanded="false"> <font style="color: white;">College</font>
 				</a>
+				
 					<div class="dropdown-menu" aria-labelledby="navbarDropdown">
 						<a class="dropdown-item" href="<%=ORSView.COLLEGE_CTL%>"><i
 							class="fa fa-university"></i>Add College</a> <a class="dropdown-item"

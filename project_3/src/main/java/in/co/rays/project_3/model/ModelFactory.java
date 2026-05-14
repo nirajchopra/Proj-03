@@ -54,6 +54,20 @@ public final class ModelFactory {
 		}
 		return marksheetModel;
 	}
+	
+	public SchedularJobModelInt getSchedularJobModel() {
+		SchedularJobModelInt schedularJobModel = (SchedularJobModelInt) modelCache.get("schedularJobModel");
+		if (schedularJobModel == null) {
+			if ("Hibernate".equals(DATABASE)) {
+				schedularJobModel = new SchedularJobModelHibImpl();
+			}
+			if ("JDBC".equals(DATABASE)) {
+				schedularJobModel = new SchedularJobModelJDBCImpl();
+			}
+			modelCache.put("schedularJobModel", schedularJobModel);
+		}
+		return schedularJobModel;
+	}
 
 	public CollegeModelInt getCollegeModel() {
 		CollegeModelInt collegeModel = (CollegeModelInt) modelCache.get("collegeModel");
@@ -84,6 +98,22 @@ public final class ModelFactory {
 		}
 		return roleModel;
 	}
+	
+	public DroneDeliveryModelInt getDroneDeliveryModel() {
+		DroneDeliveryModelInt droneDeliveryModel = (DroneDeliveryModelInt) modelCache.get("droneDeliveryModel");
+		if (droneDeliveryModel == null) {
+			if ("Hibernate".equals(DATABASE)) {
+				droneDeliveryModel = new DroneDeliveryModelHibImpl();
+
+			}
+			if ("JDBC".equals(DATABASE)) {
+				droneDeliveryModel = new DroneDeliveryModelHibImpl();
+			}
+			modelCache.put("roleModel", droneDeliveryModel);
+		}
+		return droneDeliveryModel;
+	}
+
 
 	public UserModelInt getUserModel() {
 
@@ -114,6 +144,21 @@ public final class ModelFactory {
 		}
 
 		return studentModel;
+	}
+	
+	public SettingModelInt getSettingModel() {
+		SettingModelInt settingModel = (SettingModelInt) modelCache.get("settingModel");
+		if (settingModel == null) {
+			if ("Hibernate".equals(DATABASE)) {
+				settingModel = new SettingModelHibImpl();
+			}
+			if ("JDBC".equals(DATABASE)) {
+				settingModel = new SettingModelJDBCImpl();
+			}
+			modelCache.put("settingModel", settingModel);
+		}
+
+		return settingModel;
 	}
 
 	public CourseModelInt getCourseModel() {
