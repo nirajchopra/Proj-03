@@ -1,0 +1,73 @@
+\doxysection{in.\+co.\+rays.\+project\+\_\+3.\+model.\+User\+Model\+Int Interface Reference}
+\hypertarget{interfacein_1_1co_1_1rays_1_1project__3_1_1model_1_1UserModelInt}{}\label{interfacein_1_1co_1_1rays_1_1project__3_1_1model_1_1UserModelInt}\index{in.co.rays.project\_3.model.UserModelInt@{in.co.rays.project\_3.model.UserModelInt}}
+
+
+Inheritance diagram for in.\+co.\+rays.\+project\+\_\+3.\+model.\+User\+Model\+Int\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{interfacein_1_1co_1_1rays_1_1project__3_1_1model_1_1UserModelInt__inherit__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{interfacein_1_1co_1_1rays_1_1project__3_1_1model_1_1UserModelInt_abbb591add9933b1af6a939bb8e570bd1}\label{interfacein_1_1co_1_1rays_1_1project__3_1_1model_1_1UserModelInt_abbb591add9933b1af6a939bb8e570bd1} 
+long {\bfseries add} (User\+DTO dto)  throws Application\+Exception, Duplicate\+Record\+Exception
+\item 
+\Hypertarget{interfacein_1_1co_1_1rays_1_1project__3_1_1model_1_1UserModelInt_aff32a3c599a573339def09ace0357789}\label{interfacein_1_1co_1_1rays_1_1project__3_1_1model_1_1UserModelInt_aff32a3c599a573339def09ace0357789} 
+void {\bfseries delete} (User\+DTO dto)  throws Application\+Exception
+\item 
+\Hypertarget{interfacein_1_1co_1_1rays_1_1project__3_1_1model_1_1UserModelInt_a540115444ca98c0669508cd59fe3bf4c}\label{interfacein_1_1co_1_1rays_1_1project__3_1_1model_1_1UserModelInt_a540115444ca98c0669508cd59fe3bf4c} 
+void {\bfseries update} (User\+DTO dto)  throws Application\+Exception, Duplicate\+Record\+Exception
+\item 
+\Hypertarget{interfacein_1_1co_1_1rays_1_1project__3_1_1model_1_1UserModelInt_a6480724fc0bd2fe603fe3b83cf76d847}\label{interfacein_1_1co_1_1rays_1_1project__3_1_1model_1_1UserModelInt_a6480724fc0bd2fe603fe3b83cf76d847} 
+User\+DTO {\bfseries find\+By\+PK} (long pk)  throws Application\+Exception
+\item 
+\Hypertarget{interfacein_1_1co_1_1rays_1_1project__3_1_1model_1_1UserModelInt_a8179d9dc7e20d5eb436f1a59dc81b46f}\label{interfacein_1_1co_1_1rays_1_1project__3_1_1model_1_1UserModelInt_a8179d9dc7e20d5eb436f1a59dc81b46f} 
+User\+DTO {\bfseries find\+By\+Login} (String login)  throws Application\+Exception
+\item 
+\Hypertarget{interfacein_1_1co_1_1rays_1_1project__3_1_1model_1_1UserModelInt_ad7ed95a0c055cef3a0ba7012fea2a7f3}\label{interfacein_1_1co_1_1rays_1_1project__3_1_1model_1_1UserModelInt_ad7ed95a0c055cef3a0ba7012fea2a7f3} 
+List {\bfseries list} ()  throws Application\+Exception
+\item 
+\Hypertarget{interfacein_1_1co_1_1rays_1_1project__3_1_1model_1_1UserModelInt_a18205f5afddec5e579b181d567aa556d}\label{interfacein_1_1co_1_1rays_1_1project__3_1_1model_1_1UserModelInt_a18205f5afddec5e579b181d567aa556d} 
+List {\bfseries list} (int page\+No, int page\+Size)  throws Application\+Exception
+\item 
+\Hypertarget{interfacein_1_1co_1_1rays_1_1project__3_1_1model_1_1UserModelInt_a85d10c204a31b3c6748a8ee01fba6135}\label{interfacein_1_1co_1_1rays_1_1project__3_1_1model_1_1UserModelInt_a85d10c204a31b3c6748a8ee01fba6135} 
+List {\bfseries search} (User\+DTO dto, int page\+No, int page\+Size)  throws Application\+Exception
+\item 
+\Hypertarget{interfacein_1_1co_1_1rays_1_1project__3_1_1model_1_1UserModelInt_a685102be056207cd359aae7ca0ca9e31}\label{interfacein_1_1co_1_1rays_1_1project__3_1_1model_1_1UserModelInt_a685102be056207cd359aae7ca0ca9e31} 
+List {\bfseries search} (User\+DTO dto)  throws Application\+Exception
+\item 
+\Hypertarget{interfacein_1_1co_1_1rays_1_1project__3_1_1model_1_1UserModelInt_a96cb4475c92e274fc1aa45827039a20a}\label{interfacein_1_1co_1_1rays_1_1project__3_1_1model_1_1UserModelInt_a96cb4475c92e274fc1aa45827039a20a} 
+boolean {\bfseries change\+Password} (long id, String new\+Password, String old\+Password)  throws Application\+Exception, Record\+Not\+Found\+Exception
+\item 
+\Hypertarget{interfacein_1_1co_1_1rays_1_1project__3_1_1model_1_1UserModelInt_a93cc1fd52ba7739c07c7192986a2017c}\label{interfacein_1_1co_1_1rays_1_1project__3_1_1model_1_1UserModelInt_a93cc1fd52ba7739c07c7192986a2017c} 
+User\+DTO {\bfseries authenticate} (String login, String password)  throws Application\+Exception
+\item 
+\Hypertarget{interfacein_1_1co_1_1rays_1_1project__3_1_1model_1_1UserModelInt_addfb5432a40fda7e9e743b304452a7b1}\label{interfacein_1_1co_1_1rays_1_1project__3_1_1model_1_1UserModelInt_addfb5432a40fda7e9e743b304452a7b1} 
+boolean {\bfseries forget\+Password} (String login)  throws Application\+Exception, Record\+Not\+Found\+Exception
+\item 
+\Hypertarget{interfacein_1_1co_1_1rays_1_1project__3_1_1model_1_1UserModelInt_a916a2b1191714b4fe7d1e466059042f6}\label{interfacein_1_1co_1_1rays_1_1project__3_1_1model_1_1UserModelInt_a916a2b1191714b4fe7d1e466059042f6} 
+boolean {\bfseries reset\+Password} (User\+DTO dto)  throws Application\+Exception, Record\+Not\+Found\+Exception
+\item 
+\Hypertarget{interfacein_1_1co_1_1rays_1_1project__3_1_1model_1_1UserModelInt_a405de9ce49e622f7dde487e361604685}\label{interfacein_1_1co_1_1rays_1_1project__3_1_1model_1_1UserModelInt_a405de9ce49e622f7dde487e361604685} 
+long {\bfseries register\+User} (User\+DTO dto)  throws Application\+Exception, Duplicate\+Record\+Exception
+\item 
+\Hypertarget{interfacein_1_1co_1_1rays_1_1project__3_1_1model_1_1UserModelInt_a423f99eb815367a6e782b45ea9639ccf}\label{interfacein_1_1co_1_1rays_1_1project__3_1_1model_1_1UserModelInt_a423f99eb815367a6e782b45ea9639ccf} 
+List {\bfseries get\+Roles} (User\+DTO dto)  throws Application\+Exception
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Interface of User model
+
+\begin{DoxyAuthor}{Author}
+Niraj Chopra 
+\end{DoxyAuthor}
+
+
+The documentation for this interface was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+project\+\_\+3/src/main/java/in/co/rays/project\+\_\+3/model/User\+Model\+Int.\+java\end{DoxyCompactItemize}

@@ -1,0 +1,272 @@
+\doxysection{in.\+co.\+rays.\+project\+\_\+3.\+model.\+Course\+Model\+JDBCImpl Class Reference}
+\hypertarget{classin_1_1co_1_1rays_1_1project__3_1_1model_1_1CourseModelJDBCImpl}{}\label{classin_1_1co_1_1rays_1_1project__3_1_1model_1_1CourseModelJDBCImpl}\index{in.co.rays.project\_3.model.CourseModelJDBCImpl@{in.co.rays.project\_3.model.CourseModelJDBCImpl}}
+
+
+Inheritance diagram for in.\+co.\+rays.\+project\+\_\+3.\+model.\+Course\+Model\+JDBCImpl\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=254pt]{classin_1_1co_1_1rays_1_1project__3_1_1model_1_1CourseModelJDBCImpl__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for in.\+co.\+rays.\+project\+\_\+3.\+model.\+Course\+Model\+JDBCImpl\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=254pt]{classin_1_1co_1_1rays_1_1project__3_1_1model_1_1CourseModelJDBCImpl__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+long \mbox{\hyperlink{classin_1_1co_1_1rays_1_1project__3_1_1model_1_1CourseModelJDBCImpl_a201a4e36f6329522a008d05cd4735b97}{next\+PK}} ()  throws Database\+Exception 
+\item 
+long \mbox{\hyperlink{classin_1_1co_1_1rays_1_1project__3_1_1model_1_1CourseModelJDBCImpl_a4923e118c34de2464c45c005fc7e9c45}{add}} (Course\+DTO b)  throws Application\+Exception, Duplicate\+Record\+Exception 
+\item 
+void \mbox{\hyperlink{classin_1_1co_1_1rays_1_1project__3_1_1model_1_1CourseModelJDBCImpl_a17f488c38b5f7fe5855bab86dddece9b}{update}} (Course\+DTO dto)  throws Application\+Exception 
+\item 
+void \mbox{\hyperlink{classin_1_1co_1_1rays_1_1project__3_1_1model_1_1CourseModelJDBCImpl_a0e6d01a769493d63ac8d91bd3658fbfb}{delete}} (Course\+DTO b)  throws Application\+Exception 
+\item 
+List \mbox{\hyperlink{classin_1_1co_1_1rays_1_1project__3_1_1model_1_1CourseModelJDBCImpl_a3a6ceaa5a4a1ef5cb791e37b0f7d5696}{list}} ()  throws Application\+Exception 
+\item 
+List \mbox{\hyperlink{classin_1_1co_1_1rays_1_1project__3_1_1model_1_1CourseModelJDBCImpl_a45c6b73a170dc3c771b4a9705230e927}{list}} (int page\+No, int page\+Size)  throws Application\+Exception 
+\item 
+List \mbox{\hyperlink{classin_1_1co_1_1rays_1_1project__3_1_1model_1_1CourseModelJDBCImpl_a71f03495250e86fbd0f686ead5ac61f5}{search}} (Course\+DTO dto)  throws Application\+Exception 
+\item 
+List \mbox{\hyperlink{classin_1_1co_1_1rays_1_1project__3_1_1model_1_1CourseModelJDBCImpl_a40f280beec2635e954f7b5a313af0e26}{search}} (Course\+DTO cdto1, int page\+No, int page\+Size)  throws Application\+Exception 
+\item 
+Course\+DTO \mbox{\hyperlink{classin_1_1co_1_1rays_1_1project__3_1_1model_1_1CourseModelJDBCImpl_ac8f7c8a923119758d04543c3642478ed}{find\+By\+PK}} (long pk)  throws Application\+Exception 
+\item 
+Course\+DTO \mbox{\hyperlink{classin_1_1co_1_1rays_1_1project__3_1_1model_1_1CourseModelJDBCImpl_ab3208a8192bbbc1cd1739bc349b8501d}{find\+By\+Name}} (String Name)  throws Application\+Exception 
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+JDBC implements of Course model \begin{DoxyAuthor}{Author}
+Niraj Chopra 
+\end{DoxyAuthor}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classin_1_1co_1_1rays_1_1project__3_1_1model_1_1CourseModelJDBCImpl_a4923e118c34de2464c45c005fc7e9c45}\label{classin_1_1co_1_1rays_1_1project__3_1_1model_1_1CourseModelJDBCImpl_a4923e118c34de2464c45c005fc7e9c45} 
+\index{in.co.rays.project\_3.model.CourseModelJDBCImpl@{in.co.rays.project\_3.model.CourseModelJDBCImpl}!add@{add}}
+\index{add@{add}!in.co.rays.project\_3.model.CourseModelJDBCImpl@{in.co.rays.project\_3.model.CourseModelJDBCImpl}}
+\doxysubsubsection{\texorpdfstring{add()}{add()}}
+{\footnotesize\ttfamily long in.\+co.\+rays.\+project\+\_\+3.\+model.\+Course\+Model\+JDBCImpl.\+add (\begin{DoxyParamCaption}\item[{Course\+DTO}]{b }\end{DoxyParamCaption}) throws Application\+Exception, Duplicate\+Record\+Exception\hspace{0.3cm}{\ttfamily [inline]}}
+
+add new course
+
+
+\begin{DoxyParams}{Parameters}
+{\em b} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+pk 
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em Application\+Exception} & \\
+\hline
+{\em Duplicate\+Record\+Exception} & \\
+\hline
+\end{DoxyExceptions}
+
+
+Implements \mbox{\hyperlink{interfacein_1_1co_1_1rays_1_1project__3_1_1model_1_1CourseModelInt}{in.\+co.\+rays.\+project\+\_\+3.\+model.\+Course\+Model\+Int}}.
+
+\Hypertarget{classin_1_1co_1_1rays_1_1project__3_1_1model_1_1CourseModelJDBCImpl_a0e6d01a769493d63ac8d91bd3658fbfb}\label{classin_1_1co_1_1rays_1_1project__3_1_1model_1_1CourseModelJDBCImpl_a0e6d01a769493d63ac8d91bd3658fbfb} 
+\index{in.co.rays.project\_3.model.CourseModelJDBCImpl@{in.co.rays.project\_3.model.CourseModelJDBCImpl}!delete@{delete}}
+\index{delete@{delete}!in.co.rays.project\_3.model.CourseModelJDBCImpl@{in.co.rays.project\_3.model.CourseModelJDBCImpl}}
+\doxysubsubsection{\texorpdfstring{delete()}{delete()}}
+{\footnotesize\ttfamily void in.\+co.\+rays.\+project\+\_\+3.\+model.\+Course\+Model\+JDBCImpl.\+delete (\begin{DoxyParamCaption}\item[{Course\+DTO}]{b }\end{DoxyParamCaption}) throws Application\+Exception\hspace{0.3cm}{\ttfamily [inline]}}
+
+delete course information in table
+
+
+\begin{DoxyParams}{Parameters}
+{\em b} & \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em Application\+Exception} & \\
+\hline
+\end{DoxyExceptions}
+
+
+Implements \mbox{\hyperlink{interfacein_1_1co_1_1rays_1_1project__3_1_1model_1_1CourseModelInt}{in.\+co.\+rays.\+project\+\_\+3.\+model.\+Course\+Model\+Int}}.
+
+\Hypertarget{classin_1_1co_1_1rays_1_1project__3_1_1model_1_1CourseModelJDBCImpl_ab3208a8192bbbc1cd1739bc349b8501d}\label{classin_1_1co_1_1rays_1_1project__3_1_1model_1_1CourseModelJDBCImpl_ab3208a8192bbbc1cd1739bc349b8501d} 
+\index{in.co.rays.project\_3.model.CourseModelJDBCImpl@{in.co.rays.project\_3.model.CourseModelJDBCImpl}!findByName@{findByName}}
+\index{findByName@{findByName}!in.co.rays.project\_3.model.CourseModelJDBCImpl@{in.co.rays.project\_3.model.CourseModelJDBCImpl}}
+\doxysubsubsection{\texorpdfstring{findByName()}{findByName()}}
+{\footnotesize\ttfamily Course\+DTO in.\+co.\+rays.\+project\+\_\+3.\+model.\+Course\+Model\+JDBCImpl.\+find\+By\+Name (\begin{DoxyParamCaption}\item[{String}]{Name }\end{DoxyParamCaption}) throws Application\+Exception\hspace{0.3cm}{\ttfamily [inline]}}
+
+find course by name
+
+
+\begin{DoxyParams}{Parameters}
+{\em Name} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+dto 
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em Application\+Exception} & \\
+\hline
+\end{DoxyExceptions}
+
+
+Implements \mbox{\hyperlink{interfacein_1_1co_1_1rays_1_1project__3_1_1model_1_1CourseModelInt}{in.\+co.\+rays.\+project\+\_\+3.\+model.\+Course\+Model\+Int}}.
+
+\Hypertarget{classin_1_1co_1_1rays_1_1project__3_1_1model_1_1CourseModelJDBCImpl_ac8f7c8a923119758d04543c3642478ed}\label{classin_1_1co_1_1rays_1_1project__3_1_1model_1_1CourseModelJDBCImpl_ac8f7c8a923119758d04543c3642478ed} 
+\index{in.co.rays.project\_3.model.CourseModelJDBCImpl@{in.co.rays.project\_3.model.CourseModelJDBCImpl}!findByPK@{findByPK}}
+\index{findByPK@{findByPK}!in.co.rays.project\_3.model.CourseModelJDBCImpl@{in.co.rays.project\_3.model.CourseModelJDBCImpl}}
+\doxysubsubsection{\texorpdfstring{findByPK()}{findByPK()}}
+{\footnotesize\ttfamily Course\+DTO in.\+co.\+rays.\+project\+\_\+3.\+model.\+Course\+Model\+JDBCImpl.\+find\+By\+PK (\begin{DoxyParamCaption}\item[{long}]{pk }\end{DoxyParamCaption}) throws Application\+Exception\hspace{0.3cm}{\ttfamily [inline]}}
+
+find information by pk
+
+
+\begin{DoxyParams}{Parameters}
+{\em pk} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+dto 
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em Application\+Exception} & \\
+\hline
+\end{DoxyExceptions}
+
+
+Implements \mbox{\hyperlink{interfacein_1_1co_1_1rays_1_1project__3_1_1model_1_1CourseModelInt}{in.\+co.\+rays.\+project\+\_\+3.\+model.\+Course\+Model\+Int}}.
+
+\Hypertarget{classin_1_1co_1_1rays_1_1project__3_1_1model_1_1CourseModelJDBCImpl_a3a6ceaa5a4a1ef5cb791e37b0f7d5696}\label{classin_1_1co_1_1rays_1_1project__3_1_1model_1_1CourseModelJDBCImpl_a3a6ceaa5a4a1ef5cb791e37b0f7d5696} 
+\index{in.co.rays.project\_3.model.CourseModelJDBCImpl@{in.co.rays.project\_3.model.CourseModelJDBCImpl}!list@{list}}
+\index{list@{list}!in.co.rays.project\_3.model.CourseModelJDBCImpl@{in.co.rays.project\_3.model.CourseModelJDBCImpl}}
+\doxysubsubsection{\texorpdfstring{list()}{list()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily List in.\+co.\+rays.\+project\+\_\+3.\+model.\+Course\+Model\+JDBCImpl.\+list (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) throws Application\+Exception\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Implements \mbox{\hyperlink{interfacein_1_1co_1_1rays_1_1project__3_1_1model_1_1CourseModelInt}{in.\+co.\+rays.\+project\+\_\+3.\+model.\+Course\+Model\+Int}}.
+
+\Hypertarget{classin_1_1co_1_1rays_1_1project__3_1_1model_1_1CourseModelJDBCImpl_a45c6b73a170dc3c771b4a9705230e927}\label{classin_1_1co_1_1rays_1_1project__3_1_1model_1_1CourseModelJDBCImpl_a45c6b73a170dc3c771b4a9705230e927} 
+\index{in.co.rays.project\_3.model.CourseModelJDBCImpl@{in.co.rays.project\_3.model.CourseModelJDBCImpl}!list@{list}}
+\index{list@{list}!in.co.rays.project\_3.model.CourseModelJDBCImpl@{in.co.rays.project\_3.model.CourseModelJDBCImpl}}
+\doxysubsubsection{\texorpdfstring{list()}{list()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily List in.\+co.\+rays.\+project\+\_\+3.\+model.\+Course\+Model\+JDBCImpl.\+list (\begin{DoxyParamCaption}\item[{int}]{page\+No,  }\item[{int}]{page\+Size }\end{DoxyParamCaption}) throws Application\+Exception\hspace{0.3cm}{\ttfamily [inline]}}
+
+to show course list
+
+
+\begin{DoxyParams}{Parameters}
+{\em page\+No} & \\
+\hline
+{\em page\+Size} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+list 
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em Application\+Exception} & \\
+\hline
+\end{DoxyExceptions}
+
+
+Implements \mbox{\hyperlink{interfacein_1_1co_1_1rays_1_1project__3_1_1model_1_1CourseModelInt}{in.\+co.\+rays.\+project\+\_\+3.\+model.\+Course\+Model\+Int}}.
+
+\Hypertarget{classin_1_1co_1_1rays_1_1project__3_1_1model_1_1CourseModelJDBCImpl_a201a4e36f6329522a008d05cd4735b97}\label{classin_1_1co_1_1rays_1_1project__3_1_1model_1_1CourseModelJDBCImpl_a201a4e36f6329522a008d05cd4735b97} 
+\index{in.co.rays.project\_3.model.CourseModelJDBCImpl@{in.co.rays.project\_3.model.CourseModelJDBCImpl}!nextPK@{nextPK}}
+\index{nextPK@{nextPK}!in.co.rays.project\_3.model.CourseModelJDBCImpl@{in.co.rays.project\_3.model.CourseModelJDBCImpl}}
+\doxysubsubsection{\texorpdfstring{nextPK()}{nextPK()}}
+{\footnotesize\ttfamily long in.\+co.\+rays.\+project\+\_\+3.\+model.\+Course\+Model\+JDBCImpl.\+next\+PK (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) throws Database\+Exception\hspace{0.3cm}{\ttfamily [inline]}}
+
+create id
+
+\begin{DoxyReturn}{Returns}
+pk 
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em Database\+Exception} & \\
+\hline
+\end{DoxyExceptions}
+\Hypertarget{classin_1_1co_1_1rays_1_1project__3_1_1model_1_1CourseModelJDBCImpl_a40f280beec2635e954f7b5a313af0e26}\label{classin_1_1co_1_1rays_1_1project__3_1_1model_1_1CourseModelJDBCImpl_a40f280beec2635e954f7b5a313af0e26} 
+\index{in.co.rays.project\_3.model.CourseModelJDBCImpl@{in.co.rays.project\_3.model.CourseModelJDBCImpl}!search@{search}}
+\index{search@{search}!in.co.rays.project\_3.model.CourseModelJDBCImpl@{in.co.rays.project\_3.model.CourseModelJDBCImpl}}
+\doxysubsubsection{\texorpdfstring{search()}{search()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily List in.\+co.\+rays.\+project\+\_\+3.\+model.\+Course\+Model\+JDBCImpl.\+search (\begin{DoxyParamCaption}\item[{Course\+DTO}]{cdto1,  }\item[{int}]{page\+No,  }\item[{int}]{page\+Size }\end{DoxyParamCaption}) throws Application\+Exception\hspace{0.3cm}{\ttfamily [inline]}}
+
+search list of course detail
+
+
+\begin{DoxyParams}{Parameters}
+{\em cdto1} & \\
+\hline
+{\em page\+No} & \\
+\hline
+{\em page\+Size} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+list 
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em Application\+Exception} & \\
+\hline
+\end{DoxyExceptions}
+
+
+Implements \mbox{\hyperlink{interfacein_1_1co_1_1rays_1_1project__3_1_1model_1_1CourseModelInt}{in.\+co.\+rays.\+project\+\_\+3.\+model.\+Course\+Model\+Int}}.
+
+\Hypertarget{classin_1_1co_1_1rays_1_1project__3_1_1model_1_1CourseModelJDBCImpl_a71f03495250e86fbd0f686ead5ac61f5}\label{classin_1_1co_1_1rays_1_1project__3_1_1model_1_1CourseModelJDBCImpl_a71f03495250e86fbd0f686ead5ac61f5} 
+\index{in.co.rays.project\_3.model.CourseModelJDBCImpl@{in.co.rays.project\_3.model.CourseModelJDBCImpl}!search@{search}}
+\index{search@{search}!in.co.rays.project\_3.model.CourseModelJDBCImpl@{in.co.rays.project\_3.model.CourseModelJDBCImpl}}
+\doxysubsubsection{\texorpdfstring{search()}{search()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily List in.\+co.\+rays.\+project\+\_\+3.\+model.\+Course\+Model\+JDBCImpl.\+search (\begin{DoxyParamCaption}\item[{Course\+DTO}]{dto }\end{DoxyParamCaption}) throws Application\+Exception\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Implements \mbox{\hyperlink{interfacein_1_1co_1_1rays_1_1project__3_1_1model_1_1CourseModelInt}{in.\+co.\+rays.\+project\+\_\+3.\+model.\+Course\+Model\+Int}}.
+
+\Hypertarget{classin_1_1co_1_1rays_1_1project__3_1_1model_1_1CourseModelJDBCImpl_a17f488c38b5f7fe5855bab86dddece9b}\label{classin_1_1co_1_1rays_1_1project__3_1_1model_1_1CourseModelJDBCImpl_a17f488c38b5f7fe5855bab86dddece9b} 
+\index{in.co.rays.project\_3.model.CourseModelJDBCImpl@{in.co.rays.project\_3.model.CourseModelJDBCImpl}!update@{update}}
+\index{update@{update}!in.co.rays.project\_3.model.CourseModelJDBCImpl@{in.co.rays.project\_3.model.CourseModelJDBCImpl}}
+\doxysubsubsection{\texorpdfstring{update()}{update()}}
+{\footnotesize\ttfamily void in.\+co.\+rays.\+project\+\_\+3.\+model.\+Course\+Model\+JDBCImpl.\+update (\begin{DoxyParamCaption}\item[{Course\+DTO}]{dto }\end{DoxyParamCaption}) throws Application\+Exception\hspace{0.3cm}{\ttfamily [inline]}}
+
+update course information
+
+
+\begin{DoxyParams}{Parameters}
+{\em b} & \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em Application\+Exception} & \\
+\hline
+\end{DoxyExceptions}
+
+
+Implements \mbox{\hyperlink{interfacein_1_1co_1_1rays_1_1project__3_1_1model_1_1CourseModelInt}{in.\+co.\+rays.\+project\+\_\+3.\+model.\+Course\+Model\+Int}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+project\+\_\+3/src/main/java/in/co/rays/project\+\_\+3/model/Course\+Model\+JDBCImpl.\+java\end{DoxyCompactItemize}

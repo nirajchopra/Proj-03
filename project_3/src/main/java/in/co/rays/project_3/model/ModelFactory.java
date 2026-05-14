@@ -40,6 +40,20 @@ public final class ModelFactory {
 		}
 		return productModel;
 	}
+	
+	public PodCastModelInt getPodCastModel() {
+		PodCastModelInt podcastModel = (PodCastModelInt) modelCache.get("podcastModel");
+		if (podcastModel == null) {
+			if ("Hibernate".equals(DATABASE)) {
+				podcastModel = new PodCastModelHibImpl();
+			}
+			if ("JDBC".equals(DATABASE)) {
+				podcastModel = new PodCastModelHibImpl();
+			}
+			modelCache.put("podcastModel", podcastModel);
+		}
+		return podcastModel;
+	}
 
 	public MarksheetModelInt getMarksheetModel() {
 		MarksheetModelInt marksheetModel = (MarksheetModelInt) modelCache.get("marksheetModel");

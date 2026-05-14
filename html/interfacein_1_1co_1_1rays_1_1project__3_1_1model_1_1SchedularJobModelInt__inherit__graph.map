@@ -1,0 +1,7 @@
+<map id="in.co.rays.project_3.model.SchedularJobModelInt" name="in.co.rays.project_3.model.SchedularJobModelInt">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,53,232,93"/>
+<area shape="rect" id="Node000002" href="$classin_1_1co_1_1rays_1_1project__3_1_1model_1_1SchedularJobModelHibImpl.html" title=" " alt="" coords="280,5,491,60"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="245,51,279,46,280,51,246,56"/>
+<area shape="rect" id="Node000003" href="$classin_1_1co_1_1rays_1_1project__3_1_1model_1_1SchedularJobModelJDBCImpl.html" title=" " alt="" coords="280,84,491,139"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="246,88,280,93,279,99,245,94"/>
+</map>

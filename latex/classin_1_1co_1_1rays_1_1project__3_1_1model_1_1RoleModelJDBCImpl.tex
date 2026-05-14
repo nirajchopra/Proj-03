@@ -1,0 +1,258 @@
+\doxysection{in.\+co.\+rays.\+project\+\_\+3.\+model.\+Role\+Model\+JDBCImpl Class Reference}
+\hypertarget{classin_1_1co_1_1rays_1_1project__3_1_1model_1_1RoleModelJDBCImpl}{}\label{classin_1_1co_1_1rays_1_1project__3_1_1model_1_1RoleModelJDBCImpl}\index{in.co.rays.project\_3.model.RoleModelJDBCImpl@{in.co.rays.project\_3.model.RoleModelJDBCImpl}}
+
+
+Inheritance diagram for in.\+co.\+rays.\+project\+\_\+3.\+model.\+Role\+Model\+JDBCImpl\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=242pt]{classin_1_1co_1_1rays_1_1project__3_1_1model_1_1RoleModelJDBCImpl__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for in.\+co.\+rays.\+project\+\_\+3.\+model.\+Role\+Model\+JDBCImpl\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=242pt]{classin_1_1co_1_1rays_1_1project__3_1_1model_1_1RoleModelJDBCImpl__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+long \mbox{\hyperlink{classin_1_1co_1_1rays_1_1project__3_1_1model_1_1RoleModelJDBCImpl_aca31c9fa3d29f6567781aee7f6bcde99}{next\+PK}} ()  throws Database\+Exception 
+\item 
+long \mbox{\hyperlink{classin_1_1co_1_1rays_1_1project__3_1_1model_1_1RoleModelJDBCImpl_ae351ccf79a456f9e11c57393e0d3eebf}{add}} (Role\+DTO rdto)  throws Application\+Exception, Duplicate\+Record\+Exception 
+\item 
+void \mbox{\hyperlink{classin_1_1co_1_1rays_1_1project__3_1_1model_1_1RoleModelJDBCImpl_a5db916f41a42920e4d1f0ab22a4175d2}{delete}} (Role\+DTO rdto)  throws Application\+Exception 
+\item 
+void \mbox{\hyperlink{classin_1_1co_1_1rays_1_1project__3_1_1model_1_1RoleModelJDBCImpl_ad0baad11080dd075d307d7bf9b89ccc3}{update}} (Role\+DTO rdto)  throws Application\+Exception, Duplicate\+Record\+Exception 
+\item 
+List \mbox{\hyperlink{classin_1_1co_1_1rays_1_1project__3_1_1model_1_1RoleModelJDBCImpl_a26c931627bb3bce353ef8eb87b6cae6f}{list}} ()  throws Application\+Exception 
+\item 
+List \mbox{\hyperlink{classin_1_1co_1_1rays_1_1project__3_1_1model_1_1RoleModelJDBCImpl_af3e7b751f630a64b5cfccf2f1d548fd9}{list}} (int page\+No, int page\+Size)  throws Application\+Exception 
+\item 
+Role\+DTO \mbox{\hyperlink{classin_1_1co_1_1rays_1_1project__3_1_1model_1_1RoleModelJDBCImpl_afda0101c78566135a6b28c6508b22c16}{find\+By\+PK}} (long pk)  throws Application\+Exception 
+\item 
+Role\+DTO \mbox{\hyperlink{classin_1_1co_1_1rays_1_1project__3_1_1model_1_1RoleModelJDBCImpl_a911dd56fb1e96b2226bf54adb41c383d}{find\+By\+Name}} (String name)  throws Application\+Exception 
+\item 
+List \mbox{\hyperlink{classin_1_1co_1_1rays_1_1project__3_1_1model_1_1RoleModelJDBCImpl_a98e2d446e47d771124ccb67993eaae40}{search}} (Role\+DTO dto)  throws Application\+Exception 
+\item 
+Array\+List$<$ Role\+DTO $>$ \mbox{\hyperlink{classin_1_1co_1_1rays_1_1project__3_1_1model_1_1RoleModelJDBCImpl_aeb2520cb3477d3cef3dbee91bfba1d4b}{search}} (Role\+DTO dto, int page\+No, int page\+Size)  throws Application\+Exception
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+JDBC implements of Role model \begin{DoxyAuthor}{Author}
+Niraj Chopra 
+\end{DoxyAuthor}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classin_1_1co_1_1rays_1_1project__3_1_1model_1_1RoleModelJDBCImpl_ae351ccf79a456f9e11c57393e0d3eebf}\label{classin_1_1co_1_1rays_1_1project__3_1_1model_1_1RoleModelJDBCImpl_ae351ccf79a456f9e11c57393e0d3eebf} 
+\index{in.co.rays.project\_3.model.RoleModelJDBCImpl@{in.co.rays.project\_3.model.RoleModelJDBCImpl}!add@{add}}
+\index{add@{add}!in.co.rays.project\_3.model.RoleModelJDBCImpl@{in.co.rays.project\_3.model.RoleModelJDBCImpl}}
+\doxysubsubsection{\texorpdfstring{add()}{add()}}
+{\footnotesize\ttfamily long in.\+co.\+rays.\+project\+\_\+3.\+model.\+Role\+Model\+JDBCImpl.\+add (\begin{DoxyParamCaption}\item[{Role\+DTO}]{rdto }\end{DoxyParamCaption}) throws Application\+Exception, Duplicate\+Record\+Exception\hspace{0.3cm}{\ttfamily [inline]}}
+
+add new role 
+\begin{DoxyParams}{Parameters}
+{\em rdto} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+pk 
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em Application\+Exception} & \\
+\hline
+{\em Duplicate\+Record\+Exception} & \\
+\hline
+\end{DoxyExceptions}
+
+
+Implements \mbox{\hyperlink{interfacein_1_1co_1_1rays_1_1project__3_1_1model_1_1RoleModelInt}{in.\+co.\+rays.\+project\+\_\+3.\+model.\+Role\+Model\+Int}}.
+
+\Hypertarget{classin_1_1co_1_1rays_1_1project__3_1_1model_1_1RoleModelJDBCImpl_a5db916f41a42920e4d1f0ab22a4175d2}\label{classin_1_1co_1_1rays_1_1project__3_1_1model_1_1RoleModelJDBCImpl_a5db916f41a42920e4d1f0ab22a4175d2} 
+\index{in.co.rays.project\_3.model.RoleModelJDBCImpl@{in.co.rays.project\_3.model.RoleModelJDBCImpl}!delete@{delete}}
+\index{delete@{delete}!in.co.rays.project\_3.model.RoleModelJDBCImpl@{in.co.rays.project\_3.model.RoleModelJDBCImpl}}
+\doxysubsubsection{\texorpdfstring{delete()}{delete()}}
+{\footnotesize\ttfamily void in.\+co.\+rays.\+project\+\_\+3.\+model.\+Role\+Model\+JDBCImpl.\+delete (\begin{DoxyParamCaption}\item[{Role\+DTO}]{rdto }\end{DoxyParamCaption}) throws Application\+Exception\hspace{0.3cm}{\ttfamily [inline]}}
+
+delete role 
+\begin{DoxyParams}{Parameters}
+{\em rdto} & \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em Application\+Exception} & \\
+\hline
+\end{DoxyExceptions}
+
+
+Implements \mbox{\hyperlink{interfacein_1_1co_1_1rays_1_1project__3_1_1model_1_1RoleModelInt}{in.\+co.\+rays.\+project\+\_\+3.\+model.\+Role\+Model\+Int}}.
+
+\Hypertarget{classin_1_1co_1_1rays_1_1project__3_1_1model_1_1RoleModelJDBCImpl_a911dd56fb1e96b2226bf54adb41c383d}\label{classin_1_1co_1_1rays_1_1project__3_1_1model_1_1RoleModelJDBCImpl_a911dd56fb1e96b2226bf54adb41c383d} 
+\index{in.co.rays.project\_3.model.RoleModelJDBCImpl@{in.co.rays.project\_3.model.RoleModelJDBCImpl}!findByName@{findByName}}
+\index{findByName@{findByName}!in.co.rays.project\_3.model.RoleModelJDBCImpl@{in.co.rays.project\_3.model.RoleModelJDBCImpl}}
+\doxysubsubsection{\texorpdfstring{findByName()}{findByName()}}
+{\footnotesize\ttfamily Role\+DTO in.\+co.\+rays.\+project\+\_\+3.\+model.\+Role\+Model\+JDBCImpl.\+find\+By\+Name (\begin{DoxyParamCaption}\item[{String}]{name }\end{DoxyParamCaption}) throws Application\+Exception\hspace{0.3cm}{\ttfamily [inline]}}
+
+find role with the help of name 
+\begin{DoxyParams}{Parameters}
+{\em name} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+dto 
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em Application\+Exception} & \\
+\hline
+\end{DoxyExceptions}
+
+
+Implements \mbox{\hyperlink{interfacein_1_1co_1_1rays_1_1project__3_1_1model_1_1RoleModelInt}{in.\+co.\+rays.\+project\+\_\+3.\+model.\+Role\+Model\+Int}}.
+
+\Hypertarget{classin_1_1co_1_1rays_1_1project__3_1_1model_1_1RoleModelJDBCImpl_afda0101c78566135a6b28c6508b22c16}\label{classin_1_1co_1_1rays_1_1project__3_1_1model_1_1RoleModelJDBCImpl_afda0101c78566135a6b28c6508b22c16} 
+\index{in.co.rays.project\_3.model.RoleModelJDBCImpl@{in.co.rays.project\_3.model.RoleModelJDBCImpl}!findByPK@{findByPK}}
+\index{findByPK@{findByPK}!in.co.rays.project\_3.model.RoleModelJDBCImpl@{in.co.rays.project\_3.model.RoleModelJDBCImpl}}
+\doxysubsubsection{\texorpdfstring{findByPK()}{findByPK()}}
+{\footnotesize\ttfamily Role\+DTO in.\+co.\+rays.\+project\+\_\+3.\+model.\+Role\+Model\+JDBCImpl.\+find\+By\+PK (\begin{DoxyParamCaption}\item[{long}]{pk }\end{DoxyParamCaption}) throws Application\+Exception\hspace{0.3cm}{\ttfamily [inline]}}
+
+find by role with the help of role 
+\begin{DoxyParams}{Parameters}
+{\em pk} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+dto 
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em Application\+Exception} & \\
+\hline
+\end{DoxyExceptions}
+
+
+Implements \mbox{\hyperlink{interfacein_1_1co_1_1rays_1_1project__3_1_1model_1_1RoleModelInt}{in.\+co.\+rays.\+project\+\_\+3.\+model.\+Role\+Model\+Int}}.
+
+\Hypertarget{classin_1_1co_1_1rays_1_1project__3_1_1model_1_1RoleModelJDBCImpl_a26c931627bb3bce353ef8eb87b6cae6f}\label{classin_1_1co_1_1rays_1_1project__3_1_1model_1_1RoleModelJDBCImpl_a26c931627bb3bce353ef8eb87b6cae6f} 
+\index{in.co.rays.project\_3.model.RoleModelJDBCImpl@{in.co.rays.project\_3.model.RoleModelJDBCImpl}!list@{list}}
+\index{list@{list}!in.co.rays.project\_3.model.RoleModelJDBCImpl@{in.co.rays.project\_3.model.RoleModelJDBCImpl}}
+\doxysubsubsection{\texorpdfstring{list()}{list()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily List in.\+co.\+rays.\+project\+\_\+3.\+model.\+Role\+Model\+JDBCImpl.\+list (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) throws Application\+Exception\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Implements \mbox{\hyperlink{interfacein_1_1co_1_1rays_1_1project__3_1_1model_1_1RoleModelInt}{in.\+co.\+rays.\+project\+\_\+3.\+model.\+Role\+Model\+Int}}.
+
+\Hypertarget{classin_1_1co_1_1rays_1_1project__3_1_1model_1_1RoleModelJDBCImpl_af3e7b751f630a64b5cfccf2f1d548fd9}\label{classin_1_1co_1_1rays_1_1project__3_1_1model_1_1RoleModelJDBCImpl_af3e7b751f630a64b5cfccf2f1d548fd9} 
+\index{in.co.rays.project\_3.model.RoleModelJDBCImpl@{in.co.rays.project\_3.model.RoleModelJDBCImpl}!list@{list}}
+\index{list@{list}!in.co.rays.project\_3.model.RoleModelJDBCImpl@{in.co.rays.project\_3.model.RoleModelJDBCImpl}}
+\doxysubsubsection{\texorpdfstring{list()}{list()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily List in.\+co.\+rays.\+project\+\_\+3.\+model.\+Role\+Model\+JDBCImpl.\+list (\begin{DoxyParamCaption}\item[{int}]{page\+No,  }\item[{int}]{page\+Size }\end{DoxyParamCaption}) throws Application\+Exception\hspace{0.3cm}{\ttfamily [inline]}}
+
+list of role 
+\begin{DoxyParams}{Parameters}
+{\em page\+No} & \\
+\hline
+{\em page\+Size} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+list 
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em Application\+Exception} & \\
+\hline
+\end{DoxyExceptions}
+
+
+Implements \mbox{\hyperlink{interfacein_1_1co_1_1rays_1_1project__3_1_1model_1_1RoleModelInt}{in.\+co.\+rays.\+project\+\_\+3.\+model.\+Role\+Model\+Int}}.
+
+\Hypertarget{classin_1_1co_1_1rays_1_1project__3_1_1model_1_1RoleModelJDBCImpl_aca31c9fa3d29f6567781aee7f6bcde99}\label{classin_1_1co_1_1rays_1_1project__3_1_1model_1_1RoleModelJDBCImpl_aca31c9fa3d29f6567781aee7f6bcde99} 
+\index{in.co.rays.project\_3.model.RoleModelJDBCImpl@{in.co.rays.project\_3.model.RoleModelJDBCImpl}!nextPK@{nextPK}}
+\index{nextPK@{nextPK}!in.co.rays.project\_3.model.RoleModelJDBCImpl@{in.co.rays.project\_3.model.RoleModelJDBCImpl}}
+\doxysubsubsection{\texorpdfstring{nextPK()}{nextPK()}}
+{\footnotesize\ttfamily long in.\+co.\+rays.\+project\+\_\+3.\+model.\+Role\+Model\+JDBCImpl.\+next\+PK (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) throws Database\+Exception\hspace{0.3cm}{\ttfamily [inline]}}
+
+create id \begin{DoxyReturn}{Returns}
+pk 
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em Database\+Exception} & \\
+\hline
+\end{DoxyExceptions}
+\Hypertarget{classin_1_1co_1_1rays_1_1project__3_1_1model_1_1RoleModelJDBCImpl_a98e2d446e47d771124ccb67993eaae40}\label{classin_1_1co_1_1rays_1_1project__3_1_1model_1_1RoleModelJDBCImpl_a98e2d446e47d771124ccb67993eaae40} 
+\index{in.co.rays.project\_3.model.RoleModelJDBCImpl@{in.co.rays.project\_3.model.RoleModelJDBCImpl}!search@{search}}
+\index{search@{search}!in.co.rays.project\_3.model.RoleModelJDBCImpl@{in.co.rays.project\_3.model.RoleModelJDBCImpl}}
+\doxysubsubsection{\texorpdfstring{search()}{search()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily List in.\+co.\+rays.\+project\+\_\+3.\+model.\+Role\+Model\+JDBCImpl.\+search (\begin{DoxyParamCaption}\item[{Role\+DTO}]{dto }\end{DoxyParamCaption}) throws Application\+Exception\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Implements \mbox{\hyperlink{interfacein_1_1co_1_1rays_1_1project__3_1_1model_1_1RoleModelInt}{in.\+co.\+rays.\+project\+\_\+3.\+model.\+Role\+Model\+Int}}.
+
+\Hypertarget{classin_1_1co_1_1rays_1_1project__3_1_1model_1_1RoleModelJDBCImpl_aeb2520cb3477d3cef3dbee91bfba1d4b}\label{classin_1_1co_1_1rays_1_1project__3_1_1model_1_1RoleModelJDBCImpl_aeb2520cb3477d3cef3dbee91bfba1d4b} 
+\index{in.co.rays.project\_3.model.RoleModelJDBCImpl@{in.co.rays.project\_3.model.RoleModelJDBCImpl}!search@{search}}
+\index{search@{search}!in.co.rays.project\_3.model.RoleModelJDBCImpl@{in.co.rays.project\_3.model.RoleModelJDBCImpl}}
+\doxysubsubsection{\texorpdfstring{search()}{search()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily Array\+List$<$ Role\+DTO $>$ in.\+co.\+rays.\+project\+\_\+3.\+model.\+Role\+Model\+JDBCImpl.\+search (\begin{DoxyParamCaption}\item[{Role\+DTO}]{dto,  }\item[{int}]{page\+No,  }\item[{int}]{page\+Size }\end{DoxyParamCaption}) throws Application\+Exception\hspace{0.3cm}{\ttfamily [inline]}}
+
+search role 
+\begin{DoxyParams}{Parameters}
+{\em rdto1} & \\
+\hline
+{\em page\+No} & \\
+\hline
+{\em page\+Size} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+list 
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em Application\+Exception} & \\
+\hline
+\end{DoxyExceptions}
+
+
+Implements \mbox{\hyperlink{interfacein_1_1co_1_1rays_1_1project__3_1_1model_1_1RoleModelInt}{in.\+co.\+rays.\+project\+\_\+3.\+model.\+Role\+Model\+Int}}.
+
+\Hypertarget{classin_1_1co_1_1rays_1_1project__3_1_1model_1_1RoleModelJDBCImpl_ad0baad11080dd075d307d7bf9b89ccc3}\label{classin_1_1co_1_1rays_1_1project__3_1_1model_1_1RoleModelJDBCImpl_ad0baad11080dd075d307d7bf9b89ccc3} 
+\index{in.co.rays.project\_3.model.RoleModelJDBCImpl@{in.co.rays.project\_3.model.RoleModelJDBCImpl}!update@{update}}
+\index{update@{update}!in.co.rays.project\_3.model.RoleModelJDBCImpl@{in.co.rays.project\_3.model.RoleModelJDBCImpl}}
+\doxysubsubsection{\texorpdfstring{update()}{update()}}
+{\footnotesize\ttfamily void in.\+co.\+rays.\+project\+\_\+3.\+model.\+Role\+Model\+JDBCImpl.\+update (\begin{DoxyParamCaption}\item[{Role\+DTO}]{rdto }\end{DoxyParamCaption}) throws Application\+Exception, Duplicate\+Record\+Exception\hspace{0.3cm}{\ttfamily [inline]}}
+
+update role 
+\begin{DoxyParams}{Parameters}
+{\em rdto} & \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em Application\+Exception} & \\
+\hline
+{\em Duplicate\+Record\+Exception} & \\
+\hline
+\end{DoxyExceptions}
+
+
+Implements \mbox{\hyperlink{interfacein_1_1co_1_1rays_1_1project__3_1_1model_1_1RoleModelInt}{in.\+co.\+rays.\+project\+\_\+3.\+model.\+Role\+Model\+Int}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+project\+\_\+3/src/main/java/in/co/rays/project\+\_\+3/model/Role\+Model\+JDBCImpl.\+java\end{DoxyCompactItemize}

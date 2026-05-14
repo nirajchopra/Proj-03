@@ -1,0 +1,7 @@
+<map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
+<area shape="rect" id="Node000000" href="$interfacein_1_1co_1_1rays_1_1project__3_1_1model_1_1MarksheetModelInt.html" title=" " alt="" coords="5,37,217,77"/>
+<area shape="rect" id="Node000001" href="$classin_1_1co_1_1rays_1_1project__3_1_1model_1_1MarksheetModelHibImp.html" title=" " alt="" coords="272,5,515,45"/>
+<area shape="poly" id="edge65_Node000000_Node000001" title=" " alt="" coords="231,41,271,36,272,42,231,46"/>
+<area shape="rect" id="Node000002" href="$classin_1_1co_1_1rays_1_1project__3_1_1model_1_1MarksheetModelJDBCImpl.html" title=" " alt="" coords="265,69,521,109"/>
+<area shape="poly" id="edge66_Node000000_Node000002" title=" " alt="" coords="231,68,265,72,265,77,231,74"/>
+</map>

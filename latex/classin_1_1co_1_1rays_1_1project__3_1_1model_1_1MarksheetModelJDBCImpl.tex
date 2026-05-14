@@ -1,0 +1,308 @@
+\doxysection{in.\+co.\+rays.\+project\+\_\+3.\+model.\+Marksheet\+Model\+JDBCImpl Class Reference}
+\hypertarget{classin_1_1co_1_1rays_1_1project__3_1_1model_1_1MarksheetModelJDBCImpl}{}\label{classin_1_1co_1_1rays_1_1project__3_1_1model_1_1MarksheetModelJDBCImpl}\index{in.co.rays.project\_3.model.MarksheetModelJDBCImpl@{in.co.rays.project\_3.model.MarksheetModelJDBCImpl}}
+
+
+Inheritance diagram for in.\+co.\+rays.\+project\+\_\+3.\+model.\+Marksheet\+Model\+JDBCImpl\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=272pt]{classin_1_1co_1_1rays_1_1project__3_1_1model_1_1MarksheetModelJDBCImpl__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for in.\+co.\+rays.\+project\+\_\+3.\+model.\+Marksheet\+Model\+JDBCImpl\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=272pt]{classin_1_1co_1_1rays_1_1project__3_1_1model_1_1MarksheetModelJDBCImpl__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+long \mbox{\hyperlink{classin_1_1co_1_1rays_1_1project__3_1_1model_1_1MarksheetModelJDBCImpl_a45e4c6e91bbb48d6752d7e2e8c0ba000}{add}} (Marksheet\+DTO dto)  throws Application\+Exception, Duplicate\+Record\+Exception 
+\item 
+void \mbox{\hyperlink{classin_1_1co_1_1rays_1_1project__3_1_1model_1_1MarksheetModelJDBCImpl_a90c4614e9378fe79bd424ab2de37c268}{update}} (Marksheet\+DTO dto)  throws Application\+Exception, Duplicate\+Record\+Exception 
+\item 
+void \mbox{\hyperlink{classin_1_1co_1_1rays_1_1project__3_1_1model_1_1MarksheetModelJDBCImpl_af06428da66755251094c4b5e0c6dd6cf}{delete}} (Marksheet\+DTO dto)  throws Application\+Exception 
+\item 
+Marksheet\+DTO \mbox{\hyperlink{classin_1_1co_1_1rays_1_1project__3_1_1model_1_1MarksheetModelJDBCImpl_a50487549f1d11b18d4886038392a10d7}{fing\+By\+PK}} (long pk)  throws Application\+Exception 
+\item 
+Marksheet\+DTO \mbox{\hyperlink{classin_1_1co_1_1rays_1_1project__3_1_1model_1_1MarksheetModelJDBCImpl_a126b49b9aacfa63f99688001526e959a}{find\+By\+Roll\+No}} (String roll\+NO)  throws Application\+Exception 
+\item 
+List \mbox{\hyperlink{classin_1_1co_1_1rays_1_1project__3_1_1model_1_1MarksheetModelJDBCImpl_a2938591c5912eab6e8c1237f12a3e289}{search}} (Marksheet\+DTO dto)  throws Application\+Exception 
+\item 
+List \mbox{\hyperlink{classin_1_1co_1_1rays_1_1project__3_1_1model_1_1MarksheetModelJDBCImpl_af9f542797bec9dfe7c4a5cf88d50f840}{get\+Merit\+List}} (int page\+No, int page\+Size)  throws Application\+Exception 
+\item 
+List \mbox{\hyperlink{classin_1_1co_1_1rays_1_1project__3_1_1model_1_1MarksheetModelJDBCImpl_af688a48a730a61312c49f586bd5e3632}{search}} (Marksheet\+DTO marksheet, int page\+No, int page\+Size)  throws Application\+Exception 
+\item 
+List \mbox{\hyperlink{classin_1_1co_1_1rays_1_1project__3_1_1model_1_1MarksheetModelJDBCImpl_a02cc40c9bfbd13f96625ea02dfce866b}{list}} ()  throws Application\+Exception 
+\item 
+List \mbox{\hyperlink{classin_1_1co_1_1rays_1_1project__3_1_1model_1_1MarksheetModelJDBCImpl_a16eaaef4fb5ea8ec6fa334ee13af45e3}{list}} (int page\+No, int page\+Size)  throws Application\+Exception 
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static long \mbox{\hyperlink{classin_1_1co_1_1rays_1_1project__3_1_1model_1_1MarksheetModelJDBCImpl_ac3206dd7a03f6573648ef64ae251b7a4}{next\+PK}} ()  throws Database\+Exception 
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+JDBC implements of Marksheet model
+
+\begin{DoxyAuthor}{Author}
+Niraj Chopra 
+\end{DoxyAuthor}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classin_1_1co_1_1rays_1_1project__3_1_1model_1_1MarksheetModelJDBCImpl_a45e4c6e91bbb48d6752d7e2e8c0ba000}\label{classin_1_1co_1_1rays_1_1project__3_1_1model_1_1MarksheetModelJDBCImpl_a45e4c6e91bbb48d6752d7e2e8c0ba000} 
+\index{in.co.rays.project\_3.model.MarksheetModelJDBCImpl@{in.co.rays.project\_3.model.MarksheetModelJDBCImpl}!add@{add}}
+\index{add@{add}!in.co.rays.project\_3.model.MarksheetModelJDBCImpl@{in.co.rays.project\_3.model.MarksheetModelJDBCImpl}}
+\doxysubsubsection{\texorpdfstring{add()}{add()}}
+{\footnotesize\ttfamily long in.\+co.\+rays.\+project\+\_\+3.\+model.\+Marksheet\+Model\+JDBCImpl.\+add (\begin{DoxyParamCaption}\item[{Marksheet\+DTO}]{dto }\end{DoxyParamCaption}) throws Application\+Exception, Duplicate\+Record\+Exception\hspace{0.3cm}{\ttfamily [inline]}}
+
+add new marksheet
+
+
+\begin{DoxyParams}{Parameters}
+{\em dto} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+pk 
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em Application\+Exception} & \\
+\hline
+{\em Duplicate\+Record\+Exception} & \\
+\hline
+\end{DoxyExceptions}
+
+
+Implements \mbox{\hyperlink{interfacein_1_1co_1_1rays_1_1project__3_1_1model_1_1MarksheetModelInt}{in.\+co.\+rays.\+project\+\_\+3.\+model.\+Marksheet\+Model\+Int}}.
+
+\Hypertarget{classin_1_1co_1_1rays_1_1project__3_1_1model_1_1MarksheetModelJDBCImpl_af06428da66755251094c4b5e0c6dd6cf}\label{classin_1_1co_1_1rays_1_1project__3_1_1model_1_1MarksheetModelJDBCImpl_af06428da66755251094c4b5e0c6dd6cf} 
+\index{in.co.rays.project\_3.model.MarksheetModelJDBCImpl@{in.co.rays.project\_3.model.MarksheetModelJDBCImpl}!delete@{delete}}
+\index{delete@{delete}!in.co.rays.project\_3.model.MarksheetModelJDBCImpl@{in.co.rays.project\_3.model.MarksheetModelJDBCImpl}}
+\doxysubsubsection{\texorpdfstring{delete()}{delete()}}
+{\footnotesize\ttfamily void in.\+co.\+rays.\+project\+\_\+3.\+model.\+Marksheet\+Model\+JDBCImpl.\+delete (\begin{DoxyParamCaption}\item[{Marksheet\+DTO}]{dto }\end{DoxyParamCaption}) throws Application\+Exception\hspace{0.3cm}{\ttfamily [inline]}}
+
+delete marksheet information
+
+
+\begin{DoxyParams}{Parameters}
+{\em dto} & \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em Application\+Exception} & \\
+\hline
+\end{DoxyExceptions}
+
+
+Implements \mbox{\hyperlink{interfacein_1_1co_1_1rays_1_1project__3_1_1model_1_1MarksheetModelInt}{in.\+co.\+rays.\+project\+\_\+3.\+model.\+Marksheet\+Model\+Int}}.
+
+\Hypertarget{classin_1_1co_1_1rays_1_1project__3_1_1model_1_1MarksheetModelJDBCImpl_a126b49b9aacfa63f99688001526e959a}\label{classin_1_1co_1_1rays_1_1project__3_1_1model_1_1MarksheetModelJDBCImpl_a126b49b9aacfa63f99688001526e959a} 
+\index{in.co.rays.project\_3.model.MarksheetModelJDBCImpl@{in.co.rays.project\_3.model.MarksheetModelJDBCImpl}!findByRollNo@{findByRollNo}}
+\index{findByRollNo@{findByRollNo}!in.co.rays.project\_3.model.MarksheetModelJDBCImpl@{in.co.rays.project\_3.model.MarksheetModelJDBCImpl}}
+\doxysubsubsection{\texorpdfstring{findByRollNo()}{findByRollNo()}}
+{\footnotesize\ttfamily Marksheet\+DTO in.\+co.\+rays.\+project\+\_\+3.\+model.\+Marksheet\+Model\+JDBCImpl.\+find\+By\+Roll\+No (\begin{DoxyParamCaption}\item[{String}]{roll\+NO }\end{DoxyParamCaption}) throws Application\+Exception\hspace{0.3cm}{\ttfamily [inline]}}
+
+find information with the help of rollno
+
+
+\begin{DoxyParams}{Parameters}
+{\em roll\+NO} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+dto 
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em Application\+Exception} & \\
+\hline
+\end{DoxyExceptions}
+
+
+Implements \mbox{\hyperlink{interfacein_1_1co_1_1rays_1_1project__3_1_1model_1_1MarksheetModelInt}{in.\+co.\+rays.\+project\+\_\+3.\+model.\+Marksheet\+Model\+Int}}.
+
+\Hypertarget{classin_1_1co_1_1rays_1_1project__3_1_1model_1_1MarksheetModelJDBCImpl_a50487549f1d11b18d4886038392a10d7}\label{classin_1_1co_1_1rays_1_1project__3_1_1model_1_1MarksheetModelJDBCImpl_a50487549f1d11b18d4886038392a10d7} 
+\index{in.co.rays.project\_3.model.MarksheetModelJDBCImpl@{in.co.rays.project\_3.model.MarksheetModelJDBCImpl}!fingByPK@{fingByPK}}
+\index{fingByPK@{fingByPK}!in.co.rays.project\_3.model.MarksheetModelJDBCImpl@{in.co.rays.project\_3.model.MarksheetModelJDBCImpl}}
+\doxysubsubsection{\texorpdfstring{fingByPK()}{fingByPK()}}
+{\footnotesize\ttfamily Marksheet\+DTO in.\+co.\+rays.\+project\+\_\+3.\+model.\+Marksheet\+Model\+JDBCImpl.\+fing\+By\+PK (\begin{DoxyParamCaption}\item[{long}]{pk }\end{DoxyParamCaption}) throws Application\+Exception\hspace{0.3cm}{\ttfamily [inline]}}
+
+find information with the help of pk
+
+
+\begin{DoxyParams}{Parameters}
+{\em pk} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+dto 
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em Application\+Exception} & \\
+\hline
+\end{DoxyExceptions}
+
+
+Implements \mbox{\hyperlink{interfacein_1_1co_1_1rays_1_1project__3_1_1model_1_1MarksheetModelInt}{in.\+co.\+rays.\+project\+\_\+3.\+model.\+Marksheet\+Model\+Int}}.
+
+\Hypertarget{classin_1_1co_1_1rays_1_1project__3_1_1model_1_1MarksheetModelJDBCImpl_af9f542797bec9dfe7c4a5cf88d50f840}\label{classin_1_1co_1_1rays_1_1project__3_1_1model_1_1MarksheetModelJDBCImpl_af9f542797bec9dfe7c4a5cf88d50f840} 
+\index{in.co.rays.project\_3.model.MarksheetModelJDBCImpl@{in.co.rays.project\_3.model.MarksheetModelJDBCImpl}!getMeritList@{getMeritList}}
+\index{getMeritList@{getMeritList}!in.co.rays.project\_3.model.MarksheetModelJDBCImpl@{in.co.rays.project\_3.model.MarksheetModelJDBCImpl}}
+\doxysubsubsection{\texorpdfstring{getMeritList()}{getMeritList()}}
+{\footnotesize\ttfamily List in.\+co.\+rays.\+project\+\_\+3.\+model.\+Marksheet\+Model\+JDBCImpl.\+get\+Merit\+List (\begin{DoxyParamCaption}\item[{int}]{page\+No,  }\item[{int}]{page\+Size }\end{DoxyParamCaption}) throws Application\+Exception\hspace{0.3cm}{\ttfamily [inline]}}
+
+get merit list
+
+
+\begin{DoxyParams}{Parameters}
+{\em page\+No} & \\
+\hline
+{\em page\+Size} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+list 
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em Application\+Exception} & \\
+\hline
+\end{DoxyExceptions}
+
+
+Implements \mbox{\hyperlink{interfacein_1_1co_1_1rays_1_1project__3_1_1model_1_1MarksheetModelInt}{in.\+co.\+rays.\+project\+\_\+3.\+model.\+Marksheet\+Model\+Int}}.
+
+\Hypertarget{classin_1_1co_1_1rays_1_1project__3_1_1model_1_1MarksheetModelJDBCImpl_a02cc40c9bfbd13f96625ea02dfce866b}\label{classin_1_1co_1_1rays_1_1project__3_1_1model_1_1MarksheetModelJDBCImpl_a02cc40c9bfbd13f96625ea02dfce866b} 
+\index{in.co.rays.project\_3.model.MarksheetModelJDBCImpl@{in.co.rays.project\_3.model.MarksheetModelJDBCImpl}!list@{list}}
+\index{list@{list}!in.co.rays.project\_3.model.MarksheetModelJDBCImpl@{in.co.rays.project\_3.model.MarksheetModelJDBCImpl}}
+\doxysubsubsection{\texorpdfstring{list()}{list()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily List in.\+co.\+rays.\+project\+\_\+3.\+model.\+Marksheet\+Model\+JDBCImpl.\+list (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) throws Application\+Exception\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Implements \mbox{\hyperlink{interfacein_1_1co_1_1rays_1_1project__3_1_1model_1_1MarksheetModelInt}{in.\+co.\+rays.\+project\+\_\+3.\+model.\+Marksheet\+Model\+Int}}.
+
+\Hypertarget{classin_1_1co_1_1rays_1_1project__3_1_1model_1_1MarksheetModelJDBCImpl_a16eaaef4fb5ea8ec6fa334ee13af45e3}\label{classin_1_1co_1_1rays_1_1project__3_1_1model_1_1MarksheetModelJDBCImpl_a16eaaef4fb5ea8ec6fa334ee13af45e3} 
+\index{in.co.rays.project\_3.model.MarksheetModelJDBCImpl@{in.co.rays.project\_3.model.MarksheetModelJDBCImpl}!list@{list}}
+\index{list@{list}!in.co.rays.project\_3.model.MarksheetModelJDBCImpl@{in.co.rays.project\_3.model.MarksheetModelJDBCImpl}}
+\doxysubsubsection{\texorpdfstring{list()}{list()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily List in.\+co.\+rays.\+project\+\_\+3.\+model.\+Marksheet\+Model\+JDBCImpl.\+list (\begin{DoxyParamCaption}\item[{int}]{page\+No,  }\item[{int}]{page\+Size }\end{DoxyParamCaption}) throws Application\+Exception\hspace{0.3cm}{\ttfamily [inline]}}
+
+get List of Marksheet with pagination
+
+\begin{DoxyReturn}{Returns}
+list \+: List of Marksheets 
+\end{DoxyReturn}
+
+\begin{DoxyParams}{Parameters}
+{\em page\+No} & \+: Current Page No. \\
+\hline
+{\em page\+Size} & \+: Size of Page \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em Database\+Exception} & \\
+\hline
+\end{DoxyExceptions}
+
+
+Implements \mbox{\hyperlink{interfacein_1_1co_1_1rays_1_1project__3_1_1model_1_1MarksheetModelInt}{in.\+co.\+rays.\+project\+\_\+3.\+model.\+Marksheet\+Model\+Int}}.
+
+\Hypertarget{classin_1_1co_1_1rays_1_1project__3_1_1model_1_1MarksheetModelJDBCImpl_ac3206dd7a03f6573648ef64ae251b7a4}\label{classin_1_1co_1_1rays_1_1project__3_1_1model_1_1MarksheetModelJDBCImpl_ac3206dd7a03f6573648ef64ae251b7a4} 
+\index{in.co.rays.project\_3.model.MarksheetModelJDBCImpl@{in.co.rays.project\_3.model.MarksheetModelJDBCImpl}!nextPK@{nextPK}}
+\index{nextPK@{nextPK}!in.co.rays.project\_3.model.MarksheetModelJDBCImpl@{in.co.rays.project\_3.model.MarksheetModelJDBCImpl}}
+\doxysubsubsection{\texorpdfstring{nextPK()}{nextPK()}}
+{\footnotesize\ttfamily static long in.\+co.\+rays.\+project\+\_\+3.\+model.\+Marksheet\+Model\+JDBCImpl.\+next\+PK (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) throws Database\+Exception\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+add new id
+
+\begin{DoxyReturn}{Returns}
+pk 
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em Database\+Exception} & \\
+\hline
+\end{DoxyExceptions}
+\Hypertarget{classin_1_1co_1_1rays_1_1project__3_1_1model_1_1MarksheetModelJDBCImpl_a2938591c5912eab6e8c1237f12a3e289}\label{classin_1_1co_1_1rays_1_1project__3_1_1model_1_1MarksheetModelJDBCImpl_a2938591c5912eab6e8c1237f12a3e289} 
+\index{in.co.rays.project\_3.model.MarksheetModelJDBCImpl@{in.co.rays.project\_3.model.MarksheetModelJDBCImpl}!search@{search}}
+\index{search@{search}!in.co.rays.project\_3.model.MarksheetModelJDBCImpl@{in.co.rays.project\_3.model.MarksheetModelJDBCImpl}}
+\doxysubsubsection{\texorpdfstring{search()}{search()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily List in.\+co.\+rays.\+project\+\_\+3.\+model.\+Marksheet\+Model\+JDBCImpl.\+search (\begin{DoxyParamCaption}\item[{Marksheet\+DTO}]{dto }\end{DoxyParamCaption}) throws Application\+Exception\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Implements \mbox{\hyperlink{interfacein_1_1co_1_1rays_1_1project__3_1_1model_1_1MarksheetModelInt}{in.\+co.\+rays.\+project\+\_\+3.\+model.\+Marksheet\+Model\+Int}}.
+
+\Hypertarget{classin_1_1co_1_1rays_1_1project__3_1_1model_1_1MarksheetModelJDBCImpl_af688a48a730a61312c49f586bd5e3632}\label{classin_1_1co_1_1rays_1_1project__3_1_1model_1_1MarksheetModelJDBCImpl_af688a48a730a61312c49f586bd5e3632} 
+\index{in.co.rays.project\_3.model.MarksheetModelJDBCImpl@{in.co.rays.project\_3.model.MarksheetModelJDBCImpl}!search@{search}}
+\index{search@{search}!in.co.rays.project\_3.model.MarksheetModelJDBCImpl@{in.co.rays.project\_3.model.MarksheetModelJDBCImpl}}
+\doxysubsubsection{\texorpdfstring{search()}{search()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily List in.\+co.\+rays.\+project\+\_\+3.\+model.\+Marksheet\+Model\+JDBCImpl.\+search (\begin{DoxyParamCaption}\item[{Marksheet\+DTO}]{marksheet,  }\item[{int}]{page\+No,  }\item[{int}]{page\+Size }\end{DoxyParamCaption}) throws Application\+Exception\hspace{0.3cm}{\ttfamily [inline]}}
+
+search marksheet
+
+
+\begin{DoxyParams}{Parameters}
+{\em marksheet} & \\
+\hline
+{\em page\+No} & \\
+\hline
+{\em page\+Size} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em Application\+Exception} & \\
+\hline
+\end{DoxyExceptions}
+
+
+Implements \mbox{\hyperlink{interfacein_1_1co_1_1rays_1_1project__3_1_1model_1_1MarksheetModelInt}{in.\+co.\+rays.\+project\+\_\+3.\+model.\+Marksheet\+Model\+Int}}.
+
+\Hypertarget{classin_1_1co_1_1rays_1_1project__3_1_1model_1_1MarksheetModelJDBCImpl_a90c4614e9378fe79bd424ab2de37c268}\label{classin_1_1co_1_1rays_1_1project__3_1_1model_1_1MarksheetModelJDBCImpl_a90c4614e9378fe79bd424ab2de37c268} 
+\index{in.co.rays.project\_3.model.MarksheetModelJDBCImpl@{in.co.rays.project\_3.model.MarksheetModelJDBCImpl}!update@{update}}
+\index{update@{update}!in.co.rays.project\_3.model.MarksheetModelJDBCImpl@{in.co.rays.project\_3.model.MarksheetModelJDBCImpl}}
+\doxysubsubsection{\texorpdfstring{update()}{update()}}
+{\footnotesize\ttfamily void in.\+co.\+rays.\+project\+\_\+3.\+model.\+Marksheet\+Model\+JDBCImpl.\+update (\begin{DoxyParamCaption}\item[{Marksheet\+DTO}]{dto }\end{DoxyParamCaption}) throws Application\+Exception, Duplicate\+Record\+Exception\hspace{0.3cm}{\ttfamily [inline]}}
+
+update marksheet information
+
+
+\begin{DoxyParams}{Parameters}
+{\em dto} & \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em Application\+Exception} & \\
+\hline
+{\em Duplicate\+Record\+Exception} & \\
+\hline
+\end{DoxyExceptions}
+
+
+Implements \mbox{\hyperlink{interfacein_1_1co_1_1rays_1_1project__3_1_1model_1_1MarksheetModelInt}{in.\+co.\+rays.\+project\+\_\+3.\+model.\+Marksheet\+Model\+Int}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+project\+\_\+3/src/main/java/in/co/rays/project\+\_\+3/model/Marksheet\+Model\+JDBCImpl.\+java\end{DoxyCompactItemize}

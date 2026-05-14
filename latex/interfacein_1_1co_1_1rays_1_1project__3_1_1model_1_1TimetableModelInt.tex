@@ -1,0 +1,143 @@
+\doxysection{in.\+co.\+rays.\+project\+\_\+3.\+model.\+Timetable\+Model\+Int Interface Reference}
+\hypertarget{interfacein_1_1co_1_1rays_1_1project__3_1_1model_1_1TimetableModelInt}{}\label{interfacein_1_1co_1_1rays_1_1project__3_1_1model_1_1TimetableModelInt}\index{in.co.rays.project\_3.model.TimetableModelInt@{in.co.rays.project\_3.model.TimetableModelInt}}
+
+
+Inheritance diagram for in.\+co.\+rays.\+project\+\_\+3.\+model.\+Timetable\+Model\+Int\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{interfacein_1_1co_1_1rays_1_1project__3_1_1model_1_1TimetableModelInt__inherit__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+long \mbox{\hyperlink{interfacein_1_1co_1_1rays_1_1project__3_1_1model_1_1TimetableModelInt_a6decf0fda7152b43c8f3d7f8133f57b2}{add}} (Timetable\+DTO dto)  throws Application\+Exception,Duplicate\+Record\+Exception
+\item 
+void \mbox{\hyperlink{interfacein_1_1co_1_1rays_1_1project__3_1_1model_1_1TimetableModelInt_a4a1d62e2d96d6aa679e740c2200e0d0e}{delete}} (Timetable\+DTO dto)  throws Application\+Exception
+\item 
+void \mbox{\hyperlink{interfacein_1_1co_1_1rays_1_1project__3_1_1model_1_1TimetableModelInt_a4f14ea0452c9619f5545a5bbbd3a56a6}{update}} (Timetable\+DTO dto)  throws Application\+Exception,Duplicate\+Record\+Exception,Database\+Exception
+\item 
+\Hypertarget{interfacein_1_1co_1_1rays_1_1project__3_1_1model_1_1TimetableModelInt_aec64b9725d32e71643c1271200f55592}\label{interfacein_1_1co_1_1rays_1_1project__3_1_1model_1_1TimetableModelInt_aec64b9725d32e71643c1271200f55592} 
+List {\bfseries list} ()  throws Application\+Exception
+\item 
+List \mbox{\hyperlink{interfacein_1_1co_1_1rays_1_1project__3_1_1model_1_1TimetableModelInt_ac7f2b3a85433b02419ab437de018bb02}{list}} (int page\+No, int page\+Size)  throws Application\+Exception
+\item 
+\Hypertarget{interfacein_1_1co_1_1rays_1_1project__3_1_1model_1_1TimetableModelInt_abd316a64de0d445146004a0d5c858e2c}\label{interfacein_1_1co_1_1rays_1_1project__3_1_1model_1_1TimetableModelInt_abd316a64de0d445146004a0d5c858e2c} 
+List {\bfseries search} (Timetable\+DTO dto)  throws Application\+Exception
+\item 
+List \mbox{\hyperlink{interfacein_1_1co_1_1rays_1_1project__3_1_1model_1_1TimetableModelInt_a60565cfcd365ae00bd89f045bf2e1c39}{search}} (Timetable\+DTO dto, int page\+No, int page\+Size)  throws Application\+Exception
+\item 
+Timetable\+DTO \mbox{\hyperlink{interfacein_1_1co_1_1rays_1_1project__3_1_1model_1_1TimetableModelInt_ac7ed5fceaa6721ee7c60851c9cc5b709}{find\+By\+PK}} (long pk)  throws Application\+Exception
+\item 
+Timetable\+DTO \mbox{\hyperlink{interfacein_1_1co_1_1rays_1_1project__3_1_1model_1_1TimetableModelInt_a3d649bd2bea8dbae34f8619c72284bac}{check\+By\+Course\+Name}} (long course\+Id, java.\+util.\+Date exam\+Date)  throws Application\+Exception,Duplicate\+Record\+Exception
+\item 
+Timetable\+DTO \mbox{\hyperlink{interfacein_1_1co_1_1rays_1_1project__3_1_1model_1_1TimetableModelInt_af9436d9e55b216706ba5cfaab93b7f82}{check\+By\+Subject\+Name}} (long course\+Id, long subject\+Id, java.\+util.\+Date exam\+Date)  throws Application\+Exception,Duplicate\+Record\+Exception
+\item 
+Timetable\+DTO \mbox{\hyperlink{interfacein_1_1co_1_1rays_1_1project__3_1_1model_1_1TimetableModelInt_a99096dd880796f6be74f033582727d3e}{check\+Bysemester}} (long course\+Id, long subject\+Id, String semester, java.\+util.\+Date exam\+Date)  throws Application\+Exception,Duplicate\+Record\+Exception
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Interface of Timetable model \begin{DoxyAuthor}{Author}
+Niraj Chopra 
+\end{DoxyAuthor}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{interfacein_1_1co_1_1rays_1_1project__3_1_1model_1_1TimetableModelInt_a6decf0fda7152b43c8f3d7f8133f57b2}\label{interfacein_1_1co_1_1rays_1_1project__3_1_1model_1_1TimetableModelInt_a6decf0fda7152b43c8f3d7f8133f57b2} 
+\index{in.co.rays.project\_3.model.TimetableModelInt@{in.co.rays.project\_3.model.TimetableModelInt}!add@{add}}
+\index{add@{add}!in.co.rays.project\_3.model.TimetableModelInt@{in.co.rays.project\_3.model.TimetableModelInt}}
+\doxysubsubsection{\texorpdfstring{add()}{add()}}
+{\footnotesize\ttfamily long in.\+co.\+rays.\+project\+\_\+3.\+model.\+Timetable\+Model\+Int.\+add (\begin{DoxyParamCaption}\item[{Timetable\+DTO}]{dto }\end{DoxyParamCaption}) throws Application\+Exception,Duplicate\+Record\+Exception}
+
+
+
+Implemented in \mbox{\hyperlink{classin_1_1co_1_1rays_1_1project__3_1_1model_1_1TimetableModelJDBCImpl_a7ad6a94912ece1f2b50d1d58a25c425a}{in.\+co.\+rays.\+project\+\_\+3.\+model.\+Timetable\+Model\+JDBCImpl}}.
+
+\Hypertarget{interfacein_1_1co_1_1rays_1_1project__3_1_1model_1_1TimetableModelInt_a3d649bd2bea8dbae34f8619c72284bac}\label{interfacein_1_1co_1_1rays_1_1project__3_1_1model_1_1TimetableModelInt_a3d649bd2bea8dbae34f8619c72284bac} 
+\index{in.co.rays.project\_3.model.TimetableModelInt@{in.co.rays.project\_3.model.TimetableModelInt}!checkByCourseName@{checkByCourseName}}
+\index{checkByCourseName@{checkByCourseName}!in.co.rays.project\_3.model.TimetableModelInt@{in.co.rays.project\_3.model.TimetableModelInt}}
+\doxysubsubsection{\texorpdfstring{checkByCourseName()}{checkByCourseName()}}
+{\footnotesize\ttfamily Timetable\+DTO in.\+co.\+rays.\+project\+\_\+3.\+model.\+Timetable\+Model\+Int.\+check\+By\+Course\+Name (\begin{DoxyParamCaption}\item[{long}]{course\+Id,  }\item[{java.\+util.\+Date}]{exam\+Date }\end{DoxyParamCaption}) throws Application\+Exception,Duplicate\+Record\+Exception}
+
+
+
+Implemented in \mbox{\hyperlink{classin_1_1co_1_1rays_1_1project__3_1_1model_1_1TimetableModelJDBCImpl_a1ba5260198fad72bf1227ad65702a7e9}{in.\+co.\+rays.\+project\+\_\+3.\+model.\+Timetable\+Model\+JDBCImpl}}.
+
+\Hypertarget{interfacein_1_1co_1_1rays_1_1project__3_1_1model_1_1TimetableModelInt_a99096dd880796f6be74f033582727d3e}\label{interfacein_1_1co_1_1rays_1_1project__3_1_1model_1_1TimetableModelInt_a99096dd880796f6be74f033582727d3e} 
+\index{in.co.rays.project\_3.model.TimetableModelInt@{in.co.rays.project\_3.model.TimetableModelInt}!checkBysemester@{checkBysemester}}
+\index{checkBysemester@{checkBysemester}!in.co.rays.project\_3.model.TimetableModelInt@{in.co.rays.project\_3.model.TimetableModelInt}}
+\doxysubsubsection{\texorpdfstring{checkBysemester()}{checkBysemester()}}
+{\footnotesize\ttfamily Timetable\+DTO in.\+co.\+rays.\+project\+\_\+3.\+model.\+Timetable\+Model\+Int.\+check\+Bysemester (\begin{DoxyParamCaption}\item[{long}]{course\+Id,  }\item[{long}]{subject\+Id,  }\item[{String}]{semester,  }\item[{java.\+util.\+Date}]{exam\+Date }\end{DoxyParamCaption}) throws Application\+Exception,Duplicate\+Record\+Exception}
+
+
+
+Implemented in \mbox{\hyperlink{classin_1_1co_1_1rays_1_1project__3_1_1model_1_1TimetableModelJDBCImpl_a0883eb93f4fe9f56ea14aba3fde1248d}{in.\+co.\+rays.\+project\+\_\+3.\+model.\+Timetable\+Model\+JDBCImpl}}.
+
+\Hypertarget{interfacein_1_1co_1_1rays_1_1project__3_1_1model_1_1TimetableModelInt_af9436d9e55b216706ba5cfaab93b7f82}\label{interfacein_1_1co_1_1rays_1_1project__3_1_1model_1_1TimetableModelInt_af9436d9e55b216706ba5cfaab93b7f82} 
+\index{in.co.rays.project\_3.model.TimetableModelInt@{in.co.rays.project\_3.model.TimetableModelInt}!checkBySubjectName@{checkBySubjectName}}
+\index{checkBySubjectName@{checkBySubjectName}!in.co.rays.project\_3.model.TimetableModelInt@{in.co.rays.project\_3.model.TimetableModelInt}}
+\doxysubsubsection{\texorpdfstring{checkBySubjectName()}{checkBySubjectName()}}
+{\footnotesize\ttfamily Timetable\+DTO in.\+co.\+rays.\+project\+\_\+3.\+model.\+Timetable\+Model\+Int.\+check\+By\+Subject\+Name (\begin{DoxyParamCaption}\item[{long}]{course\+Id,  }\item[{long}]{subject\+Id,  }\item[{java.\+util.\+Date}]{exam\+Date }\end{DoxyParamCaption}) throws Application\+Exception,Duplicate\+Record\+Exception}
+
+
+
+Implemented in \mbox{\hyperlink{classin_1_1co_1_1rays_1_1project__3_1_1model_1_1TimetableModelJDBCImpl_a9056efb85be143945b90ba34f78e4d82}{in.\+co.\+rays.\+project\+\_\+3.\+model.\+Timetable\+Model\+JDBCImpl}}.
+
+\Hypertarget{interfacein_1_1co_1_1rays_1_1project__3_1_1model_1_1TimetableModelInt_a4a1d62e2d96d6aa679e740c2200e0d0e}\label{interfacein_1_1co_1_1rays_1_1project__3_1_1model_1_1TimetableModelInt_a4a1d62e2d96d6aa679e740c2200e0d0e} 
+\index{in.co.rays.project\_3.model.TimetableModelInt@{in.co.rays.project\_3.model.TimetableModelInt}!delete@{delete}}
+\index{delete@{delete}!in.co.rays.project\_3.model.TimetableModelInt@{in.co.rays.project\_3.model.TimetableModelInt}}
+\doxysubsubsection{\texorpdfstring{delete()}{delete()}}
+{\footnotesize\ttfamily void in.\+co.\+rays.\+project\+\_\+3.\+model.\+Timetable\+Model\+Int.\+delete (\begin{DoxyParamCaption}\item[{Timetable\+DTO}]{dto }\end{DoxyParamCaption}) throws Application\+Exception}
+
+
+
+Implemented in \mbox{\hyperlink{classin_1_1co_1_1rays_1_1project__3_1_1model_1_1TimetableModelJDBCImpl_a5a67ddfe8274e6d2ba91670de5b6aaf9}{in.\+co.\+rays.\+project\+\_\+3.\+model.\+Timetable\+Model\+JDBCImpl}}.
+
+\Hypertarget{interfacein_1_1co_1_1rays_1_1project__3_1_1model_1_1TimetableModelInt_ac7ed5fceaa6721ee7c60851c9cc5b709}\label{interfacein_1_1co_1_1rays_1_1project__3_1_1model_1_1TimetableModelInt_ac7ed5fceaa6721ee7c60851c9cc5b709} 
+\index{in.co.rays.project\_3.model.TimetableModelInt@{in.co.rays.project\_3.model.TimetableModelInt}!findByPK@{findByPK}}
+\index{findByPK@{findByPK}!in.co.rays.project\_3.model.TimetableModelInt@{in.co.rays.project\_3.model.TimetableModelInt}}
+\doxysubsubsection{\texorpdfstring{findByPK()}{findByPK()}}
+{\footnotesize\ttfamily Timetable\+DTO in.\+co.\+rays.\+project\+\_\+3.\+model.\+Timetable\+Model\+Int.\+find\+By\+PK (\begin{DoxyParamCaption}\item[{long}]{pk }\end{DoxyParamCaption}) throws Application\+Exception}
+
+
+
+Implemented in \mbox{\hyperlink{classin_1_1co_1_1rays_1_1project__3_1_1model_1_1TimetableModelJDBCImpl_a25b708d7dccea4a2623ea1e05e45f024}{in.\+co.\+rays.\+project\+\_\+3.\+model.\+Timetable\+Model\+JDBCImpl}}.
+
+\Hypertarget{interfacein_1_1co_1_1rays_1_1project__3_1_1model_1_1TimetableModelInt_ac7f2b3a85433b02419ab437de018bb02}\label{interfacein_1_1co_1_1rays_1_1project__3_1_1model_1_1TimetableModelInt_ac7f2b3a85433b02419ab437de018bb02} 
+\index{in.co.rays.project\_3.model.TimetableModelInt@{in.co.rays.project\_3.model.TimetableModelInt}!list@{list}}
+\index{list@{list}!in.co.rays.project\_3.model.TimetableModelInt@{in.co.rays.project\_3.model.TimetableModelInt}}
+\doxysubsubsection{\texorpdfstring{list()}{list()}}
+{\footnotesize\ttfamily List in.\+co.\+rays.\+project\+\_\+3.\+model.\+Timetable\+Model\+Int.\+list (\begin{DoxyParamCaption}\item[{int}]{page\+No,  }\item[{int}]{page\+Size }\end{DoxyParamCaption}) throws Application\+Exception}
+
+
+
+Implemented in \mbox{\hyperlink{classin_1_1co_1_1rays_1_1project__3_1_1model_1_1TimetableModelJDBCImpl_a5982ccbb78f30aaa45295507c6b1b90f}{in.\+co.\+rays.\+project\+\_\+3.\+model.\+Timetable\+Model\+JDBCImpl}}.
+
+\Hypertarget{interfacein_1_1co_1_1rays_1_1project__3_1_1model_1_1TimetableModelInt_a60565cfcd365ae00bd89f045bf2e1c39}\label{interfacein_1_1co_1_1rays_1_1project__3_1_1model_1_1TimetableModelInt_a60565cfcd365ae00bd89f045bf2e1c39} 
+\index{in.co.rays.project\_3.model.TimetableModelInt@{in.co.rays.project\_3.model.TimetableModelInt}!search@{search}}
+\index{search@{search}!in.co.rays.project\_3.model.TimetableModelInt@{in.co.rays.project\_3.model.TimetableModelInt}}
+\doxysubsubsection{\texorpdfstring{search()}{search()}}
+{\footnotesize\ttfamily List in.\+co.\+rays.\+project\+\_\+3.\+model.\+Timetable\+Model\+Int.\+search (\begin{DoxyParamCaption}\item[{Timetable\+DTO}]{dto,  }\item[{int}]{page\+No,  }\item[{int}]{page\+Size }\end{DoxyParamCaption}) throws Application\+Exception}
+
+
+
+Implemented in \mbox{\hyperlink{classin_1_1co_1_1rays_1_1project__3_1_1model_1_1TimetableModelJDBCImpl_a320d3371077bbef8f50758c1d76bd92a}{in.\+co.\+rays.\+project\+\_\+3.\+model.\+Timetable\+Model\+JDBCImpl}}.
+
+\Hypertarget{interfacein_1_1co_1_1rays_1_1project__3_1_1model_1_1TimetableModelInt_a4f14ea0452c9619f5545a5bbbd3a56a6}\label{interfacein_1_1co_1_1rays_1_1project__3_1_1model_1_1TimetableModelInt_a4f14ea0452c9619f5545a5bbbd3a56a6} 
+\index{in.co.rays.project\_3.model.TimetableModelInt@{in.co.rays.project\_3.model.TimetableModelInt}!update@{update}}
+\index{update@{update}!in.co.rays.project\_3.model.TimetableModelInt@{in.co.rays.project\_3.model.TimetableModelInt}}
+\doxysubsubsection{\texorpdfstring{update()}{update()}}
+{\footnotesize\ttfamily void in.\+co.\+rays.\+project\+\_\+3.\+model.\+Timetable\+Model\+Int.\+update (\begin{DoxyParamCaption}\item[{Timetable\+DTO}]{dto }\end{DoxyParamCaption}) throws Application\+Exception,Duplicate\+Record\+Exception,Database\+Exception}
+
+
+
+Implemented in \mbox{\hyperlink{classin_1_1co_1_1rays_1_1project__3_1_1model_1_1TimetableModelJDBCImpl_a09bc968a577353b028df5b8abe383b70}{in.\+co.\+rays.\+project\+\_\+3.\+model.\+Timetable\+Model\+JDBCImpl}}.
+
+
+
+The documentation for this interface was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+project\+\_\+3/src/main/java/in/co/rays/project\+\_\+3/model/Timetable\+Model\+Int.\+java\end{DoxyCompactItemize}

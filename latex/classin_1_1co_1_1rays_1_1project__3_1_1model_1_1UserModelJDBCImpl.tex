@@ -1,0 +1,224 @@
+\doxysection{in.\+co.\+rays.\+project\+\_\+3.\+model.\+User\+Model\+JDBCImpl Class Reference}
+\hypertarget{classin_1_1co_1_1rays_1_1project__3_1_1model_1_1UserModelJDBCImpl}{}\label{classin_1_1co_1_1rays_1_1project__3_1_1model_1_1UserModelJDBCImpl}\index{in.co.rays.project\_3.model.UserModelJDBCImpl@{in.co.rays.project\_3.model.UserModelJDBCImpl}}
+
+
+Inheritance diagram for in.\+co.\+rays.\+project\+\_\+3.\+model.\+User\+Model\+JDBCImpl\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=243pt]{classin_1_1co_1_1rays_1_1project__3_1_1model_1_1UserModelJDBCImpl__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for in.\+co.\+rays.\+project\+\_\+3.\+model.\+User\+Model\+JDBCImpl\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=243pt]{classin_1_1co_1_1rays_1_1project__3_1_1model_1_1UserModelJDBCImpl__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{classin_1_1co_1_1rays_1_1project__3_1_1model_1_1UserModelJDBCImpl_a7f033c05f164fe0e42413bd4c7d07612}\label{classin_1_1co_1_1rays_1_1project__3_1_1model_1_1UserModelJDBCImpl_a7f033c05f164fe0e42413bd4c7d07612} 
+long {\bfseries next\+PK} ()  throws Database\+Exception 
+\item 
+long \mbox{\hyperlink{classin_1_1co_1_1rays_1_1project__3_1_1model_1_1UserModelJDBCImpl_ada448de7cc8969dd96041da38c6c1b04}{add}} (User\+DTO dto)  throws Application\+Exception, Duplicate\+Record\+Exception 
+\item 
+void \mbox{\hyperlink{classin_1_1co_1_1rays_1_1project__3_1_1model_1_1UserModelJDBCImpl_aa33abd57c11b16296790e0457f60fa36}{delete}} (User\+DTO dto)  throws Application\+Exception 
+\item 
+void \mbox{\hyperlink{classin_1_1co_1_1rays_1_1project__3_1_1model_1_1UserModelJDBCImpl_a629addf53c327be2f9688d1441b022ad}{update}} (User\+DTO dto)  throws Application\+Exception, Duplicate\+Record\+Exception 
+\item 
+User\+DTO \mbox{\hyperlink{classin_1_1co_1_1rays_1_1project__3_1_1model_1_1UserModelJDBCImpl_aaf62b5056e1e1571cb893b80836410cb}{find\+By\+PK}} (long pk)  throws Application\+Exception 
+\item 
+User\+DTO \mbox{\hyperlink{classin_1_1co_1_1rays_1_1project__3_1_1model_1_1UserModelJDBCImpl_aea7a7221d0a9ed9873e21d029819409d}{find\+By\+Login}} (String login)  throws Application\+Exception 
+\item 
+List \mbox{\hyperlink{classin_1_1co_1_1rays_1_1project__3_1_1model_1_1UserModelJDBCImpl_a115cfddf81f3c0bae1af43ef40a3fd40}{list}} ()  throws Application\+Exception 
+\item 
+List \mbox{\hyperlink{classin_1_1co_1_1rays_1_1project__3_1_1model_1_1UserModelJDBCImpl_ad316d1b25d300ce2f46ea0f98ed9aff4}{list}} (int page\+No, int page\+Size)  throws Application\+Exception 
+\item 
+List \mbox{\hyperlink{classin_1_1co_1_1rays_1_1project__3_1_1model_1_1UserModelJDBCImpl_aa99ffb596848e43f55e2922f42c2dd4b}{search}} (User\+DTO dto, int page\+No, int page\+Size)  throws Application\+Exception 
+\item 
+List \mbox{\hyperlink{classin_1_1co_1_1rays_1_1project__3_1_1model_1_1UserModelJDBCImpl_a6144f9854301bbfb86a55eedb04458c6}{search}} (User\+DTO dto)  throws Application\+Exception 
+\item 
+User\+DTO \mbox{\hyperlink{classin_1_1co_1_1rays_1_1project__3_1_1model_1_1UserModelJDBCImpl_a36aeaa6e02e4c7d39e660317103c39b6}{authenticate}} (String login, String password)  throws Application\+Exception 
+\item 
+boolean \mbox{\hyperlink{classin_1_1co_1_1rays_1_1project__3_1_1model_1_1UserModelJDBCImpl_a16b39e51ecde38d4add5b3381b477af7}{change\+Password}} (long id, String new\+Password, String old\+Password)  throws Application\+Exception, Record\+Not\+Found\+Exception 
+\item 
+boolean \mbox{\hyperlink{classin_1_1co_1_1rays_1_1project__3_1_1model_1_1UserModelJDBCImpl_a1452a8d059b85ac21b3922aa167a6170}{forget\+Password}} (String login)  throws Application\+Exception, Record\+Not\+Found\+Exception 
+\item 
+boolean \mbox{\hyperlink{classin_1_1co_1_1rays_1_1project__3_1_1model_1_1UserModelJDBCImpl_a950d610ef7297764306b4fc276e7419e}{reset\+Password}} (User\+DTO dto)  throws Application\+Exception, Record\+Not\+Found\+Exception 
+\item 
+long \mbox{\hyperlink{classin_1_1co_1_1rays_1_1project__3_1_1model_1_1UserModelJDBCImpl_aeded1a5e3a8a2f36624f9c5098f49cad}{register\+User}} (User\+DTO dto)  throws Application\+Exception, Duplicate\+Record\+Exception 
+\item 
+List \mbox{\hyperlink{classin_1_1co_1_1rays_1_1project__3_1_1model_1_1UserModelJDBCImpl_a6ed0f18ff4b84f18a46737179b5fc5da}{get\+Roles}} (User\+DTO dto)  throws Application\+Exception 
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+JDBC implements of User model
+
+\begin{DoxyAuthor}{Author}
+Niraj Chopra 
+\end{DoxyAuthor}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classin_1_1co_1_1rays_1_1project__3_1_1model_1_1UserModelJDBCImpl_ada448de7cc8969dd96041da38c6c1b04}\label{classin_1_1co_1_1rays_1_1project__3_1_1model_1_1UserModelJDBCImpl_ada448de7cc8969dd96041da38c6c1b04} 
+\index{in.co.rays.project\_3.model.UserModelJDBCImpl@{in.co.rays.project\_3.model.UserModelJDBCImpl}!add@{add}}
+\index{add@{add}!in.co.rays.project\_3.model.UserModelJDBCImpl@{in.co.rays.project\_3.model.UserModelJDBCImpl}}
+\doxysubsubsection{\texorpdfstring{add()}{add()}}
+{\footnotesize\ttfamily long in.\+co.\+rays.\+project\+\_\+3.\+model.\+User\+Model\+JDBCImpl.\+add (\begin{DoxyParamCaption}\item[{User\+DTO}]{dto }\end{DoxyParamCaption}) throws Application\+Exception, Duplicate\+Record\+Exception\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Implements \mbox{\hyperlink{interfacein_1_1co_1_1rays_1_1project__3_1_1model_1_1UserModelInt}{in.\+co.\+rays.\+project\+\_\+3.\+model.\+User\+Model\+Int}}.
+
+\Hypertarget{classin_1_1co_1_1rays_1_1project__3_1_1model_1_1UserModelJDBCImpl_a36aeaa6e02e4c7d39e660317103c39b6}\label{classin_1_1co_1_1rays_1_1project__3_1_1model_1_1UserModelJDBCImpl_a36aeaa6e02e4c7d39e660317103c39b6} 
+\index{in.co.rays.project\_3.model.UserModelJDBCImpl@{in.co.rays.project\_3.model.UserModelJDBCImpl}!authenticate@{authenticate}}
+\index{authenticate@{authenticate}!in.co.rays.project\_3.model.UserModelJDBCImpl@{in.co.rays.project\_3.model.UserModelJDBCImpl}}
+\doxysubsubsection{\texorpdfstring{authenticate()}{authenticate()}}
+{\footnotesize\ttfamily User\+DTO in.\+co.\+rays.\+project\+\_\+3.\+model.\+User\+Model\+JDBCImpl.\+authenticate (\begin{DoxyParamCaption}\item[{String}]{login,  }\item[{String}]{password }\end{DoxyParamCaption}) throws Application\+Exception\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Implements \mbox{\hyperlink{interfacein_1_1co_1_1rays_1_1project__3_1_1model_1_1UserModelInt}{in.\+co.\+rays.\+project\+\_\+3.\+model.\+User\+Model\+Int}}.
+
+\Hypertarget{classin_1_1co_1_1rays_1_1project__3_1_1model_1_1UserModelJDBCImpl_a16b39e51ecde38d4add5b3381b477af7}\label{classin_1_1co_1_1rays_1_1project__3_1_1model_1_1UserModelJDBCImpl_a16b39e51ecde38d4add5b3381b477af7} 
+\index{in.co.rays.project\_3.model.UserModelJDBCImpl@{in.co.rays.project\_3.model.UserModelJDBCImpl}!changePassword@{changePassword}}
+\index{changePassword@{changePassword}!in.co.rays.project\_3.model.UserModelJDBCImpl@{in.co.rays.project\_3.model.UserModelJDBCImpl}}
+\doxysubsubsection{\texorpdfstring{changePassword()}{changePassword()}}
+{\footnotesize\ttfamily boolean in.\+co.\+rays.\+project\+\_\+3.\+model.\+User\+Model\+JDBCImpl.\+change\+Password (\begin{DoxyParamCaption}\item[{long}]{id,  }\item[{String}]{new\+Password,  }\item[{String}]{old\+Password }\end{DoxyParamCaption}) throws Application\+Exception, Record\+Not\+Found\+Exception\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Implements \mbox{\hyperlink{interfacein_1_1co_1_1rays_1_1project__3_1_1model_1_1UserModelInt}{in.\+co.\+rays.\+project\+\_\+3.\+model.\+User\+Model\+Int}}.
+
+\Hypertarget{classin_1_1co_1_1rays_1_1project__3_1_1model_1_1UserModelJDBCImpl_aa33abd57c11b16296790e0457f60fa36}\label{classin_1_1co_1_1rays_1_1project__3_1_1model_1_1UserModelJDBCImpl_aa33abd57c11b16296790e0457f60fa36} 
+\index{in.co.rays.project\_3.model.UserModelJDBCImpl@{in.co.rays.project\_3.model.UserModelJDBCImpl}!delete@{delete}}
+\index{delete@{delete}!in.co.rays.project\_3.model.UserModelJDBCImpl@{in.co.rays.project\_3.model.UserModelJDBCImpl}}
+\doxysubsubsection{\texorpdfstring{delete()}{delete()}}
+{\footnotesize\ttfamily void in.\+co.\+rays.\+project\+\_\+3.\+model.\+User\+Model\+JDBCImpl.\+delete (\begin{DoxyParamCaption}\item[{User\+DTO}]{dto }\end{DoxyParamCaption}) throws Application\+Exception\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Implements \mbox{\hyperlink{interfacein_1_1co_1_1rays_1_1project__3_1_1model_1_1UserModelInt}{in.\+co.\+rays.\+project\+\_\+3.\+model.\+User\+Model\+Int}}.
+
+\Hypertarget{classin_1_1co_1_1rays_1_1project__3_1_1model_1_1UserModelJDBCImpl_aea7a7221d0a9ed9873e21d029819409d}\label{classin_1_1co_1_1rays_1_1project__3_1_1model_1_1UserModelJDBCImpl_aea7a7221d0a9ed9873e21d029819409d} 
+\index{in.co.rays.project\_3.model.UserModelJDBCImpl@{in.co.rays.project\_3.model.UserModelJDBCImpl}!findByLogin@{findByLogin}}
+\index{findByLogin@{findByLogin}!in.co.rays.project\_3.model.UserModelJDBCImpl@{in.co.rays.project\_3.model.UserModelJDBCImpl}}
+\doxysubsubsection{\texorpdfstring{findByLogin()}{findByLogin()}}
+{\footnotesize\ttfamily User\+DTO in.\+co.\+rays.\+project\+\_\+3.\+model.\+User\+Model\+JDBCImpl.\+find\+By\+Login (\begin{DoxyParamCaption}\item[{String}]{login }\end{DoxyParamCaption}) throws Application\+Exception\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Implements \mbox{\hyperlink{interfacein_1_1co_1_1rays_1_1project__3_1_1model_1_1UserModelInt}{in.\+co.\+rays.\+project\+\_\+3.\+model.\+User\+Model\+Int}}.
+
+\Hypertarget{classin_1_1co_1_1rays_1_1project__3_1_1model_1_1UserModelJDBCImpl_aaf62b5056e1e1571cb893b80836410cb}\label{classin_1_1co_1_1rays_1_1project__3_1_1model_1_1UserModelJDBCImpl_aaf62b5056e1e1571cb893b80836410cb} 
+\index{in.co.rays.project\_3.model.UserModelJDBCImpl@{in.co.rays.project\_3.model.UserModelJDBCImpl}!findByPK@{findByPK}}
+\index{findByPK@{findByPK}!in.co.rays.project\_3.model.UserModelJDBCImpl@{in.co.rays.project\_3.model.UserModelJDBCImpl}}
+\doxysubsubsection{\texorpdfstring{findByPK()}{findByPK()}}
+{\footnotesize\ttfamily User\+DTO in.\+co.\+rays.\+project\+\_\+3.\+model.\+User\+Model\+JDBCImpl.\+find\+By\+PK (\begin{DoxyParamCaption}\item[{long}]{pk }\end{DoxyParamCaption}) throws Application\+Exception\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Implements \mbox{\hyperlink{interfacein_1_1co_1_1rays_1_1project__3_1_1model_1_1UserModelInt}{in.\+co.\+rays.\+project\+\_\+3.\+model.\+User\+Model\+Int}}.
+
+\Hypertarget{classin_1_1co_1_1rays_1_1project__3_1_1model_1_1UserModelJDBCImpl_a1452a8d059b85ac21b3922aa167a6170}\label{classin_1_1co_1_1rays_1_1project__3_1_1model_1_1UserModelJDBCImpl_a1452a8d059b85ac21b3922aa167a6170} 
+\index{in.co.rays.project\_3.model.UserModelJDBCImpl@{in.co.rays.project\_3.model.UserModelJDBCImpl}!forgetPassword@{forgetPassword}}
+\index{forgetPassword@{forgetPassword}!in.co.rays.project\_3.model.UserModelJDBCImpl@{in.co.rays.project\_3.model.UserModelJDBCImpl}}
+\doxysubsubsection{\texorpdfstring{forgetPassword()}{forgetPassword()}}
+{\footnotesize\ttfamily boolean in.\+co.\+rays.\+project\+\_\+3.\+model.\+User\+Model\+JDBCImpl.\+forget\+Password (\begin{DoxyParamCaption}\item[{String}]{login }\end{DoxyParamCaption}) throws Application\+Exception, Record\+Not\+Found\+Exception\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Implements \mbox{\hyperlink{interfacein_1_1co_1_1rays_1_1project__3_1_1model_1_1UserModelInt}{in.\+co.\+rays.\+project\+\_\+3.\+model.\+User\+Model\+Int}}.
+
+\Hypertarget{classin_1_1co_1_1rays_1_1project__3_1_1model_1_1UserModelJDBCImpl_a6ed0f18ff4b84f18a46737179b5fc5da}\label{classin_1_1co_1_1rays_1_1project__3_1_1model_1_1UserModelJDBCImpl_a6ed0f18ff4b84f18a46737179b5fc5da} 
+\index{in.co.rays.project\_3.model.UserModelJDBCImpl@{in.co.rays.project\_3.model.UserModelJDBCImpl}!getRoles@{getRoles}}
+\index{getRoles@{getRoles}!in.co.rays.project\_3.model.UserModelJDBCImpl@{in.co.rays.project\_3.model.UserModelJDBCImpl}}
+\doxysubsubsection{\texorpdfstring{getRoles()}{getRoles()}}
+{\footnotesize\ttfamily List in.\+co.\+rays.\+project\+\_\+3.\+model.\+User\+Model\+JDBCImpl.\+get\+Roles (\begin{DoxyParamCaption}\item[{User\+DTO}]{dto }\end{DoxyParamCaption}) throws Application\+Exception\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Implements \mbox{\hyperlink{interfacein_1_1co_1_1rays_1_1project__3_1_1model_1_1UserModelInt}{in.\+co.\+rays.\+project\+\_\+3.\+model.\+User\+Model\+Int}}.
+
+\Hypertarget{classin_1_1co_1_1rays_1_1project__3_1_1model_1_1UserModelJDBCImpl_a115cfddf81f3c0bae1af43ef40a3fd40}\label{classin_1_1co_1_1rays_1_1project__3_1_1model_1_1UserModelJDBCImpl_a115cfddf81f3c0bae1af43ef40a3fd40} 
+\index{in.co.rays.project\_3.model.UserModelJDBCImpl@{in.co.rays.project\_3.model.UserModelJDBCImpl}!list@{list}}
+\index{list@{list}!in.co.rays.project\_3.model.UserModelJDBCImpl@{in.co.rays.project\_3.model.UserModelJDBCImpl}}
+\doxysubsubsection{\texorpdfstring{list()}{list()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily List in.\+co.\+rays.\+project\+\_\+3.\+model.\+User\+Model\+JDBCImpl.\+list (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) throws Application\+Exception\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Implements \mbox{\hyperlink{interfacein_1_1co_1_1rays_1_1project__3_1_1model_1_1UserModelInt}{in.\+co.\+rays.\+project\+\_\+3.\+model.\+User\+Model\+Int}}.
+
+\Hypertarget{classin_1_1co_1_1rays_1_1project__3_1_1model_1_1UserModelJDBCImpl_ad316d1b25d300ce2f46ea0f98ed9aff4}\label{classin_1_1co_1_1rays_1_1project__3_1_1model_1_1UserModelJDBCImpl_ad316d1b25d300ce2f46ea0f98ed9aff4} 
+\index{in.co.rays.project\_3.model.UserModelJDBCImpl@{in.co.rays.project\_3.model.UserModelJDBCImpl}!list@{list}}
+\index{list@{list}!in.co.rays.project\_3.model.UserModelJDBCImpl@{in.co.rays.project\_3.model.UserModelJDBCImpl}}
+\doxysubsubsection{\texorpdfstring{list()}{list()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily List in.\+co.\+rays.\+project\+\_\+3.\+model.\+User\+Model\+JDBCImpl.\+list (\begin{DoxyParamCaption}\item[{int}]{page\+No,  }\item[{int}]{page\+Size }\end{DoxyParamCaption}) throws Application\+Exception\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Implements \mbox{\hyperlink{interfacein_1_1co_1_1rays_1_1project__3_1_1model_1_1UserModelInt}{in.\+co.\+rays.\+project\+\_\+3.\+model.\+User\+Model\+Int}}.
+
+\Hypertarget{classin_1_1co_1_1rays_1_1project__3_1_1model_1_1UserModelJDBCImpl_aeded1a5e3a8a2f36624f9c5098f49cad}\label{classin_1_1co_1_1rays_1_1project__3_1_1model_1_1UserModelJDBCImpl_aeded1a5e3a8a2f36624f9c5098f49cad} 
+\index{in.co.rays.project\_3.model.UserModelJDBCImpl@{in.co.rays.project\_3.model.UserModelJDBCImpl}!registerUser@{registerUser}}
+\index{registerUser@{registerUser}!in.co.rays.project\_3.model.UserModelJDBCImpl@{in.co.rays.project\_3.model.UserModelJDBCImpl}}
+\doxysubsubsection{\texorpdfstring{registerUser()}{registerUser()}}
+{\footnotesize\ttfamily long in.\+co.\+rays.\+project\+\_\+3.\+model.\+User\+Model\+JDBCImpl.\+register\+User (\begin{DoxyParamCaption}\item[{User\+DTO}]{dto }\end{DoxyParamCaption}) throws Application\+Exception, Duplicate\+Record\+Exception\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Implements \mbox{\hyperlink{interfacein_1_1co_1_1rays_1_1project__3_1_1model_1_1UserModelInt}{in.\+co.\+rays.\+project\+\_\+3.\+model.\+User\+Model\+Int}}.
+
+\Hypertarget{classin_1_1co_1_1rays_1_1project__3_1_1model_1_1UserModelJDBCImpl_a950d610ef7297764306b4fc276e7419e}\label{classin_1_1co_1_1rays_1_1project__3_1_1model_1_1UserModelJDBCImpl_a950d610ef7297764306b4fc276e7419e} 
+\index{in.co.rays.project\_3.model.UserModelJDBCImpl@{in.co.rays.project\_3.model.UserModelJDBCImpl}!resetPassword@{resetPassword}}
+\index{resetPassword@{resetPassword}!in.co.rays.project\_3.model.UserModelJDBCImpl@{in.co.rays.project\_3.model.UserModelJDBCImpl}}
+\doxysubsubsection{\texorpdfstring{resetPassword()}{resetPassword()}}
+{\footnotesize\ttfamily boolean in.\+co.\+rays.\+project\+\_\+3.\+model.\+User\+Model\+JDBCImpl.\+reset\+Password (\begin{DoxyParamCaption}\item[{User\+DTO}]{dto }\end{DoxyParamCaption}) throws Application\+Exception, Record\+Not\+Found\+Exception\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Implements \mbox{\hyperlink{interfacein_1_1co_1_1rays_1_1project__3_1_1model_1_1UserModelInt}{in.\+co.\+rays.\+project\+\_\+3.\+model.\+User\+Model\+Int}}.
+
+\Hypertarget{classin_1_1co_1_1rays_1_1project__3_1_1model_1_1UserModelJDBCImpl_a6144f9854301bbfb86a55eedb04458c6}\label{classin_1_1co_1_1rays_1_1project__3_1_1model_1_1UserModelJDBCImpl_a6144f9854301bbfb86a55eedb04458c6} 
+\index{in.co.rays.project\_3.model.UserModelJDBCImpl@{in.co.rays.project\_3.model.UserModelJDBCImpl}!search@{search}}
+\index{search@{search}!in.co.rays.project\_3.model.UserModelJDBCImpl@{in.co.rays.project\_3.model.UserModelJDBCImpl}}
+\doxysubsubsection{\texorpdfstring{search()}{search()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily List in.\+co.\+rays.\+project\+\_\+3.\+model.\+User\+Model\+JDBCImpl.\+search (\begin{DoxyParamCaption}\item[{User\+DTO}]{dto }\end{DoxyParamCaption}) throws Application\+Exception\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Implements \mbox{\hyperlink{interfacein_1_1co_1_1rays_1_1project__3_1_1model_1_1UserModelInt}{in.\+co.\+rays.\+project\+\_\+3.\+model.\+User\+Model\+Int}}.
+
+\Hypertarget{classin_1_1co_1_1rays_1_1project__3_1_1model_1_1UserModelJDBCImpl_aa99ffb596848e43f55e2922f42c2dd4b}\label{classin_1_1co_1_1rays_1_1project__3_1_1model_1_1UserModelJDBCImpl_aa99ffb596848e43f55e2922f42c2dd4b} 
+\index{in.co.rays.project\_3.model.UserModelJDBCImpl@{in.co.rays.project\_3.model.UserModelJDBCImpl}!search@{search}}
+\index{search@{search}!in.co.rays.project\_3.model.UserModelJDBCImpl@{in.co.rays.project\_3.model.UserModelJDBCImpl}}
+\doxysubsubsection{\texorpdfstring{search()}{search()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily List in.\+co.\+rays.\+project\+\_\+3.\+model.\+User\+Model\+JDBCImpl.\+search (\begin{DoxyParamCaption}\item[{User\+DTO}]{dto,  }\item[{int}]{page\+No,  }\item[{int}]{page\+Size }\end{DoxyParamCaption}) throws Application\+Exception\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Implements \mbox{\hyperlink{interfacein_1_1co_1_1rays_1_1project__3_1_1model_1_1UserModelInt}{in.\+co.\+rays.\+project\+\_\+3.\+model.\+User\+Model\+Int}}.
+
+\Hypertarget{classin_1_1co_1_1rays_1_1project__3_1_1model_1_1UserModelJDBCImpl_a629addf53c327be2f9688d1441b022ad}\label{classin_1_1co_1_1rays_1_1project__3_1_1model_1_1UserModelJDBCImpl_a629addf53c327be2f9688d1441b022ad} 
+\index{in.co.rays.project\_3.model.UserModelJDBCImpl@{in.co.rays.project\_3.model.UserModelJDBCImpl}!update@{update}}
+\index{update@{update}!in.co.rays.project\_3.model.UserModelJDBCImpl@{in.co.rays.project\_3.model.UserModelJDBCImpl}}
+\doxysubsubsection{\texorpdfstring{update()}{update()}}
+{\footnotesize\ttfamily void in.\+co.\+rays.\+project\+\_\+3.\+model.\+User\+Model\+JDBCImpl.\+update (\begin{DoxyParamCaption}\item[{User\+DTO}]{dto }\end{DoxyParamCaption}) throws Application\+Exception, Duplicate\+Record\+Exception\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Implements \mbox{\hyperlink{interfacein_1_1co_1_1rays_1_1project__3_1_1model_1_1UserModelInt}{in.\+co.\+rays.\+project\+\_\+3.\+model.\+User\+Model\+Int}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+project\+\_\+3/src/main/java/in/co/rays/project\+\_\+3/model/User\+Model\+JDBCImpl.\+java\end{DoxyCompactItemize}

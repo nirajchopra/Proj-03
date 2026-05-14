@@ -51,6 +51,8 @@ public interface ORSView {
 	public String SETTING_LIST_VIEW = PAGE_FOLDER + "/jsp/SettingListView.jsp";
 	public String DRONE_DELIVERY_VIEW = PAGE_FOLDER + "/jsp/DroneDeliveryView.jsp";
 	public String DRONE_DELIVERY_LIST_VIEW = PAGE_FOLDER + "/jsp/DroneDeliveryListView.jsp";
+	public String PODCAST_VIEW = PAGE_FOLDER + "/jsp/PodCastView.jsp";
+	public String PODCAST_LIST_VIEW = PAGE_FOLDER + "/jsp/PodCastListView.jsp";
 
 	public String ERROR_CTL = APP_CONTEXT + "/ErrorCtl";
 
@@ -91,5 +93,7 @@ public interface ORSView {
 	public String SETTING_LIST_CTL = APP_CONTEXT + "/ctl/SettingListCtl";
 	public String DRONE_DELIVERY_CTL = APP_CONTEXT + "/ctl/DroneDeliveryCtl";
 	public String DRONE_DELIVERY_LIST_CTL = APP_CONTEXT + "/ctl/DroneDeliveryListCtl";
+	public String PODCAST_CTL = APP_CONTEXT + "/ctl/PodCastCtl";
+	public String PODCAST_LIST_CTL = APP_CONTEXT + "/ctl/PodCastListCtl";
 
 }

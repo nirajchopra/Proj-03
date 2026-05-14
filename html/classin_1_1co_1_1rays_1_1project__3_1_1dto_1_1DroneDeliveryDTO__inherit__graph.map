@@ -1,0 +1,11 @@
+<map id="in.co.rays.project_3.dto.DroneDeliveryDTO" name="in.co.rays.project_3.dto.DroneDeliveryDTO">
+<area shape="rect" id="Node000001" title=" " alt="" coords="130,181,318,221"/>
+<area shape="rect" id="Node000002" href="$classin_1_1co_1_1rays_1_1project__3_1_1dto_1_1BaseDTO.html" title=" " alt="" coords="157,93,291,133"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="227,147,227,181,221,181,221,147"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="5,13,104,38"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="91,42,188,91,185,96,88,47"/>
+<area shape="rect" id="Node000004" title=" " alt="" coords="129,13,319,38"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="227,52,227,93,221,93,221,52"/>
+<area shape="rect" id="Node000005" href="$interfacein_1_1co_1_1rays_1_1project__3_1_1dto_1_1DropdownList.html" title=" " alt="" coords="344,5,499,45"/>
+<area shape="poly" id="edge4_Node000002_Node000005" title=" " alt="" coords="367,53,268,96,266,91,365,48"/>
+</map>

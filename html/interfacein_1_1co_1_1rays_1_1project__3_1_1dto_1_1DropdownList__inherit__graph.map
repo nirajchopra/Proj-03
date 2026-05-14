@@ -1,0 +1,31 @@
+<map id="in.co.rays.project_3.dto.DropdownList" name="in.co.rays.project_3.dto.DropdownList">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,389,160,429"/>
+<area shape="rect" id="Node000002" href="$classin_1_1co_1_1rays_1_1project__3_1_1dto_1_1BaseDTO.html" title=" " alt="" coords="208,389,343,429"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="174,407,208,407,208,412,174,412"/>
+<area shape="rect" id="Node000003" href="$classin_1_1co_1_1rays_1_1project__3_1_1dto_1_1CollegeDTO.html" title=" " alt="" coords="413,5,556,45"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="275,375,282,309,300,224,315,179,334,134,358,93,389,55,412,39,415,44,392,59,363,96,339,137,320,180,305,225,288,310,281,376"/>
+<area shape="rect" id="Node000004" href="$classin_1_1co_1_1rays_1_1project__3_1_1dto_1_1CourseDTO.html" title=" " alt="" coords="415,69,554,109"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="278,375,289,320,309,252,341,181,363,148,389,119,414,103,417,107,392,123,367,152,346,184,314,254,294,321,283,376"/>
+<area shape="rect" id="Node000005" href="$classin_1_1co_1_1rays_1_1project__3_1_1dto_1_1DroneDeliveryDTO.html" title=" " alt="" coords="391,133,579,173"/>
+<area shape="poly" id="edge4_Node000002_Node000005" title=" " alt="" coords="283,375,297,332,318,280,349,228,389,183,407,171,410,176,392,187,353,232,323,283,302,334,288,376"/>
+<area shape="rect" id="Node000006" href="$classin_1_1co_1_1rays_1_1project__3_1_1dto_1_1FacultyDTO.html" title=" " alt="" coords="415,197,555,237"/>
+<area shape="poly" id="edge5_Node000002_Node000006" title=" " alt="" coords="290,375,329,311,357,277,389,247,413,233,416,238,392,251,361,280,333,314,294,378"/>
+<area shape="rect" id="Node000007" href="$classin_1_1co_1_1rays_1_1project__3_1_1dto_1_1MarksheetDTO.html" title=" " alt="" coords="403,261,566,301"/>
+<area shape="poly" id="edge6_Node000002_Node000007" title=" " alt="" coords="304,377,343,343,389,311,415,299,417,304,392,316,346,347,308,381"/>
+<area shape="rect" id="Node000008" href="$classin_1_1co_1_1rays_1_1project__3_1_1dto_1_1ProductDTO.html" title=" " alt="" coords="413,325,556,365"/>
+<area shape="poly" id="edge7_Node000002_Node000008" title=" " alt="" coords="354,383,418,363,420,368,355,388"/>
+<area shape="rect" id="Node000009" href="$classin_1_1co_1_1rays_1_1project__3_1_1dto_1_1RoleDTO.html" title=" " alt="" coords="417,389,552,429"/>
+<area shape="poly" id="edge8_Node000002_Node000009" title=" " alt="" coords="357,407,417,407,417,412,357,412"/>
+<area shape="rect" id="Node000010" href="$classin_1_1co_1_1rays_1_1project__3_1_1dto_1_1SchedulerJobDTO.html" title=" " alt="" coords="395,453,574,493"/>
+<area shape="poly" id="edge9_Node000002_Node000010" title=" " alt="" coords="355,431,420,451,418,456,354,436"/>
+<area shape="rect" id="Node000011" href="$classin_1_1co_1_1rays_1_1project__3_1_1dto_1_1SettingDTO.html" title=" " alt="" coords="415,517,555,557"/>
+<area shape="poly" id="edge10_Node000002_Node000011" title=" " alt="" coords="308,437,346,471,392,503,417,515,415,520,389,508,343,475,304,441"/>
+<area shape="rect" id="Node000012" href="$classin_1_1co_1_1rays_1_1project__3_1_1dto_1_1StudentDTO.html" title=" " alt="" coords="413,581,557,621"/>
+<area shape="poly" id="edge11_Node000002_Node000012" title=" " alt="" coords="294,440,333,505,361,538,392,567,414,580,411,585,389,571,357,542,329,508,290,443"/>
+<area shape="rect" id="Node000013" href="$classin_1_1co_1_1rays_1_1project__3_1_1dto_1_1SubjectDTO.html" title=" " alt="" coords="413,645,556,685"/>
+<area shape="poly" id="edge12_Node000002_Node000013" title=" " alt="" coords="288,442,302,485,323,536,353,587,392,631,415,646,412,650,389,635,349,590,318,538,297,487,283,444"/>
+<area shape="rect" id="Node000014" href="$classin_1_1co_1_1rays_1_1project__3_1_1dto_1_1TimetableDTO.html" title=" " alt="" coords="405,709,565,749"/>
+<area shape="poly" id="edge13_Node000002_Node000014" title=" " alt="" coords="283,442,294,497,314,565,346,635,367,667,392,695,408,707,405,711,389,699,363,670,341,637,309,567,289,499,278,443"/>
+<area shape="rect" id="Node000015" href="$classin_1_1co_1_1rays_1_1project__3_1_1dto_1_1UserDTO.html" title=" " alt="" coords="417,773,552,813"/>
+<area shape="poly" id="edge14_Node000002_Node000015" title=" " alt="" coords="281,443,288,509,305,594,320,638,339,682,363,723,392,759,419,777,416,781,389,763,358,726,334,684,315,640,300,595,282,510,275,443"/>
+</map>
