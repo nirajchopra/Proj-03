@@ -1,718 +1,253 @@
+````md
 # Proj-03
 
+## Project Structure
+
+```text
 .
 ├── project_3
-│   ├── doc
-│   │   ├── allclasses.html
-│   │   ├── allclasses-index.html
-│   │   ├── allpackages-index.html
-│   │   ├── constant-values.html
-│   │   ├── deprecated-list.html
-│   │   ├── element-list
-│   │   ├── help-doc.html
-│   │   ├── in
-│   │   │   └── co
-│   │   │       └── rays
-│   │   │           └── project_3
-│   │   │               └── model
-│   │   │                   ├── class-use
-│   │   │                   │   └── MarksheetModelJDBCImpl.html
-│   │   │                   ├── MarksheetModelJDBCImpl.html
-│   │   │                   ├── package-summary.html
-│   │   │                   ├── package-tree.html
-│   │   │                   └── package-use.html
-│   │   ├── index-files
-│   │   │   ├── index-10.html
-│   │   │   ├── index-1.html
-│   │   │   ├── index-2.html
-│   │   │   ├── index-3.html
-│   │   │   ├── index-4.html
-│   │   │   ├── index-5.html
-│   │   │   ├── index-6.html
-│   │   │   ├── index-7.html
-│   │   │   ├── index-8.html
-│   │   │   └── index-9.html
-│   │   ├── index.html
-│   │   ├── jquery
-│   │   │   ├── external
-│   │   │   │   └── jquery
-│   │   │   │       └── jquery.js
-│   │   │   ├── images
-│   │   │   │   ├── ui-bg_glass_55_fbf9ee_1x400.png
-│   │   │   │   ├── ui-bg_glass_65_dadada_1x400.png
-│   │   │   │   ├── ui-bg_glass_75_dadada_1x400.png
-│   │   │   │   ├── ui-bg_glass_75_e6e6e6_1x400.png
-│   │   │   │   ├── ui-bg_glass_95_fef1ec_1x400.png
-│   │   │   │   ├── ui-bg_highlight-soft_75_cccccc_1x100.png
-│   │   │   │   ├── ui-icons_222222_256x240.png
-│   │   │   │   ├── ui-icons_2e83ff_256x240.png
-│   │   │   │   ├── ui-icons_454545_256x240.png
-│   │   │   │   ├── ui-icons_888888_256x240.png
-│   │   │   │   └── ui-icons_cd0a0a_256x240.png
-│   │   │   ├── jquery-3.5.1.js
-│   │   │   ├── jquery-ui.css
-│   │   │   ├── jquery-ui.js
-│   │   │   ├── jquery-ui.min.css
-│   │   │   ├── jquery-ui.min.js
-│   │   │   ├── jquery-ui.structure.css
-│   │   │   ├── jquery-ui.structure.min.css
-│   │   │   ├── jszip
-│   │   │   │   └── dist
-│   │   │   │       ├── jszip.js
-│   │   │   │       └── jszip.min.js
-│   │   │   └── jszip-utils
-│   │   │       └── dist
-│   │   │           ├── jszip-utils-ie.js
-│   │   │           ├── jszip-utils-ie.min.js
-│   │   │           ├── jszip-utils.js
-│   │   │           └── jszip-utils.min.js
-│   │   ├── member-search-index.js
-│   │   ├── member-search-index.zip
-│   │   ├── overview-tree.html
-│   │   ├── package-search-index.js
-│   │   ├── package-search-index.zip
-│   │   ├── resources
-│   │   │   ├── glass.png
-│   │   │   └── x.png
-│   │   ├── script.js
-│   │   ├── search.js
-│   │   ├── stylesheet.css
-│   │   ├── type-search-index.js
-│   │   └── type-search-index.zip
-│   ├── pom.xml
-│   ├── RemoteSystemsTempFiles
-│   └── src
-│       ├── main
-│       │   ├── java
-│       │   │   ├── in
-│       │   │   │   └── co
-│       │   │   │       └── rays
-│       │   │   │           └── project_3
-│       │   │   │               ├── controller
-│       │   │   │               │   ├── BaseCtl.java
-│       │   │   │               │   ├── ChangePasswordCtl.java
-│       │   │   │               │   ├── CollegeCtl.java
-│       │   │   │               │   ├── CollegeListCtl.java
-│       │   │   │               │   ├── CourseCtl.java
-│       │   │   │               │   ├── CourseListCtl.java
-│       │   │   │               │   ├── DroneDeliveryCtl.java
-│       │   │   │               │   ├── DroneDeliveryListCtl.java
-│       │   │   │               │   ├── ErrorCtl.java
-│       │   │   │               │   ├── FacultyCtl.java
-│       │   │   │               │   ├── FacultyListCtl.java
-│       │   │   │               │   ├── ForgetPasswordCtl.java
-│       │   │   │               │   ├── FrontController.java
-│       │   │   │               │   ├── GetMarksheetCtl.java
-│       │   │   │               │   ├── JasperCtl.java
-│       │   │   │               │   ├── LoginCtl.java
-│       │   │   │               │   ├── MarksheetCtl.java
-│       │   │   │               │   ├── MarksheetListCtl.java
-│       │   │   │               │   ├── MarksheetMeritListCtl.java
-│       │   │   │               │   ├── MyProfileCtl.java
-│       │   │   │               │   ├── ORSView.java
-│       │   │   │               │   ├── ProductCtl.java
-│       │   │   │               │   ├── ProductListCtl.java
-│       │   │   │               │   ├── RoleCtl.java
-│       │   │   │               │   ├── RoleListCtl.java
-│       │   │   │               │   ├── SchedularJobCtl.java
-│       │   │   │               │   ├── SchedularJobListCtl.java
-│       │   │   │               │   ├── SettingCtl.java
-│       │   │   │               │   ├── SettingListCtl.java
-│       │   │   │               │   ├── StudentCtl.java
-│       │   │   │               │   ├── StudentListCtl.java
-│       │   │   │               │   ├── SubjectCtl.java
-│       │   │   │               │   ├── SubjectListCtl.java
-│       │   │   │               │   ├── TimeTableCtl.java
-│       │   │   │               │   ├── TimeTableListCtl.java
-│       │   │   │               │   ├── UserCtl.java
-│       │   │   │               │   ├── UserListCtl.java
-│       │   │   │               │   ├── UserRegistrationCtl.java
-│       │   │   │               │   └── WelcomeCtl.java
-│       │   │   │               ├── dto
-│       │   │   │               │   ├── BaseDTO.hbm.xml
-│       │   │   │               │   ├── BaseDTO.java
-│       │   │   │               │   ├── CollegeDTO.hbm.xml
-│       │   │   │               │   ├── CollegeDTO.java
-│       │   │   │               │   ├── CourseDTO.hbm.xml
-│       │   │   │               │   ├── CourseDTO.java
-│       │   │   │               │   ├── DroneDeliveryDTO.hbm.xml
-│       │   │   │               │   ├── DroneDeliveryDTO.java
-│       │   │   │               │   ├── DropdownList.java
-│       │   │   │               │   ├── FacultyDTO.hbm.xml
-│       │   │   │               │   ├── FacultyDTO.java
-│       │   │   │               │   ├── MarksheetDTO.hbm.xml
-│       │   │   │               │   ├── MarksheetDTO.java
-│       │   │   │               │   ├── PrakharDTO.java
-│       │   │   │               │   ├── ProductDTO.hbm.xml
-│       │   │   │               │   ├── ProductDTO.java
-│       │   │   │               │   ├── RoleDTO.hbm.xml
-│       │   │   │               │   ├── RoleDTO.java
-│       │   │   │               │   ├── SchedulerJobDTO.java
-│       │   │   │               │   ├── SettingDTO.hbm.xml
-│       │   │   │               │   ├── SettingDTO.java
-│       │   │   │               │   ├── StudentDTO.hbm.xml
-│       │   │   │               │   ├── StudentDTO.java
-│       │   │   │               │   ├── SubjectDTO.hbm.xml
-│       │   │   │               │   ├── SubjectDTO.java
-│       │   │   │               │   ├── TimetableDTO.hbm.xml
-│       │   │   │               │   ├── TimetableDTO.java
-│       │   │   │               │   ├── UserDTO.hbm.xml
-│       │   │   │               │   └── UserDTO.java
-│       │   │   │               ├── exception
-│       │   │   │               │   ├── ApplicationException.java
-│       │   │   │               │   ├── DatabaseException.java
-│       │   │   │               │   ├── DuplicateRecordException.java
-│       │   │   │               │   └── RecordNotFoundException.java
-│       │   │   │               ├── model
-│       │   │   │               │   ├── CollegeModelHibImp.java
-│       │   │   │               │   ├── CollegeModelInt.java
-│       │   │   │               │   ├── CollegeModelJDBCImpl.java
-│       │   │   │               │   ├── CourseModelHibImp.java
-│       │   │   │               │   ├── CourseModelInt.java
-│       │   │   │               │   ├── CourseModelJDBCImpl.java
-│       │   │   │               │   ├── DroneDeliveryModelHibImpl.java
-│       │   │   │               │   ├── DroneDeliveryModelInt.java
-│       │   │   │               │   ├── FacultyModelHibImp.java
-│       │   │   │               │   ├── FacultyModelInt.java
-│       │   │   │               │   ├── FacultyModelJDBCImpl.java
-│       │   │   │               │   ├── MarksheetModelHibImp.java
-│       │   │   │               │   ├── MarksheetModelInt.java
-│       │   │   │               │   ├── MarksheetModelJDBCImpl.java
-│       │   │   │               │   ├── ModelFactory.java
-│       │   │   │               │   ├── ProductModelHibImp.java
-│       │   │   │               │   ├── ProductModelInt.java
-│       │   │   │               │   ├── RoleModelHibImp.java
-│       │   │   │               │   ├── RoleModelInt.java
-│       │   │   │               │   ├── RoleModelJDBCImpl.java
-│       │   │   │               │   ├── SchedularJobModelHibImpl.java
-│       │   │   │               │   ├── SchedularJobModelInt.java
-│       │   │   │               │   ├── SchedularJobModelJDBCImpl.java
-│       │   │   │               │   ├── SettingModelHibImpl.java
-│       │   │   │               │   ├── SettingModelInt.java
-│       │   │   │               │   ├── SettingModelJDBCImpl.java
-│       │   │   │               │   ├── StudentModelHibImp.java
-│       │   │   │               │   ├── StudentModelInt.java
-│       │   │   │               │   ├── StudentModelJDBCImpl.java
-│       │   │   │               │   ├── SubjectModelHibImp.java
-│       │   │   │               │   ├── SubjectModelInt.java
-│       │   │   │               │   ├── SubjectModelJDBCImpl.java
-│       │   │   │               │   ├── TimetableModelHibImp.java
-│       │   │   │               │   ├── TimetableModelInt.java
-│       │   │   │               │   ├── TimetableModelJDBCImpl.java
-│       │   │   │               │   ├── UserModelHibImp.java
-│       │   │   │               │   ├── UserModelInt.java
-│       │   │   │               │   └── UserModelJDBCImpl.java
-│       │   │   │               ├── test
-│       │   │   │               │   ├── CollegeModelTest.java
-│       │   │   │               │   ├── CourseModelTest.java
-│       │   │   │               │   ├── FacultyModelTest.java
-│       │   │   │               │   ├── MarksheetModelTest.java
-│       │   │   │               │   ├── RoleModelTest.java
-│       │   │   │               │   ├── StudentModelTest.java
-│       │   │   │               │   ├── SubjectModelTest.java
-│       │   │   │               │   ├── TimetableTest.java
-│       │   │   │               │   └── UserModelTest.java
-│       │   │   │               └── util
-│       │   │   │                   ├── DataUtility.java
-│       │   │   │                   ├── DataValidator.java
-│       │   │   │                   ├── EmailBuilder.java
-│       │   │   │                   ├── EmailMessage.java
-│       │   │   │                   ├── EmailUtility.java
-│       │   │   │                   ├── HibDataSource.java
-│       │   │   │                   ├── HTMLUtility.java
-│       │   │   │                   ├── JDBCDataSource.java
-│       │   │   │                   ├── PropertyReader.java
-│       │   │   │                   └── ServletUtility.java
-│       │   │   └── Log4j.properties
-│       │   ├── resources
-│       │   │   ├── hibernate.cfg.xml
-│       │   │   └── in
-│       │   │       └── co
-│       │   │           └── rays
-│       │   │               └── project_3
-│       │   │                   ├── bundle
-│       │   │                   │   └── system.properties
-│       │   │                   └── hbm
-│       │   │                       ├── CollegeDTO.hbm.xml
-│       │   │                       ├── CourseDTO.hbm.xml
-│       │   │                       ├── DroneDeliveryDTO.hbm.xml
-│       │   │                       ├── FacultyDTO.hbm.xml
-│       │   │                       ├── MarksheetDTO.hbm.xml
-│       │   │                       ├── ProductDTO.hbm.xml
-│       │   │                       ├── RoleDTO.hbm.xml
-│       │   │                       ├── StudentDTO.hbm.xml
-│       │   │                       ├── SubjectDTO.hbm.xml
-│       │   │                       ├── TimetableDTO.hbm.xml
-│       │   │                       └── UserDTO.hbm.xml
-│       │   └── webapp
-│       │       ├── doc
-│       │       │   ├── allclasses.html
-│       │       │   ├── allclasses-index.html
-│       │       │   ├── allpackages-index.html
-│       │       │   ├── constant-values.html
-│       │       │   ├── deprecated-list.html
-│       │       │   ├── element-list
-│       │       │   ├── help-doc.html
-│       │       │   ├── in
-│       │       │   │   └── co
-│       │       │   │       └── rays
-│       │       │   │           └── project_3
-│       │       │   │               ├── controller
-│       │       │   │               │   ├── BaseCtl.html
-│       │       │   │               │   ├── ChangePasswordCtl.html
-│       │       │   │               │   ├── class-use
-│       │       │   │               │   │   ├── BaseCtl.html
-│       │       │   │               │   │   ├── ChangePasswordCtl.html
-│       │       │   │               │   │   ├── CollegeCtl.html
-│       │       │   │               │   │   ├── CollegeListCtl.html
-│       │       │   │               │   │   ├── CourseCtl.html
-│       │       │   │               │   │   ├── CourseListCtl.html
-│       │       │   │               │   │   ├── ErrorCtl.html
-│       │       │   │               │   │   ├── FacultyCtl.html
-│       │       │   │               │   │   ├── FacultyListCtl.html
-│       │       │   │               │   │   ├── ForgetPasswordCtl.html
-│       │       │   │               │   │   ├── FrontController.html
-│       │       │   │               │   │   ├── GetMarksheetCtl.html
-│       │       │   │               │   │   ├── JasperCtl.html
-│       │       │   │               │   │   ├── LoginCtl.html
-│       │       │   │               │   │   ├── MarksheetCtl.html
-│       │       │   │               │   │   ├── MarksheetListCtl.html
-│       │       │   │               │   │   ├── MarksheetMeritListCtl.html
-│       │       │   │               │   │   ├── MyProfileCtl.html
-│       │       │   │               │   │   ├── ORSView.html
-│       │       │   │               │   │   ├── RoleCtl.html
-│       │       │   │               │   │   ├── RoleListCtl.html
-│       │       │   │               │   │   ├── StudentCtl.html
-│       │       │   │               │   │   ├── StudentListCtl.html
-│       │       │   │               │   │   ├── SubjectCtl.html
-│       │       │   │               │   │   ├── SubjectListCtl.html
-│       │       │   │               │   │   ├── TimeTableCtl.html
-│       │       │   │               │   │   ├── TimeTableListCtl.html
-│       │       │   │               │   │   ├── UserCtl.html
-│       │       │   │               │   │   ├── UserListCtl.html
-│       │       │   │               │   │   ├── UserRegistrationCtl.html
-│       │       │   │               │   │   └── WelcomeCtl.html
-│       │       │   │               │   ├── CollegeCtl.html
-│       │       │   │               │   ├── CollegeListCtl.html
-│       │       │   │               │   ├── CourseCtl.html
-│       │       │   │               │   ├── CourseListCtl.html
-│       │       │   │               │   ├── ErrorCtl.html
-│       │       │   │               │   ├── FacultyCtl.html
-│       │       │   │               │   ├── FacultyListCtl.html
-│       │       │   │               │   ├── ForgetPasswordCtl.html
-│       │       │   │               │   ├── FrontController.html
-│       │       │   │               │   ├── GetMarksheetCtl.html
-│       │       │   │               │   ├── JasperCtl.html
-│       │       │   │               │   ├── LoginCtl.html
-│       │       │   │               │   ├── MarksheetCtl.html
-│       │       │   │               │   ├── MarksheetListCtl.html
-│       │       │   │               │   ├── MarksheetMeritListCtl.html
-│       │       │   │               │   ├── MyProfileCtl.html
-│       │       │   │               │   ├── ORSView.html
-│       │       │   │               │   ├── package-summary.html
-│       │       │   │               │   ├── package-tree.html
-│       │       │   │               │   ├── package-use.html
-│       │       │   │               │   ├── RoleCtl.html
-│       │       │   │               │   ├── RoleListCtl.html
-│       │       │   │               │   ├── StudentCtl.html
-│       │       │   │               │   ├── StudentListCtl.html
-│       │       │   │               │   ├── SubjectCtl.html
-│       │       │   │               │   ├── SubjectListCtl.html
-│       │       │   │               │   ├── TimeTableCtl.html
-│       │       │   │               │   ├── TimeTableListCtl.html
-│       │       │   │               │   ├── UserCtl.html
-│       │       │   │               │   ├── UserListCtl.html
-│       │       │   │               │   ├── UserRegistrationCtl.html
-│       │       │   │               │   └── WelcomeCtl.html
-│       │       │   │               ├── dto
-│       │       │   │               │   ├── BaseDTO.html
-│       │       │   │               │   ├── class-use
-│       │       │   │               │   │   ├── BaseDTO.html
-│       │       │   │               │   │   ├── CollegeDTO.html
-│       │       │   │               │   │   ├── CourseDTO.html
-│       │       │   │               │   │   ├── DropdownList.html
-│       │       │   │               │   │   ├── FacultyDTO.html
-│       │       │   │               │   │   ├── MarksheetDTO.html
-│       │       │   │               │   │   ├── RoleDTO.html
-│       │       │   │               │   │   ├── StudentDTO.html
-│       │       │   │               │   │   ├── SubjectDTO.html
-│       │       │   │               │   │   ├── TimetableDTO.html
-│       │       │   │               │   │   └── UserDTO.html
-│       │       │   │               │   ├── CollegeDTO.html
-│       │       │   │               │   ├── CourseDTO.html
-│       │       │   │               │   ├── DropdownList.html
-│       │       │   │               │   ├── FacultyDTO.html
-│       │       │   │               │   ├── MarksheetDTO.html
-│       │       │   │               │   ├── package-summary.html
-│       │       │   │               │   ├── package-tree.html
-│       │       │   │               │   ├── package-use.html
-│       │       │   │               │   ├── RoleDTO.html
-│       │       │   │               │   ├── StudentDTO.html
-│       │       │   │               │   ├── SubjectDTO.html
-│       │       │   │               │   ├── TimetableDTO.html
-│       │       │   │               │   └── UserDTO.html
-│       │       │   │               ├── exception
-│       │       │   │               │   ├── ApplicationException.html
-│       │       │   │               │   ├── class-use
-│       │       │   │               │   │   ├── ApplicationException.html
-│       │       │   │               │   │   ├── DatabaseException.html
-│       │       │   │               │   │   ├── DuplicateRecordException.html
-│       │       │   │               │   │   └── RecordNotFoundException.html
-│       │       │   │               │   ├── DatabaseException.html
-│       │       │   │               │   ├── DuplicateRecordException.html
-│       │       │   │               │   ├── package-summary.html
-│       │       │   │               │   ├── package-tree.html
-│       │       │   │               │   ├── package-use.html
-│       │       │   │               │   └── RecordNotFoundException.html
-│       │       │   │               ├── model
-│       │       │   │               │   ├── class-use
-│       │       │   │               │   │   ├── CollegeModelHibImp.html
-│       │       │   │               │   │   ├── CollegeModelInt.html
-│       │       │   │               │   │   ├── CollegeModelJDBCImpl.html
-│       │       │   │               │   │   ├── CourseModelHibImp.html
-│       │       │   │               │   │   ├── CourseModelInt.html
-│       │       │   │               │   │   ├── CourseModelJDBCImpl.html
-│       │       │   │               │   │   ├── FacultyModelHibImp.html
-│       │       │   │               │   │   ├── FacultyModelInt.html
-│       │       │   │               │   │   ├── FacultyModelJDBCImpl.html
-│       │       │   │               │   │   ├── MarksheetModelHibImp.html
-│       │       │   │               │   │   ├── MarksheetModelInt.html
-│       │       │   │               │   │   ├── MarksheetModelJDBCImpl.html
-│       │       │   │               │   │   ├── ModelFactory.html
-│       │       │   │               │   │   ├── RoleModelHibImp.html
-│       │       │   │               │   │   ├── RoleModelInt.html
-│       │       │   │               │   │   ├── RoleModelJDBCImpl.html
-│       │       │   │               │   │   ├── StudentModelHibImp.html
-│       │       │   │               │   │   ├── StudentModelInt.html
-│       │       │   │               │   │   ├── StudentModelJDBCImpl.html
-│       │       │   │               │   │   ├── SubjectModelHibImp.html
-│       │       │   │               │   │   ├── SubjectModelInt.html
-│       │       │   │               │   │   ├── SubjectModelJDBCImpl.html
-│       │       │   │               │   │   ├── TimetableModelHibImp.html
-│       │       │   │               │   │   ├── TimetableModelInt.html
-│       │       │   │               │   │   ├── TimetableModelJDBCImpl.html
-│       │       │   │               │   │   ├── UserModelHibImp.html
-│       │       │   │               │   │   ├── UserModelInt.html
-│       │       │   │               │   │   └── UserModelJDBCImpl.html
-│       │       │   │               │   ├── CollegeModelHibImp.html
-│       │       │   │               │   ├── CollegeModelInt.html
-│       │       │   │               │   ├── CollegeModelJDBCImpl.html
-│       │       │   │               │   ├── CourseModelHibImp.html
-│       │       │   │               │   ├── CourseModelInt.html
-│       │       │   │               │   ├── CourseModelJDBCImpl.html
-│       │       │   │               │   ├── FacultyModelHibImp.html
-│       │       │   │               │   ├── FacultyModelInt.html
-│       │       │   │               │   ├── FacultyModelJDBCImpl.html
-│       │       │   │               │   ├── MarksheetModelHibImp.html
-│       │       │   │               │   ├── MarksheetModelInt.html
-│       │       │   │               │   ├── MarksheetModelJDBCImpl.html
-│       │       │   │               │   ├── ModelFactory.html
-│       │       │   │               │   ├── package-summary.html
-│       │       │   │               │   ├── package-tree.html
-│       │       │   │               │   ├── package-use.html
-│       │       │   │               │   ├── RoleModelHibImp.html
-│       │       │   │               │   ├── RoleModelInt.html
-│       │       │   │               │   ├── RoleModelJDBCImpl.html
-│       │       │   │               │   ├── StudentModelHibImp.html
-│       │       │   │               │   ├── StudentModelInt.html
-│       │       │   │               │   ├── StudentModelJDBCImpl.html
-│       │       │   │               │   ├── SubjectModelHibImp.html
-│       │       │   │               │   ├── SubjectModelInt.html
-│       │       │   │               │   ├── SubjectModelJDBCImpl.html
-│       │       │   │               │   ├── TimetableModelHibImp.html
-│       │       │   │               │   ├── TimetableModelInt.html
-│       │       │   │               │   ├── TimetableModelJDBCImpl.html
-│       │       │   │               │   ├── UserModelHibImp.html
-│       │       │   │               │   ├── UserModelInt.html
-│       │       │   │               │   └── UserModelJDBCImpl.html
-│       │       │   │               ├── test
-│       │       │   │               │   ├── class-use
-│       │       │   │               │   │   ├── CollegeModelTest.html
-│       │       │   │               │   │   ├── CourseModelTest.html
-│       │       │   │               │   │   ├── FacultyModelTest.html
-│       │       │   │               │   │   ├── MarksheetModelTest.html
-│       │       │   │               │   │   ├── RoleModelTest.html
-│       │       │   │               │   │   ├── StudentModelTest.html
-│       │       │   │               │   │   ├── SubjectModelTest.html
-│       │       │   │               │   │   ├── TimetableTest.html
-│       │       │   │               │   │   └── UserModelTest.html
-│       │       │   │               │   ├── CollegeModelTest.html
-│       │       │   │               │   ├── CourseModelTest.html
-│       │       │   │               │   ├── FacultyModelTest.html
-│       │       │   │               │   ├── MarksheetModelTest.html
-│       │       │   │               │   ├── package-summary.html
-│       │       │   │               │   ├── package-tree.html
-│       │       │   │               │   ├── package-use.html
-│       │       │   │               │   ├── RoleModelTest.html
-│       │       │   │               │   ├── StudentModelTest.html
-│       │       │   │               │   ├── SubjectModelTest.html
-│       │       │   │               │   ├── TimetableTest.html
-│       │       │   │               │   └── UserModelTest.html
-│       │       │   │               └── util
-│       │       │   │                   ├── class-use
-│       │       │   │                   │   ├── DataUtility.html
-│       │       │   │                   │   ├── DataValidator.html
-│       │       │   │                   │   ├── EmailBuilder.html
-│       │       │   │                   │   ├── EmailMessage.html
-│       │       │   │                   │   ├── EmailUtility.html
-│       │       │   │                   │   ├── HibDataSource.html
-│       │       │   │                   │   ├── HTMLUtility.html
-│       │       │   │                   │   ├── JDBCDataSource.html
-│       │       │   │                   │   ├── PropertyReader.html
-│       │       │   │                   │   └── ServletUtility.html
-│       │       │   │                   ├── DataUtility.html
-│       │       │   │                   ├── DataValidator.html
-│       │       │   │                   ├── EmailBuilder.html
-│       │       │   │                   ├── EmailMessage.html
-│       │       │   │                   ├── EmailUtility.html
-│       │       │   │                   ├── HibDataSource.html
-│       │       │   │                   ├── HTMLUtility.html
-│       │       │   │                   ├── JDBCDataSource.html
-│       │       │   │                   ├── package-summary.html
-│       │       │   │                   ├── package-tree.html
-│       │       │   │                   ├── package-use.html
-│       │       │   │                   ├── PropertyReader.html
-│       │       │   │                   └── ServletUtility.html
-│       │       │   ├── index-files
-│       │       │   │   ├── index-10.html
-│       │       │   │   ├── index-11.html
-│       │       │   │   ├── index-12.html
-│       │       │   │   ├── index-13.html
-│       │       │   │   ├── index-14.html
-│       │       │   │   ├── index-15.html
-│       │       │   │   ├── index-16.html
-│       │       │   │   ├── index-17.html
-│       │       │   │   ├── index-18.html
-│       │       │   │   ├── index-19.html
-│       │       │   │   ├── index-1.html
-│       │       │   │   ├── index-20.html
-│       │       │   │   ├── index-21.html
-│       │       │   │   ├── index-22.html
-│       │       │   │   ├── index-23.html
-│       │       │   │   ├── index-2.html
-│       │       │   │   ├── index-3.html
-│       │       │   │   ├── index-4.html
-│       │       │   │   ├── index-5.html
-│       │       │   │   ├── index-6.html
-│       │       │   │   ├── index-7.html
-│       │       │   │   ├── index-8.html
-│       │       │   │   └── index-9.html
-│       │       │   ├── index.html
-│       │       │   ├── jquery
-│       │       │   │   ├── external
-│       │       │   │   │   └── jquery
-│       │       │   │   │       └── jquery.js
-│       │       │   │   ├── images
-│       │       │   │   │   ├── ui-bg_glass_55_fbf9ee_1x400.png
-│       │       │   │   │   ├── ui-bg_glass_65_dadada_1x400.png
-│       │       │   │   │   ├── ui-bg_glass_75_dadada_1x400.png
-│       │       │   │   │   ├── ui-bg_glass_75_e6e6e6_1x400.png
-│       │       │   │   │   ├── ui-bg_glass_95_fef1ec_1x400.png
-│       │       │   │   │   ├── ui-bg_highlight-soft_75_cccccc_1x100.png
-│       │       │   │   │   ├── ui-icons_222222_256x240.png
-│       │       │   │   │   ├── ui-icons_2e83ff_256x240.png
-│       │       │   │   │   ├── ui-icons_454545_256x240.png
-│       │       │   │   │   ├── ui-icons_888888_256x240.png
-│       │       │   │   │   └── ui-icons_cd0a0a_256x240.png
-│       │       │   │   ├── jquery-3.5.1.js
-│       │       │   │   ├── jquery-ui.css
-│       │       │   │   ├── jquery-ui.js
-│       │       │   │   ├── jquery-ui.min.css
-│       │       │   │   ├── jquery-ui.min.js
-│       │       │   │   ├── jquery-ui.structure.css
-│       │       │   │   ├── jquery-ui.structure.min.css
-│       │       │   │   ├── jszip
-│       │       │   │   │   └── dist
-│       │       │   │   │       ├── jszip.js
-│       │       │   │   │       └── jszip.min.js
-│       │       │   │   └── jszip-utils
-│       │       │   │       └── dist
-│       │       │   │           ├── jszip-utils-ie.js
-│       │       │   │           ├── jszip-utils-ie.min.js
-│       │       │   │           ├── jszip-utils.js
-│       │       │   │           └── jszip-utils.min.js
-│       │       │   ├── member-search-index.js
-│       │       │   ├── member-search-index.zip
-│       │       │   ├── overview-summary.html
-│       │       │   ├── overview-tree.html
-│       │       │   ├── package-search-index.js
-│       │       │   ├── package-search-index.zip
-│       │       │   ├── resources
-│       │       │   │   ├── glass.png
-│       │       │   │   └── x.png
-│       │       │   ├── script.js
-│       │       │   ├── search.js
-│       │       │   ├── serialized-form.html
-│       │       │   ├── stylesheet.css
-│       │       │   ├── type-search-index.js
-│       │       │   └── type-search-index.zip
-│       │       ├── img
-│       │       │   ├── 12912.jpg
-│       │       │   ├── 1291.jpg
-│       │       │   ├── 129.jpg
-│       │       │   ├── 404.jpg
-│       │       │   ├── 500.jpg
-│       │       │   ├── ac.jpg
-│       │       │   ├── af.jpg
-│       │       │   ├── al.jpg
-│       │       │   ├── an.jpg
-│       │       │   ├── ao.jpg
-│       │       │   ├── ap.jpg
-│       │       │   ├── appple.jpg
-│       │       │   ├── aq.jpg
-│       │       │   ├── avengers.jpg
-│       │       │   ├── b3.jpg
-│       │       │   ├── b3.png
-│       │       │   ├── bg1.jpg
-│       │       │   ├── bg1.png
-│       │       │   ├── bg3.jpg
-│       │       │   ├── bg3.png
-│       │       │   ├── blackboard1.jpg
-│       │       │   ├── blackboard.jpg
-│       │       │   ├── books1.jpg
-│       │       │   ├── business.jpg
-│       │       │   ├── circule.jpg
-│       │       │   ├── custom1.jpg
-│       │       │   ├── custom1.png
-│       │       │   ├── cyber2.jpg
-│       │       │   ├── cyber.jpg
-│       │       │   ├── email.jpg
-│       │       │   ├── forget1.jpg
-│       │       │   ├── forget.jpg
-│       │       │   ├── images.jpg
-│       │       │   ├── img21.jpg
-│       │       │   ├── img22.jpg
-│       │       │   ├── img23.jpg
-│       │       │   ├── img24.jpg
-│       │       │   ├── img25.jpg
-│       │       │   ├── img27.gpg
-│       │       │   ├── img28.jpg
-│       │       │   ├── img29.jpg
-│       │       │   ├── img30.jpg
-│       │       │   ├── img31.jpg
-│       │       │   ├── img32.jpg
-│       │       │   ├── img33.jpg
-│       │       │   ├── img34.jpg
-│       │       │   ├── index1.jpg
-│       │       │   ├── indeximg.jpg
-│       │       │   ├── indexphoto-03.jpg
-│       │       │   ├── lamp.jpg
-│       │       │   ├── landscape.jpg
-│       │       │   ├── linecolor.jpg
-│       │       │   ├── lines.jpg
-│       │       │   ├── Linkme.jpg
-│       │       │   ├── list1.jpg
-│       │       │   ├── list2.jpg
-│       │       │   ├── list.jpg
-│       │       │   ├── login2.jpg
-│       │       │   ├── loginhere.jpg
-│       │       │   ├── Login.jpg
-│       │       │   ├── loginMain.jpg
-│       │       │   ├── logo.png
-│       │       │   ├── mail.jpg
-│       │       │   ├── marks.jpg
-│       │       │   ├── mine1.jpeg
-│       │       │   ├── mine2.jpg
-│       │       │   ├── mine3.jpg
-│       │       │   ├── mine4.jpg
-│       │       │   ├── mine5.jpg
-│       │       │   ├── mine6.jpeg
-│       │       │   ├── mymind.jpg
-│       │       │   ├── NCCHOPRA.png
-│       │       │   ├── notebook.jpg
-│       │       │   ├── onlineresultsys.jpg
-│       │       │   ├── password.jpg
-│       │       │   ├── pencils.jpg
-│       │       │   ├── pr324.jpg
-│       │       │   ├── pr33.jpg
-│       │       │   ├── pr3.jpg
-│       │       │   ├── pro32.jpg
-│       │       │   ├── pro33.jpg
-│       │       │   ├── pro3.jpg
-│       │       │   ├── profile.jpg
-│       │       │   ├── proj333.jpg
-│       │       │   ├── proj33.jpg
-│       │       │   ├── proj3.jpg
-│       │       │   ├── pxfuel.jpg
-│       │       │   ├── register.jpg
-│       │       │   ├── registeruser1.jpg
-│       │       │   ├── registerusers.jpg
-│       │       │   ├── showlist.jpg
-│       │       │   ├── teah.jpg
-│       │       │   ├── teah.png
-│       │       │   ├── teahub.jpg
-│       │       │   ├── teahub.png
-│       │       │   ├── teahu.jpg
-│       │       │   ├── teahu.png
-│       │       │   ├── user1.jpg
-│       │       │   ├── useradd.jpg
-│       │       │   ├── wall.jpg
-│       │       │   ├── wallpa.jpg
-│       │       │   ├── WallpaperDog-988052.jpg
-│       │       │   ├── wallp.jpg
-│       │       │   ├── wback.jpg
-│       │       │   ├── welc.jpg
-│       │       │   ├── welcome.jpg
-│       │       │   ├── welcomeme.jpg
-│       │       │   ├── welcomepage.jpg
-│       │       │   ├── wel.jpg
-│       │       │   ├── whit2.jpg
-│       │       │   ├── white.png
-│       │       │   └── whit.jpg
-│       │       ├── index.jsp
-│       │       ├── jasper
-│       │       │   └── Test.jrxml
-│       │       ├── js
-│       │       │   ├── CheckBox11.js
-│       │       │   └── jquery.min.js
-│       │       ├── jsp
-│       │       │   ├── calendar.jsp
-│       │       │   ├── ChangePasswordView.jsp
-│       │       │   ├── CollegeListView.jsp
-│       │       │   ├── CollegeView.jsp
-│       │       │   ├── CourseListView.jsp
-│       │       │   ├── CourseView.jsp
-│       │       │   ├── DroneDeliveryListView.jsp
-│       │       │   ├── DroneDeliveryView.jsp
-│       │       │   ├── ErrorView404.jsp
-│       │       │   ├── ErrorView.jsp
-│       │       │   ├── FacultyListView.jsp
-│       │       │   ├── FacultyView.jsp
-│       │       │   ├── FooterView.jsp
-│       │       │   ├── ForgetPasswordView.jsp
-│       │       │   ├── GetMarksheetView.jsp
-│       │       │   ├── Header.jsp
-│       │       │   ├── LoginView.jsp
-│       │       │   ├── MarksheetListView.jsp
-│       │       │   ├── MarksheetMeritListView.jsp
-│       │       │   ├── MarksheetView.jsp
-│       │       │   ├── MyProfileView.jsp
-│       │       │   ├── NewFile.jsp
-│       │       │   ├── ProductListView.jsp
-│       │       │   ├── ProductView.jsp
-│       │       │   ├── RoleListView.jsp
-│       │       │   ├── RoleView.jsp
-│       │       │   ├── SettingListView.jsp
-│       │       │   ├── SettingView.jsp
-│       │       │   ├── StudentListView.jsp
-│       │       │   ├── StudentView.jsp
-│       │       │   ├── SubjectListView.jsp
-│       │       │   ├── SubjectView.jsp
-│       │       │   ├── TimeTableListView.jsp
-│       │       │   ├── TimeTableView.jsp
-│       │       │   ├── UserListView.jsp
-│       │       │   ├── UserRegistrationView.jsp
-│       │       │   ├── UserView.jsp
-│       │       │   └── Welcome.jsp
-│       │       └── WEB-INF
-│       │           └── web.xml
-│       └── test
-│           ├── java
-│           │   └── in
-│           │       └── co
-│           │           └── rays
-│           │               └── project_03
-│           │                   └── AppTest.java
-│           └── resources
+│   ├── doc
+│   ├── pom.xml
+│   ├── RemoteSystemsTempFiles
+│   └── src
+│       ├── main
+│       │   ├── java
+│       │   │   └── in/co/rays/project_3
+│       │   │       ├── controller
+│       │   │       ├── dto
+│       │   │       ├── exception
+│       │   │       ├── model
+│       │   │       ├── test
+│       │   │       └── util
+│       │   ├── resources
+│       │   │   ├── hibernate.cfg.xml
+│       │   │   └── in/co/rays/project_3
+│       │   │       ├── bundle
+│       │   │       └── hbm
+│       │   └── webapp
+│       │       ├── doc
+│       │       ├── img
+│       │       ├── jasper
+│       │       ├── js
+│       │       ├── jsp
+│       │       └── WEB-INF
+│       └── test
+│           ├── java
+│           └── resources
 └── README.md
+````
 
+---
+
+# Modules
+
+## Controller Layer
+
+Contains all servlet controllers.
+
+### Controllers
+
+* BaseCtl.java
+* ChangePasswordCtl.java
+* CollegeCtl.java
+* CollegeListCtl.java
+* CourseCtl.java
+* CourseListCtl.java
+* DroneDeliveryCtl.java
+* DroneDeliveryListCtl.java
+* FacultyCtl.java
+* FacultyListCtl.java
+* ForgetPasswordCtl.java
+* FrontController.java
+* GetMarksheetCtl.java
+* JasperCtl.java
+* LoginCtl.java
+* MarksheetCtl.java
+* MarksheetListCtl.java
+* ProductCtl.java
+* ProductListCtl.java
+* RoleCtl.java
+* RoleListCtl.java
+* StudentCtl.java
+* StudentListCtl.java
+* SubjectCtl.java
+* SubjectListCtl.java
+* TimeTableCtl.java
+* TimeTableListCtl.java
+* UserCtl.java
+* UserListCtl.java
+* UserRegistrationCtl.java
+* WelcomeCtl.java
+
+---
+
+# DTO Layer
+
+Contains all entity classes and Hibernate mappings.
+
+### DTO Classes
+
+* CollegeDTO.java
+* CourseDTO.java
+* DroneDeliveryDTO.java
+* FacultyDTO.java
+* MarksheetDTO.java
+* ProductDTO.java
+* RoleDTO.java
+* SettingDTO.java
+* StudentDTO.java
+* SubjectDTO.java
+* TimetableDTO.java
+* UserDTO.java
+
+---
+
+# Model Layer
+
+Contains JDBC and Hibernate implementations.
+
+### Examples
+
+* CollegeModelHibImp.java
+* CollegeModelJDBCImpl.java
+* CourseModelHibImp.java
+* CourseModelJDBCImpl.java
+* FacultyModelHibImp.java
+* FacultyModelJDBCImpl.java
+* MarksheetModelHibImp.java
+* MarksheetModelJDBCImpl.java
+* StudentModelHibImp.java
+* StudentModelJDBCImpl.java
+* SubjectModelHibImp.java
+* SubjectModelJDBCImpl.java
+* UserModelHibImp.java
+* UserModelJDBCImpl.java
+
+---
+
+# Utility Layer
+
+Contains utility/helper classes.
+
+### Utility Classes
+
+* DataUtility.java
+* DataValidator.java
+* EmailBuilder.java
+* EmailMessage.java
+* EmailUtility.java
+* HibDataSource.java
+* JDBCDataSource.java
+* PropertyReader.java
+* ServletUtility.java
+
+---
+
+# JSP Views
+
+Located inside:
+
+```text
+src/main/webapp/jsp
+```
+
+### JSP Pages
+
+* LoginView.jsp
+* Welcome.jsp
+* UserView.jsp
+* UserListView.jsp
+* StudentView.jsp
+* StudentListView.jsp
+* RoleView.jsp
+* RoleListView.jsp
+* CourseView.jsp
+* CourseListView.jsp
+* SubjectView.jsp
+* SubjectListView.jsp
+* MarksheetView.jsp
+* MarksheetListView.jsp
+* ProductView.jsp
+* ProductListView.jsp
+
+---
+
+# Resources
+
+## Hibernate Configuration
+
+```text
+src/main/resources/hibernate.cfg.xml
+```
+
+## HBM Mapping Files
+
+```text
+src/main/resources/in/co/rays/project_3/hbm
+```
+
+---
+
+# Web Configuration
+
+## web.xml
+
+```text
+src/main/webapp/WEB-INF/web.xml
+```
+
+---
+
+# Technologies Used
+
+* Java
+* JSP
+* Servlet
+* Hibernate
+* JDBC
+* Maven
+* MySQL
+* Jasper Report
+* HTML/CSS/JavaScript
+
+---
+
+# Maven Build
+
+## pom.xml
+
+```text
+project_3/pom.xml
+```
+
+Build command:
+
+```bash
+mvn clean install
+```
+
+---
+
+# Run Project
+
+## Using Tomcat Server
+
+1. Import project into Eclipse
+2. Configure Tomcat
+3. Right click project
+4. Run As → Run on Server
+
+---
+
+# Notes
+
+* Project follows MVC Architecture
+* Separate layers for Controller, DTO, Model, Utility
+* Supports Hibernate + JDBC implementation
+* Includes Jasper Report support
+* Includes Authentication and CRUD modules
+
+```
+
+Source structure extracted from uploaded file. :contentReference[oaicite:0]{index=0}
+```
