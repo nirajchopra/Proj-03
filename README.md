@@ -66,6 +66,8 @@ Contains all servlet controllers.
 * MarksheetListCtl.java
 * ProductCtl.java
 * ProductListCtl.java
+* PodCastCtl.java
+* PodCastListCtl.java
 * RoleCtl.java
 * RoleListCtl.java
 * StudentCtl.java
@@ -93,6 +95,7 @@ Contains all entity classes and Hibernate mappings.
 * FacultyDTO.java
 * MarksheetDTO.java
 * ProductDTO.java
+* PodCastDTO.java
 * RoleDTO.java
 * SettingDTO.java
 * StudentDTO.java
@@ -116,6 +119,7 @@ Contains JDBC and Hibernate implementations.
 * FacultyModelJDBCImpl.java
 * MarksheetModelHibImp.java
 * MarksheetModelJDBCImpl.java
+* PodCastModelHibImpl.java
 * StudentModelHibImp.java
 * StudentModelJDBCImpl.java
 * SubjectModelHibImp.java
@@ -169,6 +173,8 @@ src/main/webapp/jsp
 * MarksheetListView.jsp
 * ProductView.jsp
 * ProductListView.jsp
+* PodCastView.jsp
+* PodCastListView.jsp
 
 ---
 
