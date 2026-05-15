@@ -40,7 +40,21 @@ public final class ModelFactory {
 		}
 		return productModel;
 	}
-	
+
+	public EmojiReactionModelInt getEmojiReactionModel() {
+		EmojiReactionModelInt emojiReactionModel = (EmojiReactionModelInt) modelCache.get("emojiReactionModel");
+		if (emojiReactionModel == null) {
+			if ("Hibernate".equals(DATABASE)) {
+				emojiReactionModel = new EmojiReactionModelHibImpl();
+			}
+			if ("JDBC".equals(DATABASE)) {
+				emojiReactionModel = new EmojiReactionModelHibImpl();
+			}
+			modelCache.put("productModel", emojiReactionModel);
+		}
+		return emojiReactionModel;
+	}
+
 	public PodCastModelInt getPodCastModel() {
 		PodCastModelInt podcastModel = (PodCastModelInt) modelCache.get("podcastModel");
 		if (podcastModel == null) {
@@ -68,7 +82,7 @@ public final class ModelFactory {
 		}
 		return marksheetModel;
 	}
-	
+
 	public SchedularJobModelInt getSchedularJobModel() {
 		SchedularJobModelInt schedularJobModel = (SchedularJobModelInt) modelCache.get("schedularJobModel");
 		if (schedularJobModel == null) {
@@ -112,7 +126,7 @@ public final class ModelFactory {
 		}
 		return roleModel;
 	}
-	
+
 	public DroneDeliveryModelInt getDroneDeliveryModel() {
 		DroneDeliveryModelInt droneDeliveryModel = (DroneDeliveryModelInt) modelCache.get("droneDeliveryModel");
 		if (droneDeliveryModel == null) {
@@ -127,7 +141,6 @@ public final class ModelFactory {
 		}
 		return droneDeliveryModel;
 	}
-
 
 	public UserModelInt getUserModel() {
 
@@ -159,7 +172,7 @@ public final class ModelFactory {
 
 		return studentModel;
 	}
-	
+
 	public SettingModelInt getSettingModel() {
 		SettingModelInt settingModel = (SettingModelInt) modelCache.get("settingModel");
 		if (settingModel == null) {

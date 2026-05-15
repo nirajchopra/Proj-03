@@ -34,22 +34,22 @@
 </head>
 <body>
 	<%
-		UserDTO userDto = (UserDTO) session.getAttribute("user");
+	UserDTO userDto = (UserDTO) session.getAttribute("user");
 
-		boolean userLoggedIn = userDto != null;
+	boolean userLoggedIn = userDto != null;
 
-		String welcomeMsg = "Hi, ";
+	String welcomeMsg = "Hi, ";
 
-		if (userLoggedIn) {
-			String role = (String) session.getAttribute("role");
-			welcomeMsg += userDto.getFirstName() + " (" + role + ")";
-		} else {
-			welcomeMsg += "Guest";
-		}
+	if (userLoggedIn) {
+		String role = (String) session.getAttribute("role");
+		welcomeMsg += userDto.getFirstName() + " (" + role + ")";
+	} else {
+		welcomeMsg += "Guest";
+	}
 	%>
 	<div class="header">
-		<nav class="navbar navbar-expand-lg fixed-top aj"> 
-			<a class="navbar-brand" href="<%=ORSView.WELCOME_CTL%>"><img
+		<nav class="navbar navbar-expand-lg fixed-top aj"> <a
+			class="navbar-brand" href="<%=ORSView.WELCOME_CTL%>"><img
 			src="<%=ORSView.APP_CONTEXT%>/img/NCCHOPRA.png" width="190px"
 			height="50px"></a>
 		<button class="navbar-toggler " type="button" data-toggle="collapse"
@@ -63,10 +63,10 @@
 				<a class="nav-link" href="#"> <span class="sr-only">(current)</span>
 				</a>
 				<%
-					if (userLoggedIn) {
+				if (userLoggedIn) {
 				%>
 				<%
-					if (userDto.getRoleId() == RoleDTO.STUDENT) {
+				if (userDto.getRoleId() == RoleDTO.STUDENT) {
 				%>
 				<li class="nav-item dropdown"><a
 					class="nav-link dropdown-toggle" href="#" id="navbarDropdown"
@@ -92,7 +92,7 @@
 								class=" fa fa-file-alt"></i>Change Password</a>
 					</div></li>
 				<%
-					} else if (userDto.getRoleId() == RoleDTO.ADMIN) {
+				} else if (userDto.getRoleId() == RoleDTO.ADMIN) {
 				%>
 
 				<li class="nav-item dropdown" style="padding-left: 5px;"><a
@@ -136,25 +136,26 @@
 							href="<%=ORSView.ROLE_LIST_CTL%>"><i
 							class="fa fa-user-friends"></i>Role List</a>
 					</div></li>
-					
-					<li class="nav-item dropdown" style="padding-left: 5px"><a
+
+				<li class="nav-item dropdown" style="padding-left: 5px"><a
 					class="nav-link dropdown-toggle" href="#" id="navbarDropdown"
 					role="button" data-toggle="dropdown" aria-haspopup="true"
-					aria-expanded="false"> <font style="color: white;">Drone Delivery</font>
+					aria-expanded="false"> <font style="color: white;">Drone
+							Delivery</font>
 				</a>
 					<div class="dropdown-menu" aria-labelledby="navbarDropdown">
 						<a class="dropdown-item" href="<%=ORSView.DRONE_DELIVERY_CTL%>"><i
-							class="fa fa-user-tie"></i>Add Drone Delivery</a> <a class="dropdown-item"
-							href="<%=ORSView.DRONE_DELIVERY_LIST_CTL%>"><i
+							class="fa fa-user-tie"></i>Add Drone Delivery</a> <a
+							class="dropdown-item" href="<%=ORSView.DRONE_DELIVERY_LIST_CTL%>"><i
 							class="fa fa-user-friends"></i>Drone Delivery List</a>
 					</div></li>
-					
+
 				<li class="nav-item dropdown" style="padding-left: 5px"><a
 					class="nav-link dropdown-toggle" href="#" id="navbarDropdown"
 					role="button" data-toggle="dropdown" aria-haspopup="true"
 					aria-expanded="false"> <font style="color: white;">College</font>
 				</a>
-				
+
 					<div class="dropdown-menu" aria-labelledby="navbarDropdown">
 						<a class="dropdown-item" href="<%=ORSView.COLLEGE_CTL%>"><i
 							class="fa fa-university"></i>Add College</a> <a class="dropdown-item"
@@ -233,8 +234,22 @@
 							href="<%=ORSView.PRODUCT_LIST_CTL%>"><i class="fa fa-paste"></i>Product
 							List</a>
 					</div></li>
-					
-					<li class="nav-item dropdown" style="padding-left: 5px"><a
+
+				<li class="nav-item dropdown" style="padding-left: 5px"><a
+					class="nav-link dropdown-toggle" href="#" id="navbarDropdown"
+					role="button" data-toggle="dropdown" aria-haspopup="true"
+					aria-expanded="false"> <font style="color: white;">Emoji
+							Reaction </font></a>
+
+					<div class="dropdown-menu" aria-labelledby="navbarDropdown">
+
+						<a class="dropdown-item" href="<%=ORSView.EMOJI_REACTION_CTL%>"><i
+							class="fa fa-file"></i>Add EmojiReacton</a> <a class="dropdown-item"
+							href="<%=ORSView.EMOJI_REACTION_LIST_CTL%>"><i
+							class="fa fa-paste"></i>Emoji Reaction List</a>
+					</div></li>
+
+				<li class="nav-item dropdown" style="padding-left: 5px"><a
 					class="nav-link dropdown-toggle" href="#" id="navbarDropdown"
 					role="button" data-toggle="dropdown" aria-haspopup="true"
 					aria-expanded="false"> <font style="color: white;">PodCast
@@ -249,8 +264,8 @@
 					</div></li>
 
 				<%
-					}
-					}
+				}
+				}
 				%>
 				<li class="nav-item dropdown"
 					style="padding-left: 5px; padding-right: 67px"><a
@@ -260,7 +275,7 @@
 					</font></a>
 					<div class="dropdown-menu" aria-labelledby="navbarDropdown">
 						<%
-							if (userLoggedIn) {
+						if (userLoggedIn) {
 						%>
 						<a class="dropdown-item"
 							href="<%=ORSView.LOGIN_CTL%>?operation=<%=LoginCtl.OP_LOG_OUT%>"><i
@@ -273,7 +288,7 @@
 							href="<%=ORSView.JAVA_DOC_VIEW%>"><i class="fa fa-clone"></i>Java
 							Doc </a>
 						<%
-							} else {
+						} else {
 						%>
 						<a class="dropdown-item" href="<%=ORSView.LOGIN_CTL%>"><i
 							class="fa fa-sign-in-alt">Login</i> <a class="dropdown-item"
@@ -281,7 +296,7 @@
 								class="fa fa-registered"></i> User Registration</a>
 					</div></li>
 				<%
-					}
+				}
 				%>
 			</ul>
 		</div>
