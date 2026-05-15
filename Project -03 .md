@@ -13,7 +13,7 @@
 
 # BOOTSTRAP
 
-## Bootstrap kai liye 4 library add ki hai -> header.jsp
+## Bootstrap kai liye 3 library add ki hai -> header.jsp
 
 ```html
 <link rel="stylesheet"
