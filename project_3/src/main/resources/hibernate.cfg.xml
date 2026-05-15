@@ -25,14 +25,15 @@
 		<property name="hibernate.c3p0.min_size">10</property>
 		<!-- Default 3 -->
 		<property name="hibernate.c3p0.max_size">100</property>
-		<!-- Default 20 Acquired increment
-		by default =3 -->
+		<!-- Default 20 Acquired increment by default =3 -->
 		<property name="hibernate.c3p0.timeout">10</property>
-	<!-- Default 20 -->
+		<!-- Default 20 -->
 		<property name="hibernate.c3p0.max_statements">50</property>
-		  
+
+
 
 		<mapping resource="in/co/rays/project_3/hbm/UserDTO.hbm.xml" />
+		<mapping resource="in/co/rays/project_3/hbm/BaseDTO.hbm.xml"/>
 		<mapping
 			resource="in/co/rays/project_3/hbm/StudentDTO.hbm.xml" />
 		<mapping
@@ -51,5 +52,9 @@
 			resource="in/co/rays/project_3/hbm/ProductDTO.hbm.xml" />
 		<mapping
 			resource="in/co/rays/project_3/hbm/DroneDeliveryDTO.hbm.xml" />
+		<mapping
+			resource="in/co/rays/project_3/hbm/PodCastDTO.hbm.xml" />
+		<mapping
+			resource="in/co/rays/project_3/hbm/EmojiReactionDTO.hbm.xml" />
 	</session-factory>
 </hibernate-configuration>
