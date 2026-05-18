@@ -25,7 +25,7 @@ import in.co.rays.project_3.util.ServletUtility;
 /**
  * User registration functionality Controller. Performs operation for User
  * 
- * @author Niraj Chopra
+ * @author Anand Choudhary
  *
  */
 @WebServlet(urlPatterns = { "/UserRegistrationCtl" })
@@ -34,7 +34,6 @@ public class UserRegistrationCtl extends BaseCtl {
 
 	protected boolean validate(HttpServletRequest request) {
 		boolean pass = true;
-		System.out.println("validate started");
 		if (DataValidator.isNull(request.getParameter("firstName"))) {
 			request.setAttribute("firstName", PropertyReader.getValue("error.require", "first Name"));
 			pass = false;

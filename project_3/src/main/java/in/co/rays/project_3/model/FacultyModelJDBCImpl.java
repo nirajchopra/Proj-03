@@ -19,7 +19,7 @@ import in.co.rays.project_3.util.JDBCDataSource;
 
 /**
  * JDBC implements of Faculty model
- * @author Niraj Chopra
+ * @author Anand Choudhary
  *
  */
 public class FacultyModelJDBCImpl implements FacultyModelInt {
@@ -37,7 +37,7 @@ public class FacultyModelJDBCImpl implements FacultyModelInt {
 		long pk = 0;
 		try {
 			con = JDBCDataSource.getConnection();
-			PreparedStatement ps = con.prepareStatement("select max(id) from st_faculty");
+			PreparedStatement ps = con.prepareStatement("select max(ID) from st_faculty");
 			ResultSet r = ps.executeQuery();
 			while (r.next()) {
 				pk = (int) r.getLong(1);
@@ -142,7 +142,7 @@ public class FacultyModelJDBCImpl implements FacultyModelInt {
 		FacultyDTO dto = null;
 		try {
 			con = JDBCDataSource.getConnection();
-			PreparedStatement ps = con.prepareStatement("select * from st_faculty where email_id=?");
+			PreparedStatement ps = con.prepareStatement("select * from st_faculty where EMAIL_ID=?");
 			ps.setString(1, emailId);
 			ResultSet rs = ps.executeQuery();
 			while (rs.next()) {
@@ -186,7 +186,7 @@ public class FacultyModelJDBCImpl implements FacultyModelInt {
 			System.out.println(dto.getId());
 			con = JDBCDataSource.getConnection();
 			con.setAutoCommit(false);
-			PreparedStatement ps = con.prepareStatement("delete from st_faculty where id=?");
+			PreparedStatement ps = con.prepareStatement("delete from st_faculty where ID=?");
 			ps.setLong(1, dto.getId());
 			System.out.println("Delete data successfully");
 			ps.executeUpdate();
@@ -224,7 +224,7 @@ public class FacultyModelJDBCImpl implements FacultyModelInt {
 			con = JDBCDataSource.getConnection();
 			con.setAutoCommit(false);
 			PreparedStatement ps = con.prepareStatement(
-					"update st_faculty set first_name=?,last_name=?,gender=?,joining_dob=?,qualification=?,email_id=?,mobile_no=?,college_id=?,college_name=?,subject_id=?,subject_name=?,course_id=?,course_name=?,created_by=?,modified_by=?,created_datetime=?,modified_datetime=? where id=?");
+					"update st_faculty set FIRST_NAME=?,LAST_NAME=?,GENDER=?,JOINING_DOB=?,QUALIFICATION=?,EMAIL_ID=?,MOBILE_NO=?,COLLEGE_ID=?,COLLEGE_NAME=?,SUBJECT_ID=?,SUBJECT_NAME=?,COURSE_ID=?,COURSE_NAME=?,CREATED_BY=?,MODIFIED_BY=?,CREATED_DATETIME=?,MODIFIED_DATETIME=? where ID=?");
 			ps.setString(1, dto.getFirstName());
 			ps.setString(2, dto.getLastName());
 			ps.setString(3, dto.getGender());
@@ -274,7 +274,7 @@ public class FacultyModelJDBCImpl implements FacultyModelInt {
 		try {
 
 			con = JDBCDataSource.getConnection();
-			PreparedStatement ps = con.prepareStatement("select * from st_faculty where id=?");
+			PreparedStatement ps = con.prepareStatement("select * from st_faculty where ID=?");
 			ps.setLong(1, pk);
 			ResultSet rs = ps.executeQuery();
 			while (rs.next()) {

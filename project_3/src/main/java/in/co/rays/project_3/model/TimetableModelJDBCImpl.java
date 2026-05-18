@@ -19,7 +19,7 @@ import in.co.rays.project_3.util.JDBCDataSource;
 
 /**
  * JDBC implements of TimeTable model
- * @author Niraj Chopra
+ * @author Anand Choudhary
  *
  */
 public class TimetableModelJDBCImpl implements TimetableModelInt {
@@ -36,7 +36,7 @@ public class TimetableModelJDBCImpl implements TimetableModelInt {
 		long pk = 0;
 		try {
 			con = JDBCDataSource.getConnection();
-			PreparedStatement ps = con.prepareStatement("select max(id) from st_timetable");
+			PreparedStatement ps = con.prepareStatement("select max(ID) from ST_TIMETABLE");
 			ResultSet r = ps.executeQuery();
 			while (r.next()) {
 				pk = (int) r.getLong(1);
@@ -79,7 +79,7 @@ public class TimetableModelJDBCImpl implements TimetableModelInt {
 			pk = nextPK();
 			con = JDBCDataSource.getConnection();
 			con.setAutoCommit(false);
-			PreparedStatement ps = con.prepareStatement("insert into st_timetable values(?,?,?,?,?,?,?,?,?,?,?,?,?)");
+			PreparedStatement ps = con.prepareStatement("insert into ST_TIMETABLE values(?,?,?,?,?,?,?,?,?,?,?,?,?)");
 			ps.setLong(1, pk);
 			ps.setLong(2, tdto.getSubId());
 			ps.setString(3, tdto.getCourseName());
@@ -123,7 +123,7 @@ public class TimetableModelJDBCImpl implements TimetableModelInt {
 
 			con = JDBCDataSource.getConnection();
 			con.setAutoCommit(false);
-			PreparedStatement ps = con.prepareStatement("delete from st_timetable where id=?");
+			PreparedStatement ps = con.prepareStatement("delete from ST_TIMETABLE where ID=?");
 			ps.setLong(1, tdto.getId());
 			System.out.println("Delete data successfully");
 			ps.executeUpdate();
@@ -174,7 +174,7 @@ public class TimetableModelJDBCImpl implements TimetableModelInt {
 			con = JDBCDataSource.getConnection();
 			con.setAutoCommit(false);
 			PreparedStatement ps = con.prepareStatement(
-					"update st_timetable set sub_id=?,sub_name=?,course_id=?,course_name=?,semester=?,exam_date=?,exam_time=?,description=?,created_by=?,modified_by=?,created_datetime=?,modified_datetime=? where id=?");
+					"update ST_TIMETABLE set SUB_ID=?,SUB_NAME=?,COURSE_ID=?,COURSE_NAME=?,SEMESTER=?,EXAM_DATE=?,EXAM_TIME=?,DESCRIPTION=?,CREATED_BY=?,MODIFIED_BY=?,CREATED_DATETIME=?,MODIFIED_DATETIME=? where ID=?");
 
 			ps.setLong(1, tdto.getSubId());
 			ps.setString(2, tdto.getSubName());
@@ -219,7 +219,7 @@ public class TimetableModelJDBCImpl implements TimetableModelInt {
 		try {
 
 			con = JDBCDataSource.getConnection();
-			PreparedStatement ps = con.prepareStatement("select * from st_timetable where id=?");
+			PreparedStatement ps = con.prepareStatement("select * from ST_TIMETABLE where ID=?");
 			ps.setLong(1, pk);
 			ResultSet rs = ps.executeQuery();
 			while (rs.next()) {
@@ -319,7 +319,7 @@ public class TimetableModelJDBCImpl implements TimetableModelInt {
 	 */
 	public List search(TimetableDTO tdto1, int pageNo, int pageSize) throws ApplicationException {
 
-		StringBuffer sql = new StringBuffer("select * from st_timetable where 1=1");
+		StringBuffer sql = new StringBuffer("select * from ST_TIMETABLE where 1=1");
 		if (tdto1 != null) {
 			if (tdto1.getId() > 0) {
 				sql.append(" AND ID = " + tdto1.getId());
@@ -409,7 +409,7 @@ public class TimetableModelJDBCImpl implements TimetableModelInt {
 		ResultSet rs = null;
 		TimetableDTO dto = null;
 
-		StringBuffer sql = new StringBuffer("select * from st_timetable where course_id=? " + "and exam_date=?");
+		StringBuffer sql = new StringBuffer("SELECT * FROM ST_TIMETABLE WHERE COURSE_ID=? " + "AND EXAM_DATE=?");
 
 		try {
 			Connection con = JDBCDataSource.getConnection();
@@ -452,7 +452,7 @@ public class TimetableModelJDBCImpl implements TimetableModelInt {
 		TimetableDTO dto = null;
 		
 		StringBuffer sql = new StringBuffer(
-				"select * from st_timetable where course_id=? AND sub_id=? and" + " exam_date=?");
+				"SELECT * FROM ST_TIMETABLE WHERE COURSE_ID=? AND SUB_ID=? AND" + " EXAM_DATE=?");
 
 		try {
 			Connection con = JDBCDataSource.getConnection();
@@ -500,7 +500,7 @@ public class TimetableModelJDBCImpl implements TimetableModelInt {
 		Date ExDate = new Date(ExamDAte.getTime());
 
 		StringBuffer sql = new StringBuffer(
-				"select * from st_timetable where course_id=? and sub_id=? and" + " semester=? and exam_date=?");
+				"SELECT * FROM ST_TIMETABLE WHERE COURSE_ID=? AND SUB_ID=? AND" + " SEMESTER=? AND EXAM_DATE=?");
 
 		try {
 			Connection con = JDBCDataSource.getConnection();
@@ -547,8 +547,8 @@ public class TimetableModelJDBCImpl implements TimetableModelInt {
 		ResultSet rs = null;
 		TimetableDTO dto = null;
 		Date ExDate = new Date(ExamDAte.getTime());
-		StringBuffer sql = new StringBuffer("select * from st_timetable where course_id=? and sub_id=? and"
-				+ " semester=? and exam_date=? and exam_time=?");
+		StringBuffer sql = new StringBuffer("SELECT * FROM ST_TIMETABLE WHERE COURSE_ID=? AND SUB_ID=? AND"
+				+ " SEMESTER=? AND EXAM_DATE=? AND EXAM_TIME=?");
 
 		try {
 			Connection con = JDBCDataSource.getConnection();

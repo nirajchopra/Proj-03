@@ -27,7 +27,7 @@ import in.co.rays.project_3.util.ServletUtility;
  * marksheeet functionality controller.to perform add,delete and update
  * operation
  * 
- * @author Niraj Chopra
+ * @author Anand Choudhary
  *
  */
 @WebServlet(urlPatterns = { "/ctl/MarksheetCtl" })
@@ -41,7 +41,6 @@ public class MarksheetCtl extends BaseCtl {
 		try {
 			List li = model.list();
 			request.setAttribute("studenList", li);
-			System.out.println("add marksheet" + li);
 
 		} catch (Exception e) {
 			e.printStackTrace();
@@ -178,11 +177,12 @@ public class MarksheetCtl extends BaseCtl {
 					dto.setId(id);
 					model.update(dto);
 					ServletUtility.setSuccessMessage("Data is successfully Updated", request);
+					ServletUtility.setDto(dto, request);
 				} else {
 					model.add(dto);
 					ServletUtility.setSuccessMessage("Data is successfully saved", request);
 				}
-				ServletUtility.setDto(dto, request);
+				//
 
 			} catch (ApplicationException e) {
 				log.error(e);

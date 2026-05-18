@@ -15,7 +15,7 @@ import in.co.rays.project_3.util.HibDataSource;
 
 /**
  * Hibernate implements of Role model
- * @author Niraj Chopra
+ * @author Anand Choudhary
  *
  */
 public class RoleModelHibImp implements RoleModelInt{

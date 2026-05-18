@@ -1,14 +1,13 @@
 package in.co.rays.project_3.dto;
 
+
 import java.sql.Timestamp;
 import java.util.Date;
-
 /**
  * user JavaDto encapsulates user attributes
- * 
- * @author Niraj Chopra
- *
+ * @author Anand Choudhary
  */
+
 
 public class UserDTO extends BaseDTO {
 	public static final String ACTIVE = "Active";
@@ -131,6 +130,8 @@ public class UserDTO extends BaseDTO {
 		this.loginIP = loginIP;
 	}
 
+	
+
 	public static String getActive() {
 		return ACTIVE;
 	}
@@ -138,6 +139,8 @@ public class UserDTO extends BaseDTO {
 	public static String getInactive() {
 		return INACTIVE;
 	}
+
+
 
 	public String getKey() {
 

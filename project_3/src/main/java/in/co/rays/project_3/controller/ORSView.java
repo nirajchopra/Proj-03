@@ -3,11 +3,11 @@ package in.co.rays.project_3.controller;
 /**
  * ORS View Provide Loose Coupling
  * 
- * @author Niraj Chopra
+ * @author Anand Choudhary
  *
  */
 public interface ORSView {
-	public String APP_CONTEXT = "/project_3";
+	public String APP_CONTEXT = "/ORSProject-03";
 
 	public String PAGE_FOLDER = "/jsp";
 
@@ -16,6 +16,9 @@ public interface ORSView {
 	public String ERROR_VIEW = PAGE_FOLDER + "/ErrorView404.jsp";
 
 	public String MARKSHEET_VIEW = PAGE_FOLDER + "/MarksheetView.jsp";
+	
+	public String JASPER_CTL = APP_CONTEXT + "/ctl/JasperCtl";
+
 
 	public String MARKSHEET_LIST_VIEW = PAGE_FOLDER + "/MarksheetListView.jsp";
 	public String GET_MARKSHEET_VIEW = PAGE_FOLDER + "/GetMarksheetView.jsp";
@@ -45,16 +48,7 @@ public interface ORSView {
 	public String SUBJECT_LIST_VIEW = PAGE_FOLDER + "/SubjectListView.jsp";
 	public String PRODUCT_VIEW = PAGE_FOLDER + "/ProductView.jsp";
 	public String PRODUCT_LIST_VIEW = PAGE_FOLDER + "/ProductListView.jsp";
-	public String SCHEDULAR_JOB_VIEW = PAGE_FOLDER + "/SchedularView.jsp";
-	public String SCHEDULAR_JOB_LIST_VIEW = PAGE_FOLDER + "/SchedularListView.jsp";
-	public String SETTING_VIEW = PAGE_FOLDER + "/jsp/SettingView.jsp";
-	public String SETTING_LIST_VIEW = PAGE_FOLDER + "/jsp/SettingListView.jsp";
-	public String DRONE_DELIVERY_VIEW = PAGE_FOLDER + "/jsp/DroneDeliveryView.jsp";
-	public String DRONE_DELIVERY_LIST_VIEW = PAGE_FOLDER + "/jsp/DroneDeliveryListView.jsp";
-	public String PODCAST_VIEW = PAGE_FOLDER + "/jsp/PodCastView.jsp";
-	public String PODCAST_LIST_VIEW = PAGE_FOLDER + "/jsp/PodCastListView.jsp";
-	public String EMOJI_REACTION_VIEW = PAGE_FOLDER + "/jsp/EmojiReactionView.jsp";
-	public String EMOJI_REACTION_LIST_VIEW = PAGE_FOLDER + "/jsp/EmojiReactionListView.jsp";
+
 
 	public String ERROR_CTL = APP_CONTEXT + "/ErrorCtl";
 
@@ -88,16 +82,102 @@ public interface ORSView {
 	public String MY_PROFILE_CTL = APP_CONTEXT + "/ctl/MyProfileCtl";
 	public String FORGET_PASSWORD_CTL = APP_CONTEXT + "/ForgetPasswordCtl";
 	public String MARKSHEET_MERIT_LIST_CTL = APP_CONTEXT + "/ctl/MarksheetMeritListCtl";
-	public String SCHEDULAR_JOB_CTL = APP_CONTEXT + "/ctl/SchedularJobCtl";
-	public String SCHEDULAR_JOB_LIST_CTL = APP_CONTEXT + "/ctl/SchedularJobListCtl";
 
-	public String SETTING_CTL = APP_CONTEXT + "/ctl/SettingCtl";
-	public String SETTING_LIST_CTL = APP_CONTEXT + "/ctl/SettingListCtl";
-	public String DRONE_DELIVERY_CTL = APP_CONTEXT + "/ctl/DroneDeliveryCtl";
-	public String DRONE_DELIVERY_LIST_CTL = APP_CONTEXT + "/ctl/DroneDeliveryListCtl";
-	public String PODCAST_CTL = APP_CONTEXT + "/ctl/PodCastCtl";
-	public String PODCAST_LIST_CTL = APP_CONTEXT + "/ctl/PodCastListCtl";
-	public String EMOJI_REACTION_CTL = APP_CONTEXT + "/ctl/EmojiReactionCtl";
-	public String EMOJI_REACTION_LIST_CTL = APP_CONTEXT + "/ctl/EMojiReactionListCtl";
 
+	public String BOOK_CTL = APP_CONTEXT + "/ctl/BookCtl";
+	public String BOOK_LIST_CTL = APP_CONTEXT + "/ctl/BookListCtl";
+	public String BOOK_VIEW = PAGE_FOLDER + "/BookView.jsp";
+	public String BOOK_LIST_VIEW = PAGE_FOLDER + "/BookListView.jsp";
+	
+	
+	public String PROFILE_VIEW = PAGE_FOLDER + "/ProfileView.jsp";
+	public String PROFILE_LIST_VIEW = PAGE_FOLDER + "/ProfileListView.jsp";
+	public String PROFILE_CTL = APP_CONTEXT + "/ctl/ProfileCtl";
+	public String PROFILE_LIST_CTL = APP_CONTEXT + "/ctl/ProfileListCtl";
+	
+	
+	public String INVENTORY_VIEW = PAGE_FOLDER + "/InventoryView.jsp";
+	public String INVENTORY_LIST_VIEW = PAGE_FOLDER + "/InventoryListView.jsp";
+	public String INVENTORY_CTL = APP_CONTEXT + "/ctl/InventoryCtl";
+	public String INVENTORY_LIST_CTL = APP_CONTEXT + "/ctl/InventoryListCtl";
+
+	
+	public String SESSION_VIEW = PAGE_FOLDER + "/SessionView.jsp";
+	public String SESSION_LIST_VIEW = PAGE_FOLDER + "/SessionListView.jsp";
+    public String SESSION_CTL = APP_CONTEXT + "/ctl/SessionCtl";
+	public String SESSION_LIST_CTL = APP_CONTEXT + "/ctl/SessionListCtl";
+
+	public String LANGUAGE_VIEW = PAGE_FOLDER + "/LanguageView.jsp";
+	public String LANGUAGE_LIST_VIEW = PAGE_FOLDER + "/LanguageListView.jsp";
+	public String LANGUAGE_CTL = APP_CONTEXT + "/ctl/LanguageCtl";
+	public String LANGUAGE_LIST_CTL = APP_CONTEXT + "/ctl/LanguageListCtl";
+	
+
+	public String ANNOUNCEMENT_VIEW = PAGE_FOLDER + "/AnnouncementView.jsp";
+	public String ANNOUNCEMENT_LIST_VIEW = PAGE_FOLDER + "/AnnouncementListView.jsp";
+	public String ANNOUNCEMENT_CTL = APP_CONTEXT + "/ctl/AnnouncementCtl";
+	public String ANNOUNCEMENT_LIST_CTL = APP_CONTEXT + "/ctl/AnnouncementListCtl";
+	
+	public String RESULT_VIEW = PAGE_FOLDER + "/ResultView.jsp";
+	public String RESULT_LIST_VIEW = PAGE_FOLDER + "/ResultListView.jsp";
+	public String RESULT_CTL = APP_CONTEXT + "/ctl/ResultCtl";
+	public String RESULT_LIST_CTL = APP_CONTEXT + "/ctl/ResultListCtl";
+	
+	public String PLACEMENT_VIEW = PAGE_FOLDER + "/PlacementView.jsp";
+	public String PLACEMENT_LIST_VIEW = PAGE_FOLDER + "/PlacementListView.jsp";
+	public String PLACEMENT_CTL = APP_CONTEXT + "/ctl/PlacementCtl";
+	public String PLACEMENT_LIST_CTL = APP_CONTEXT + "/ctl/PlacementListCtl";
+
+	public String HOSPITAL_VIEW = PAGE_FOLDER + "/HospitalView.jsp";
+	public String HOSPITAL_LIST_VIEW = PAGE_FOLDER + "/HospitalListView.jsp";
+	public String HOSPITAL_CTL = APP_CONTEXT + "/ctl/HospitalCtl";
+	public String HOSPITAL_LIST_CTL = APP_CONTEXT + "/ctl/HospitalListCtl";
+	
+	public String VEHICLE_VIEW = PAGE_FOLDER + "/VehicleView.jsp";
+	public String VEHICLE_LIST_VIEW = PAGE_FOLDER + "/VehicleListView.jsp";
+	public String VEHICLE_CTL = APP_CONTEXT + "/ctl/VehicleCtl";
+	public String VEHICLE_LIST_CTL = APP_CONTEXT + "/ctl/VehicleListCtl";
+	
+	public String EVENT_VIEW = PAGE_FOLDER + "/EventView.jsp";
+	public String EVENT_LIST_VIEW = PAGE_FOLDER + "/EventListView.jsp";
+	public String EVENT_CTL = APP_CONTEXT + "/ctl/EventCtl";
+	public String EVENT_LIST_CTL = APP_CONTEXT + "/ctl/EventListCtl";
+	
+	public String DONATION_VIEW = PAGE_FOLDER + "/DonationView.jsp";
+	public String DONATION_LIST_VIEW = PAGE_FOLDER + "/DonationListView.jsp";
+	public String DONATION_CTL = APP_CONTEXT + "/ctl/DonationCtl";
+	public String DONATION_LIST_CTL = APP_CONTEXT + "/ctl/DonationListCtl";
+	
+	public String WARRANTY_VIEW = PAGE_FOLDER + "/WarrantyView.jsp";
+	public String WARRANTY_LIST_VIEW = PAGE_FOLDER + "/WarrantyListView.jsp";
+	public String WARRANTY_CTL = APP_CONTEXT + "/ctl/WarrantyCtl";
+	public String WARRANTY_LIST_CTL = APP_CONTEXT + "/ctl/WarrantyListCtl";
+	
+	public String SALARY_VIEW = PAGE_FOLDER + "/SalaryView.jsp";
+	public String SALARY_LIST_VIEW = PAGE_FOLDER + "/SalaryListView.jsp";
+	public String SALARY_CTL = APP_CONTEXT + "/ctl/SalaryCtl";
+	public String SALARY_LIST_CTL = APP_CONTEXT + "/ctl/SalaryListCtl";
+	
+	
+	public String PORTFOLIO_VIEW = PAGE_FOLDER + "/PortfolioView.jsp";
+	public String PORTFOLIO_LIST_VIEW = PAGE_FOLDER + "/PortfolioListView.jsp";
+	public String PORTFOLIO_CTL = APP_CONTEXT + "/ctl/PortfolioCtl";
+	public String PORTFOLIO_LIST_CTL = APP_CONTEXT + "/ctl/PortfolioListCtl";
+	
+	
+	public String SECRET_VIEW = PAGE_FOLDER + "/SecretView.jsp";
+	public String SECRET_LIST_VIEW = PAGE_FOLDER + "/SecretListView.jsp";
+	public String SECRET_CTL = APP_CONTEXT + "/ctl/SecretCtl";
+	public String SECRET_LIST_CTL = APP_CONTEXT + "/ctl/SecretListCtl";
+	
+	public String CUSTOMER_VIEW = PAGE_FOLDER + "/CustomerView.jsp";
+	public String CUSTOMER_LIST_VIEW = PAGE_FOLDER + "/CustomerListView.jsp";
+	public String CUSTOMER_CTL = APP_CONTEXT + "/ctl/CustomerCtl";
+	public String CUSTOMER_LIST_CTL = APP_CONTEXT + "/ctl/CustomerListCtl";
+	
+	public String LISTENER_VIEW = PAGE_FOLDER + "/ListenerView.jsp";
+	public String LISTENER_LIST_VIEW = PAGE_FOLDER + "/ListenerListView.jsp";
+	public String LISTENER_CTL = APP_CONTEXT + "/ctl/ListenerCtl";
+	public String LISTENER_LIST_CTL = APP_CONTEXT + "/ctl/ListenerListCtl";
+	
 }

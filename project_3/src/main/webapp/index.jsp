@@ -18,11 +18,11 @@ body {
 <body class="img-fluids">
 	<div class="p1">
 		<h1 align="Center">
-			<img src="img/NCCHOPRA.png" width="318" height="120" border="0">
+			<img src="img/custom.png" width="318" height="120" border="0">
 		</h1>
 		<h1 align="Center">
 			<a href="<%=ORSView.WELCOME_CTL%>" style="color: indigo;"> <font
-				size="8px">Online Result System</font></a>
+				size="8px">Online Result System </font></a>
 		</h1>
 	</div>
 </body>

@@ -24,7 +24,7 @@ import in.co.rays.project_3.util.ServletUtility;
 /**
  * User List functionality controller.to perform Search and List operation.
  * 
- * @author Niraj Chopra
+ * @author Anand Choudhary
  *
  */
 @WebServlet(name = "UserListCtl", urlPatterns = { "/ctl/UserListCtl" })
@@ -61,29 +61,25 @@ public class UserListCtl extends BaseCtl {
 	/**
 	 * Contains Display logics
 	 */
-	protected void doGet(HttpServletRequest request, HttpServletResponse response)
+	protected void doGet(HttpServletRequest request,HttpServletResponse response)
 			throws ServletException, IOException {
 		log.debug("UserListCtl doGet Start");
 		List list;
 		List next;
 		int pageNo = 1;
 		int pageSize = DataUtility.getInt(PropertyReader.getValue("page.size"));
-		System.out.println("==========" + pageSize);
 		UserDTO dto = (UserDTO) populateDTO(request);
 		// get the selected checkbox ids array for delete list
 		UserModelInt model = ModelFactory.getInstance().getUserModel();
 		try {
-			System.out.println("in ctllllllllll search");
 			list = model.search(dto, pageNo, pageSize);
 
-			ArrayList<UserDTO> a = (ArrayList<UserDTO>) list;
+			/*
+			 * ArrayList<UserDTO> a = (ArrayList<UserDTO>) list;
+			 * 
+			 * for (UserDTO udto1 : a) { System.out.println(udto1.getRoleId()); }
+			 */
 
-			for (UserDTO udto1 : a) {
-				System.out.println(udto1.getRoleId() + "[[[[[[[[[[[--------------------");
-			}
-
-			System.out.println(list + "----------------------------------------------------------");
-			System.out.println(list.indexOf(3));
 			next = model.search(dto, pageNo + 1, pageSize);
 			ServletUtility.setList(list, request);
 			if (list == null || list.size() == 0) {
@@ -126,7 +122,6 @@ public class UserListCtl extends BaseCtl {
 		pageSize = (pageSize == 0) ? DataUtility.getInt(PropertyReader.getValue("page.size")) : pageSize;
 		UserDTO dto = (UserDTO) populateDTO(request);
 		String op = DataUtility.getString(request.getParameter("operation"));
-		System.out.println("op---->" + op);
 
 // get the selected checkbox ids array for delete list
 		String[] ids = request.getParameterValues("ids");
@@ -168,7 +163,6 @@ public class UserListCtl extends BaseCtl {
 				return;
 			}
 			dto = (UserDTO) populateDTO(request);
-			System.out.println("y yyyyyyyyyy" + dto.getRoleId());
 
 			list = model.search(dto, pageNo, pageSize);
 

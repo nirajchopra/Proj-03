@@ -17,7 +17,7 @@ import in.co.rays.project_3.util.JDBCDataSource;
 
 /**
  * JDBC implements of Subject model
- * @author Niraj Chopra
+ * @author Anand Choudhary
  *
  */
 public class SubjectModelJDBCImpl implements SubjectModelInt {
@@ -35,7 +35,7 @@ public class SubjectModelJDBCImpl implements SubjectModelInt {
 		long pk = 0;
 		try {
 			con = JDBCDataSource.getConnection();
-			PreparedStatement ps = con.prepareStatement("select max(id) from st_subject");
+			PreparedStatement ps = con.prepareStatement("select max(ID) from st_subject");
 			ResultSet r = ps.executeQuery();
 			while (r.next()) {
 				pk = (int) r.getLong(1);
@@ -113,7 +113,7 @@ public class SubjectModelJDBCImpl implements SubjectModelInt {
 
 			con = JDBCDataSource.getConnection();
 			con.setAutoCommit(false);
-			PreparedStatement ps = con.prepareStatement("delete from st_subject where id=?");
+			PreparedStatement ps = con.prepareStatement("delete from st_subject where ID=?");
 			ps.setLong(1, dto.getId());
 			System.out.println("Delete data successfully");
 			ps.executeUpdate();
@@ -147,7 +147,7 @@ public class SubjectModelJDBCImpl implements SubjectModelInt {
 		try {
 
 			con = JDBCDataSource.getConnection();
-			PreparedStatement ps = con.prepareStatement("select * from st_subject where email_id=?");
+			PreparedStatement ps = con.prepareStatement("select * from st_subject where EMAIL_ID=?");
 			ps.setString(1, email);
 			ResultSet rs = ps.executeQuery();
 			while (rs.next()) {
@@ -189,7 +189,7 @@ public class SubjectModelJDBCImpl implements SubjectModelInt {
 			con = JDBCDataSource.getConnection();
 			con.setAutoCommit(false);
 			PreparedStatement ps = con.prepareStatement(
-					"update st_subject set subject_name=?,course_name=?,course_id=?,description=?,created_by=?,modified_by=?,created_datetime=?,modified_datetime=? where id=?");
+					"update st_subject set SUBJECT_NAME=?,COURSE_NAME=?,COURSE_ID=?,DESCRIPTION=?,CREATED_BY=?,MODIFIED_BY=?,CREATED_DATETIME=?,MODIFIED_DATETIME=? where ID=?");
 
 			ps.setString(1, dto.getSubjectName());
 			ps.setString(2, dto.getCourseName());
@@ -231,7 +231,7 @@ public class SubjectModelJDBCImpl implements SubjectModelInt {
 		try {
 
 			con = JDBCDataSource.getConnection();
-			PreparedStatement ps = con.prepareStatement("select * from st_subject where id=?");
+			PreparedStatement ps = con.prepareStatement("select * from st_subject where ID=?");
 			ps.setLong(1, pk);
 			ResultSet rs = ps.executeQuery();
 			while (rs.next()) {
@@ -274,7 +274,7 @@ public class SubjectModelJDBCImpl implements SubjectModelInt {
 		try {
 			con = JDBCDataSource.getConnection();
 			con.setAutoCommit(false);
-			ps = con.prepareStatement("select * from st_subject where subject_name=?");
+			ps = con.prepareStatement("SELECT * FROM st_subject WHERE SUBJECT_NAME=?");
 			ps.setString(1, name);
 			rs = ps.executeQuery();
 			con.commit();

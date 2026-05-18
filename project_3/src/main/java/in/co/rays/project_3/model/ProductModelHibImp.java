@@ -19,9 +19,9 @@ public class ProductModelHibImp implements ProductModelInt {
 	public long add(ProductDTO dto) throws ApplicationException, DuplicateRecordException {
 		Session session = null;
 		Transaction tx = null;
-//		ProductDTO duplicateCollegeName = fingByName(dto.getProductName());
-//		if (duplicateCollegeName != null) {
-//			throw new DuplicateRecordException("college name already exist");
+//		ProductDTO duplicateProductName = fingByName(dto.getProductName());
+//		if (duplicateProductName != null) {
+//			throw new DuplicateRecordException("product name already exist");
 //		}
 		try {
 			session = HibDataSource.getSession();
@@ -70,10 +70,8 @@ public class ProductModelHibImp implements ProductModelInt {
 		try {
 			session = HibDataSource.getSession();
 			tx = session.beginTransaction();
-			System.out.println("before update");
 
 			session.saveOrUpdate(dto);
-			System.out.println("after update");
 			tx.commit();
 
 		} catch (HibernateException e) {
@@ -130,18 +128,21 @@ public class ProductModelHibImp implements ProductModelInt {
 		try {
 			session = HibDataSource.getSession();
 			Criteria criteria = session.createCriteria(ProductDTO.class);
-			if (dto.getId() != null && dto.getId() > 0) {
-				criteria.add(Restrictions.eq("id", dto.getId()));
+			if (dto != null) {
+				if (dto.getId() != null && dto.getId() > 0) {
+					criteria.add(Restrictions.eq("id", dto.getId()));
 
-			}
-			if (dto.getProductName() != null && dto.getProductName().length() > 0) {
-				criteria.add(Restrictions.like("productName", dto.getProductName() + "%"));
-			}
-			if (dto.getProductCategory() != null && dto.getProductCategory().length() > 0) {
-				criteria.add(Restrictions.like("productCategory", dto.getProductCategory() + "%"));
-			}
-			if (dto.getProductAmmount() != null && dto.getProductAmmount().length() > 0) {
-				criteria.add(Restrictions.like("productAmmount", dto.getProductAmmount() + "%"));
+				}
+				if (dto.getProductName() != null && dto.getProductName().length() > 0) {
+					criteria.add(Restrictions.like("productName", dto.getProductName() + "%"));
+				}
+				if (dto.getProductCategory() != null && dto.getProductCategory().length() > 0) {
+					criteria.add(Restrictions.like("productCategory", dto.getProductCategory() + "%"));
+				}
+				if (dto.getProductAmmount() != null && dto.getProductAmmount().length() > 0) {
+					criteria.add(Restrictions.like("productAmmount", dto.getProductAmmount() + "%"));
+				}
+
 			}
 			if (pageSize > 0) {
 				criteria.setFirstResult((pageNo - 1) * pageSize);
@@ -160,7 +161,6 @@ public class ProductModelHibImp implements ProductModelInt {
 
 	@Override
 	public ProductDTO findByPK(long pk) throws ApplicationException {
-		System.out.println("======" + pk + "----------------------------------");
 		Session session = null;
 		ProductDTO dto = null;
 		try {

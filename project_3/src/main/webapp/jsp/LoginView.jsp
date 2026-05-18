@@ -71,10 +71,10 @@ i.css {
 				<!-- Grid column -->
 				<div class="col-md-4 "></div>
 				<div class="col-md-4">
-					<div class="card input-group-addon grad	"> <!--(input-group-addon)-> shadow, (card grad)-> box -->
-						<div class="card-body"> <!-- card mai uper or niche ki space manage kar raha hai -->
-							<!-- center kai liye  -->
-							<h3 class="text-center text-dark"><b>Login</b></h3> 
+					<div class="card input-group-addon grad	">
+						<div class="card-body">
+
+							<h3 class="text-center text-dark"><b>Login</b></h3>
 							<!--Body-->
 							<div>
 
@@ -98,6 +98,7 @@ i.css {
 										if (!ServletUtility.getErrorMessage(request).equals("")) {
 									%>
 									<div class="alert alert-danger alert-dismissible">
+		
 										<button type="button" class="close" data-dismiss="alert">&times;</button>
 										<%=ServletUtility.getErrorMessage(request)%>
 									</div>
@@ -119,9 +120,7 @@ i.css {
 								<input type="hidden" name="modifiedDatetime"
 									value="<%=DataUtility.getTimestamp(dto.getModifiedDatetime())%>">
 							</div>
-							
-							
-							<!-- <span class="pl-sm-5"> -> Email id kai agge space de raha hai -->
+
 							<span class="pl-sm-5"><b>Email Id</b> <span
 								style="color: red;">*</span></span> </br>
 
@@ -140,7 +139,6 @@ i.css {
 
 							<font color="red" class="pl-sm-5"> <%=ServletUtility.getErrorMessage("login", request)%></font></br>
 
-							<!-- <span class="pl-sm-5"> -> password kai agge space de raha hai -->
 							<span class="pl-sm-5"><b>Password</b> <span
 								style="color: red;">*</span></span> </br>
 							<div class="col-sm-12">
@@ -162,11 +160,11 @@ i.css {
 							<div class="text-center">
 
 								<input type="submit" name="operation"
-									class="btn btn-success btn-md hover-overlayed"
+									class="btn btn-success  "
 									style="font-size: 17px" value="<%=LoginCtl.OP_SIGN_IN%>">
 
 								<input type="submit" name="operation"
-									class="btn btn-primary btn-md" style="font-size: 17px"
+									class="btn btn-primary " style="font-size: 17px"
 									value="<%=UserRegistrationCtl.OP_SIGN_UP%>">
 							</div>
 							<div class="text-center">

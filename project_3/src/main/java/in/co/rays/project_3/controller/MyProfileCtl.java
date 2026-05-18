@@ -24,7 +24,7 @@ import in.co.rays.project_3.util.ServletUtility;
 /**
  * Myprofile functionality controller.to perform update profile operation and
  * show profile
- * @author Niraj Chopra
+ * @author Anand Choudhary
  *
  */
 @WebServlet(name = "MyProfileCtl", urlPatterns = { "/ctl/MyProfileCtl" })
@@ -141,7 +141,6 @@ public class MyProfileCtl extends BaseCtl {
 		// get model
 		UserModelInt model =ModelFactory.getInstance().getUserModel() ;
 		if (id > 0 || op != null) {
-			System.out.println("in id > 0  condition");
 			UserDTO dto;
 			try {
 				dto = model.findByPK(id);

@@ -13,7 +13,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>User List</title>
+<title>Product List</title>
 <script src="<%=ORSView.APP_CONTEXT%>/js/jquery.min.js"></script>
 <script type="text/javascript"
 	src="<%=ORSView.APP_CONTEXT%>/js/CheckBox11.js"></script>
@@ -63,8 +63,8 @@
 				if (list.size() != 0) {
 			%>
 			<center>
-				<h1 class="text-dark font-weight-bold pt-3">
-					<u>User List</u>
+				<h1 class="text-dark  pt-3">
+					<u>Product List</u>
 				</h1>
 			</center>
 			<div class="row">
@@ -103,31 +103,29 @@
 				<div class="col-md-4"></div>
 			</div>
 
-			<div class="row">
+			<div class="row justify-content-center mt-3">
 
-				<div class="col-sm-2"></div>
-				<div class="col-sm-2">
-					<input type="text" name="productName"
-						placeholder="Enter productName" class="form-control"
-						value="<%=ServletUtility.getParameter("productName", request)%>">
-				</div>
-				&emsp;
-				<div class="col-sm-2">
-					<input type="text" name="productAmmount"
-						placeholder="Enter productAmmount" class="form-control"
-						value="<%=ServletUtility.getParameter("productAmmount", request)%>">
-				</div>
-				&emsp;
+    <div class="col-md-2">
+        <input type="text" name="productName"
+            placeholder="Enter productName" class="form-control"
+            value="<%=ServletUtility.getParameter("productName", request)%>">
+    </div>
 
-				<div class="col-sm-2">
-					<input type="submit" class="btn btn-primary btn-md"
-						style="font-size: 15px" name="operation"
-						value="<%=ProductListCtl.OP_SEARCH%>">&emsp; <input
-						type="submit" class="btn btn-dark btn-md" style="font-size: 15px"
-						name="operation" value="<%=ProductListCtl.OP_RESET%>">
-				</div>
-				<div class="col-sm-1"></div>
-			</div>
+    <div class="col-md-2">
+        <input type="text" name="productAmmount"
+            placeholder="Enter productAmmount" class="form-control"
+            value="<%=ServletUtility.getParameter("productAmmount", request)%>">
+    </div>
+
+    <div class="col-md-3 text-center">
+        <input type="submit" class="btn btn-primary btn-md"
+            name="operation" value="<%=ProductListCtl.OP_SEARCH%>">&emsp;
+
+        <input type="submit" class="btn btn-dark btn-md"
+            name="operation" value="<%=ProductListCtl.OP_RESET%>">
+    </div>
+
+</div>
 
 			</br>
 			<div style="margin-bottom: 20px;" class="table-responsive">
@@ -192,7 +190,7 @@
 				if (list.size() == 0) {
 			%>
 			<center>
-				<h1 style="font-size: 40px; color: #162390;">User List</h1>
+				<h1 style="font-size: 40px; color: #162390;">Product List</h1>
 			</center>
 			</br>
 			<div class="row">

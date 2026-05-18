@@ -14,6 +14,7 @@ import in.co.rays.project_3.dto.BaseDTO;
 import in.co.rays.project_3.dto.RoleDTO;
 import in.co.rays.project_3.dto.UserDTO;
 import in.co.rays.project_3.exception.ApplicationException;
+import in.co.rays.project_3.exception.DatabaseException;
 import in.co.rays.project_3.model.ModelFactory;
 import in.co.rays.project_3.model.RoleModelInt;
 import in.co.rays.project_3.model.UserModelInt;
@@ -22,10 +23,10 @@ import in.co.rays.project_3.util.DataValidator;
 import in.co.rays.project_3.util.PropertyReader;
 import in.co.rays.project_3.util.ServletUtility;
 
-
 /**
  * login functionality controller. perform login operation
- * @author Niraj Chopra
+ * 
+ * @author Anand Choudhary
  *
  */
 
@@ -44,7 +45,6 @@ public class LoginCtl extends BaseCtl {
 		if (OP_SIGN_UP.equals(op) || OP_LOG_OUT.equals(op)) {
 			return pass;
 		}
-		System.out.println(request.getParameter("login") + ".........." + request.getParameter("password"));
 
 		if (DataValidator.isNull(request.getParameter("login"))) {
 			request.setAttribute("login", PropertyReader.getValue("error.require", "Login Id"));
@@ -57,14 +57,14 @@ public class LoginCtl extends BaseCtl {
 			request.setAttribute("password", PropertyReader.getValue("error.require", "password"));
 			pass = false;
 		}
-		System.out.println(pass+"/////");
+
 		return pass;
 
 	}
 
 	protected BaseDTO populateDTO(HttpServletRequest request) {
 		UserDTO dto = new UserDTO();
-		System.out.println(request.getParameter("login"));
+
 		dto.setId(DataUtility.getLong(request.getParameter("id")));
 		dto.setLogin(DataUtility.getString(request.getParameter("login")));
 		dto.setPassword(DataUtility.getString(request.getParameter("password")));
@@ -72,19 +72,17 @@ public class LoginCtl extends BaseCtl {
 
 	}
 
-	
 	protected void doGet(HttpServletRequest request, HttpServletResponse response)
 			throws IOException, ServletException {
-		System.out.println(request.getParameter("login"));
-		
+
 		String op = request.getParameter("operation");
-		
+
 		UserModelInt model = ModelFactory.getInstance().getUserModel();
-		
+
 		HttpSession session = request.getSession(true);
-		
+
 		long id = DataUtility.getLong(request.getParameter("id"));
-		
+
 		if (OP_LOG_OUT.equals(op)) {
 			session = request.getSession();
 			session.invalidate();
@@ -97,7 +95,7 @@ public class LoginCtl extends BaseCtl {
 			try {
 				dto = model.findByPK(id);
 				ServletUtility.setDto(dto, request);
-			} catch (ApplicationException e) {
+			}catch (ApplicationException e) {
 				// TODO Auto-generated catch block
 				e.printStackTrace();
 				ServletUtility.handleException(e, request, response);
@@ -109,17 +107,18 @@ public class LoginCtl extends BaseCtl {
 
 	}
 
-	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException {
+	protected void doPost(HttpServletRequest request, HttpServletResponse response)
+			throws IOException, ServletException {
 		String op = request.getParameter("operation");
-		System.out.println(";;;"+op);
 		
+
 		HttpSession session = request.getSession(true);
-		
+
 		UserModelInt userModel = ModelFactory.getInstance().getUserModel();
 		RoleModelInt model1 = ModelFactory.getInstance().getRoleModel();
-		
-		//long id = DataUtility.getLong(request.getParameter("id"));
-		
+
+		// long id = DataUtility.getLong(request.getParameter("id"));
+
 		if (OP_SIGN_IN.equalsIgnoreCase(op)) {
 			UserDTO dto = (UserDTO) populateDTO(request);
 			try {
@@ -136,7 +135,6 @@ public class LoginCtl extends BaseCtl {
 						ServletUtility.redirect(ORSView.WELCOME_CTL, request, response);
 						return;
 					} else {
-						System.out.println();
 						if (rdto.getId() == 1) {
 							ServletUtility.redirect(uri, request, response);
 						} else {

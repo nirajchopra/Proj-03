@@ -15,6 +15,7 @@ import org.hibernate.criterion.Restrictions;
 
 import in.co.rays.project_3.dto.UserDTO;
 import in.co.rays.project_3.exception.ApplicationException;
+import in.co.rays.project_3.exception.DatabaseException;
 import in.co.rays.project_3.exception.DuplicateRecordException;
 import in.co.rays.project_3.exception.RecordNotFoundException;
 import in.co.rays.project_3.util.EmailBuilder;
@@ -25,14 +26,13 @@ import in.co.rays.project_3.util.HibDataSource;
 /**
  * Hibernate implements of User model
  * 
- * @author Niraj Chopra
+ * @author Anand Choudhary
  *
  */
 public class UserModelHibImp implements UserModelInt {
 
 	public long add(UserDTO dto) throws ApplicationException, DuplicateRecordException {
 
-		System.out.println("in addddddddddddd");
 		// TODO Auto-generated method stub
 		/* log.debug("usermodel hib start"); */
 
@@ -48,18 +48,28 @@ public class UserModelHibImp implements UserModelInt {
 			int pk = 0;
 			tx = session.beginTransaction();
 
-			System.out.println("trac1");
 			session.save(dto);
-			System.out.println("trac2");
+
 			tx.commit();
-			System.out.println("trac3");
-		} catch (HibernateException e) {
+			
+		
+
+		}catch (org.hibernate.exception.JDBCConnectionException e) {
+			e.printStackTrace();
+			throw new DatabaseException("Database connection was lost. Please try again.");
+
+		}
+		
+		
+		catch (HibernateException e) {
 			e.printStackTrace();
 			// TODO: handle exception
 			if (tx != null) {
 				tx.rollback();
-
-			}
+        }
+			
+			
+			
 			throw new ApplicationException("Exception in User Add " + e.getMessage());
 		} finally {
 			session.close();
@@ -82,6 +92,8 @@ public class UserModelHibImp implements UserModelInt {
 			if (tx != null) {
 				tx.rollback();
 			}
+			
+			
 			throw new ApplicationException("Exception in User Delete" + e.getMessage());
 		} finally {
 			session.close();
@@ -95,7 +107,7 @@ public class UserModelHibImp implements UserModelInt {
 		UserDTO existDto = findByLogin(dto.getLogin());
 		// Check if updated LoginId already exist
 		if (existDto != null && existDto.getId() != dto.getId()) {
-			// throw new DuplicateRecordException("LoginId is already exist");
+			throw new DuplicateRecordException("LoginId is already exist");
 		}
 
 		try {
@@ -190,8 +202,6 @@ public class UserModelHibImp implements UserModelInt {
 	public List search(UserDTO dto, int pageNo, int pageSize) throws ApplicationException {
 		// TODO Auto-generated method stub
 
-		System.out.println(
-				"hellllo" + pageNo + "....." + pageSize + "........" + dto.getId() + "......" + dto.getRoleId());
 		Session session = null;
 		ArrayList<UserDTO> list = null;
 		try {
@@ -246,23 +256,57 @@ public class UserModelHibImp implements UserModelInt {
 		return list;
 	}
 
-	public UserDTO authenticate(String login, String password) throws ApplicationException {
-		// TODO Auto-generated method stub
-		System.out.println(login + "kkkkk" + password);
+//	public UserDTO authenticate(String login, String password) throws ApplicationException {
+//		// TODO Auto-generated method stub
+//		Session session = null;
+//		UserDTO dto = null;
+//		session = HibDataSource.getSession();
+//		Query q = session.createQuery("from UserDTO where login=? and password=?");
+//		q.setString(0, login);
+//		q.setString(1, password);
+//		List list = q.list();
+//		if (list.size() > 0) {
+//			dto = (UserDTO) list.get(0);
+//		} else {
+//			dto = null;
+//
+//		}
+//		return dto;
+//	}
+
+	public UserDTO authenticate(String login, String password) throws DatabaseException {
+
 		Session session = null;
 		UserDTO dto = null;
-		session = HibDataSource.getSession();
-		Query q = session.createQuery("from UserDTO where login=? and password=?");
-		q.setString(0, login);
-		q.setString(1, password);
-		List list = q.list();
-		if (list.size() > 0) {
-			dto = (UserDTO) list.get(0);
-		} else {
-			dto = null;
 
+		try {
+			session = HibDataSource.getSession();
+
+			Query q = session.createQuery("from UserDTO where login = ? and password = ?");
+			q.setString(0, login);
+			q.setString(1, password);
+
+			List list = q.list();
+
+			if (list != null && list.size() > 0) {
+				dto = (UserDTO) list.get(0);
+				System.out.println(dto);
+			}
+
+			return dto;
+
+		} catch (org.hibernate.exception.JDBCConnectionException e) {
+			e.printStackTrace();
+			throw new DatabaseException("Database connection was lost. Please try again.");
+
+		} catch (Exception e) {
+			e.printStackTrace();
+
+			throw new DatabaseException("Error during authentication");
+
+		} finally {
+			HibDataSource.closeSession(session);
 		}
-		return dto;
 	}
 
 	public List getRoles(UserDTO dto) throws ApplicationException {
@@ -277,7 +321,6 @@ public class UserModelHibImp implements UserModelInt {
 		UserDTO dtoExist = null;
 
 		dtoExist = findByPK(id);
-		System.out.println("in method password" + dtoExist.getPassword() + "jjjjjjj" + oldPassword);
 		if (dtoExist != null && dtoExist.getPassword().equals(oldPassword)) {
 			dtoExist.setPassword(newPassword);
 			try {

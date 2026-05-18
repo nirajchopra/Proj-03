@@ -17,7 +17,7 @@ import in.co.rays.project_3.util.JDBCDataSource;
 
 /**
  * JDBC implements of Student model
- * @author Niraj Chopra
+ * @author Anand Choudhary
  *
  */
 public class StudentModelJDBCImpl implements StudentModelInt {
@@ -29,7 +29,7 @@ public class StudentModelJDBCImpl implements StudentModelInt {
 		long pk = 0;
 		try {
 			con = JDBCDataSource.getConnection();
-			PreparedStatement ps = con.prepareStatement("select max(id) from st_student");
+			PreparedStatement ps = con.prepareStatement("select max(id) from ST_STUDENT");
 			ResultSet rs = ps.executeQuery();
 			while (rs.next()) {
 				pk = rs.getLong(1);
@@ -70,7 +70,7 @@ public class StudentModelJDBCImpl implements StudentModelInt {
 			// Get auto-generated next primary key
 			System.out.println(pk + " in ModelJDBC");
 			conn.setAutoCommit(false); // Begin transaction
-			PreparedStatement pstmt = conn.prepareStatement("insert into st_student values(?,?,?,?,?,?,?,?,?,?,?,?)");
+			PreparedStatement pstmt = conn.prepareStatement("INSERT INTO ST_STUDENT VALUES(?,?,?,?,?,?,?,?,?,?,?,?)");
 			pstmt.setLong(1, pk);
 			pstmt.setString(2, dto.getFirstName());
 			pstmt.setString(3, dto.getLastName());
@@ -108,7 +108,7 @@ public class StudentModelJDBCImpl implements StudentModelInt {
 		try {
 			conn = JDBCDataSource.getConnection();
 			conn.setAutoCommit(false); // Begin transaction
-			PreparedStatement pstmt = conn.prepareStatement("delete from st_student where id=?");
+			PreparedStatement pstmt = conn.prepareStatement("DELETE FROM ST_STUDENT WHERE ID=?");
 			pstmt.setLong(1, dto.getId());
 			pstmt.executeUpdate();
 			conn.commit(); // End transaction
@@ -151,7 +151,7 @@ public class StudentModelJDBCImpl implements StudentModelInt {
 
 			conn.setAutoCommit(false); // Begin transaction
 			PreparedStatement pstmt = conn.prepareStatement(
-					"update st_student set college_id=?,college_name=?,first_name=?,last_name=?,dob=?,mobile_no=?,email_id=?,created_by=?,modified_by=?,created_datetime=?,modified_datetime=? where id=?");
+					"UPDATE ST_STUDENT SET COLLEGE_ID=?,COLLEGE_NAME=?,FIRST_NAME=?,LAST_NAME=?,DOB=?,MOBILE_NO=?,EMAILID=?,CREATED_BY=?,MODIFIED_BY=?,CREATED_DATETIME=?,MODIFIED_DATETIME=? WHERE ID=?");
 			pstmt.setLong(1, dto.getCollegeId());
 			pstmt.setString(2, dto.getCollegeName());
 			pstmt.setString(3, dto.getFirstName());
@@ -190,7 +190,7 @@ public class StudentModelJDBCImpl implements StudentModelInt {
 		// TODO Auto-generated method stub
 		log.debug("Model list Started");
 		ArrayList list = new ArrayList();
-		StringBuffer sql = new StringBuffer("select * from st_student");
+		StringBuffer sql = new StringBuffer("select * from ST_STUDENT");
 		// if page size is greater than zero then apply pagination
 		if (pageSize > 0) {
 			// Calculate start record index
@@ -240,7 +240,7 @@ public class StudentModelJDBCImpl implements StudentModelInt {
 	public List search(StudentDTO dto, int pageNo, int pageSize) throws ApplicationException {
 		// TODO Auto-generated method stub
 		log.debug("Model search Started");
-		StringBuffer sql = new StringBuffer("select * from st_student where 1=1");
+		StringBuffer sql = new StringBuffer("SELECT * FROM ST_STUDENT WHERE 1=1");
 
 		if (dto != null) {
 			if (dto.getId() > 0) {
@@ -313,7 +313,7 @@ public class StudentModelJDBCImpl implements StudentModelInt {
 	public StudentDTO findByPK(long pk) throws ApplicationException {
 		// TODO Auto-generated method stub
 		log.debug("Model findByPK Started");
-		StringBuffer sql = new StringBuffer("select * from st_student where id=?");
+		StringBuffer sql = new StringBuffer("SELECT * FROM ST_STUDENT WHERE ID=?");
 		StudentDTO dto = null;
 		Connection conn = null;
 		try {
@@ -350,7 +350,7 @@ public class StudentModelJDBCImpl implements StudentModelInt {
 	public StudentDTO findByEmailId(String emailId) throws ApplicationException {
 		// TODO Auto-generated method stub
 		log.debug("Model findBy Email Started");
-		StringBuffer sql = new StringBuffer("select * from st_student where email_id=?");
+		StringBuffer sql = new StringBuffer("SELECT * FROM ST_STUDENT WHERE EMAILID=?");
 		StudentDTO dto = null;
 		Connection conn = null;
 		try {

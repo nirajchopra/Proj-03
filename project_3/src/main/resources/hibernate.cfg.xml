@@ -1,39 +1,40 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE hibernate-configuration PUBLIC
-		"-//Hibernate/Hibernate Configuration DTD 3.0//EN"
-		"http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+	<!DOCTYPE hibernate-configuration PUBLIC
+			"-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+			"http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
 <hibernate-configuration>
 
 	<session-factory>
 		<property name="hibernate.connection.driver_class">com.mysql.cj.jdbc.Driver</property>
-		<property name="hibernate.connection.url">jdbc:mysql://localhost:3306/project_03</property>
+		<property name="hibernate.connection.url">jdbc:mysql://localhost:3306/project-3</property>
 
 		<property name="hibernate.connection.username">root</property>
-		<property name="hibernate.connection.password">root</property>
-
+		<property name="hibernate.connection.password">Root@123</property>
 
 		<property name="hibernate.dialect">org.hibernate.dialect.MySQLDialect</property>
 
 		<property name="hbm2ddl.auto">update</property>
 		<property name="show_sql">true</property>
 
+		<!-- <property name="hibernate.format_sql">true</property> -->
 
-		<property name="hibernate.cache.provider_class"> org.hibernate.cache.EhCacheProvider</property>
-		<property name="hibernate.cache.use_second_level_cache"> true</property>
+
+
+	<!--<property name="hibernate.cache.provider_class"> org.hibernate.cache.EhCacheProvider</property> 
+		<property name="hibernate.cache.use_second_level_cache"> true</property> -->
 
 		<!-- hibernate DCP c3p0 Configuration -->
 		<property name="hibernate.c3p0.min_size">10</property>
-		<!-- Default 3 -->
+		<!-- Defailt 3 -->
 		<property name="hibernate.c3p0.max_size">100</property>
-		<!-- Default 20 Acquired increment by default =3 -->
+		<!-- Defailt 20 Acquired increment by default =3 -->
 		<property name="hibernate.c3p0.timeout">10</property>
-		<!-- Default 20 -->
+		<!-- Defailt 20 -->
 		<property name="hibernate.c3p0.max_statements">50</property>
-
+		<property name="hibernate.c3p0.idle_test_period">3000</property>
 
 
 		<mapping resource="in/co/rays/project_3/hbm/UserDTO.hbm.xml" />
-		<mapping resource="in/co/rays/project_3/hbm/BaseDTO.hbm.xml"/>
 		<mapping
 			resource="in/co/rays/project_3/hbm/StudentDTO.hbm.xml" />
 		<mapping
@@ -51,10 +52,42 @@
 		<mapping
 			resource="in/co/rays/project_3/hbm/ProductDTO.hbm.xml" />
 		<mapping
-			resource="in/co/rays/project_3/hbm/DroneDeliveryDTO.hbm.xml" />
+			resource="in/co/rays/project_3/hbm/ProfileDTO.hbm.xml" />
 		<mapping
-			resource="in/co/rays/project_3/hbm/PodCastDTO.hbm.xml" />
+			resource="in/co/rays/project_3/hbm/InventoryDTO.hbm.xml" />
 		<mapping
-			resource="in/co/rays/project_3/hbm/EmojiReactionDTO.hbm.xml" />
+			resource="in/co/rays/project_3/hbm/SessionDTO.hbm.xml" />
+		<mapping
+			resource="in/co/rays/project_3/hbm/LenguageDTO.hbm.xml" />
+
+		<mapping
+			resource="in/co/rays/project_3/hbm/AnnouncementDTO.hbm.xml" />
+
+		<mapping resource="in/co/rays/project_3/hbm/ResultDTO.hbm.xml" />
+
+		<mapping
+			resource="in/co/rays/project_3/hbm/PlacementDTO.hbm.xml" />
+		<mapping
+			resource="in/co/rays/project_3/hbm/HospitalDTO.hbm.xml" />
+		<mapping
+			resource="in/co/rays/project_3/hbm/VehicleDTO.hbm.xml" />
+		<mapping resource="in/co/rays/project_3/hbm/EventDTO.hbm.xml" />
+		<mapping
+			resource="in/co/rays/project_3/hbm/DonationDTO.hbm.xml" />
+		<mapping
+			resource="in/co/rays/project_3/hbm/WarrantyDTO.hbm.xml" />
+		<mapping resource="in/co/rays/project_3/hbm/SalaryDTO.hbm.xml" />
+		<mapping
+			resource="in/co/rays/project_3/hbm/PortfolioDTO.hbm.xml" />
+
+		<mapping resource="in/co/rays/project_3/hbm/SecretDTO.hbm.xml" />
+		
+		<mapping resource="in/co/rays/project_3/hbm/CustomerDTO.hbm.xml" />
+		
+		<mapping resource="in/co/rays/project_3/hbm/ListenerDTO.hbm.xml" />
+		<mapping resource="in/co/rays/project_3/hbm/BookDTO.hbm.xml" />
+
+
+
 	</session-factory>
 </hibernate-configuration>

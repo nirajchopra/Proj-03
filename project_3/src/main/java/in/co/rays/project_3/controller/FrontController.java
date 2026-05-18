@@ -16,27 +16,27 @@ import javax.servlet.http.HttpSession;
 import in.co.rays.project_3.util.ServletUtility;
 
 /**
- * Front Functionality ctl. to perform session checking and logging operation
- * 
- * @author Niraj Chopra
+ * Front Functionality ctl. to perform session checking and logging operation 
+ * It prevent any user to access application without login 
+ * @author Anand Choudhary
  *
  */
-@WebFilter(urlPatterns = { "/ctl/*", "/doc/*" })
+@WebFilter(urlPatterns={"/ctl/*","/doc/*"})
 public class FrontController implements Filter {
 	public void init(FilterConfig conf) throws ServletException {
 	}
 
 	public void doFilter(ServletRequest req, ServletResponse resp, FilterChain chain)
 			throws IOException, ServletException {
-
+		
 		HttpServletRequest request = (HttpServletRequest) req;
 		HttpServletResponse response = (HttpServletResponse) resp;
-
+		
 		HttpSession session = request.getSession();
-
-		String uri = request.getRequestURI();
+		
+		String uri=request.getRequestURI();
 		request.setAttribute("uri", uri);
-
+		
 		if (session.getAttribute("user") == null) {
 			request.setAttribute("error", "Your session has been expired please Login again!");
 			ServletUtility.forward(ORSView.LOGIN_VIEW, request, response);

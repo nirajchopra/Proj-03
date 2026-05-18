@@ -22,8 +22,7 @@ import in.co.rays.project_3.util.JDBCDataSource;
 
 /**
  * JDBC implements of User model
- * 
- * @author Niraj Chopra
+ * @author Anand Choudhary
  *
  */
 public class UserModelJDBCImpl implements UserModelInt {
@@ -35,7 +34,7 @@ public class UserModelJDBCImpl implements UserModelInt {
 		long pk = 0;
 		try {
 			con = JDBCDataSource.getConnection();
-			PreparedStatement ps = con.prepareStatement("select max(id) from st_user");
+			PreparedStatement ps = con.prepareStatement("select max(id) from ST_USER");
 			ResultSet rs = ps.executeQuery();
 			while (rs.next()) {
 				pk = rs.getLong(1);
@@ -69,7 +68,7 @@ public class UserModelJDBCImpl implements UserModelInt {
 			pk = nextPK();
 			System.out.println("insert data");
 			PreparedStatement ps = con
-					.prepareStatement("insert into st_user values(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)");
+					.prepareStatement("insert into ST_USERdto values(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)");
 			ps.setLong(1, pk);
 			ps.setString(2, dto.getFirstName());
 			ps.setString(3, dto.getLastName());
@@ -118,7 +117,7 @@ public class UserModelJDBCImpl implements UserModelInt {
 		try {
 			con = JDBCDataSource.getConnection();
 			con.setAutoCommit(false);
-			PreparedStatement ps = con.prepareStatement("delete from st_user where id=?");
+			PreparedStatement ps = con.prepareStatement("delete from ST_USER where id=?");
 			ps.setLong(1, dto.getId());
 			ps.executeUpdate();
 			con.commit();
@@ -150,7 +149,7 @@ public class UserModelJDBCImpl implements UserModelInt {
 		try {
 			con = JDBCDataSource.getConnection();
 			ps = con.prepareStatement(
-					"update st_user set first_name=?,last_name=?,login=?,password=?,confirmpassword=?,dob=?,mobile_no=?,role_id=?,unsuccessful_login=?,gender=?,last_login=?,registered_ip=?,last_login_ip=?,created_by=?,modified_by=?,created_datetime=?,modified_datetime=? where id=?");
+					"update ST_USER set FIRST_NAME=?,LAST_NAME=?,LOGIN=?,PASSWORD=?,CONFIRMPASSWORD=?,DOB=?,MOBILE_NO=?,ROLE_ID=?,UNSUCCESSFUL_LOGIN=?,GENDER=?,LAST_LOGIN=?,REGISTERED_IP=?,LAST_LOGIN_IP=?,CREATED_BY=?,MODIFIED_BY=?,CREATED_DATETIME=?,MODIFIED_DATETIME=? WHERE ID=?");
 
 			ps.setString(1, dto.getFirstName());
 			ps.setString(2, dto.getLastName());
@@ -195,7 +194,7 @@ public class UserModelJDBCImpl implements UserModelInt {
 		UserDTO dto = null;
 		try {
 			con = JDBCDataSource.getConnection();
-			ps = con.prepareStatement("select * from st_user where id=?");
+			ps = con.prepareStatement("select * from ST_USER where id=?");
 			ps.setLong(1, pk);
 			ResultSet rs = ps.executeQuery();
 			while (rs.next()) {
@@ -210,8 +209,8 @@ public class UserModelJDBCImpl implements UserModelInt {
 				dto.setLogin(rs.getString(8));
 				dto.setPassword(rs.getString(9));
 				dto.setConfirmPassword(rs.getString(10));
-				dto.setLastLogin(rs.getTimestamp(11));
-				dto.setUnSuccessfullLogin(rs.getInt(12));
+				dto.setLastLogin(rs.getTimestamp(11));	
+				dto.setUnSuccessfullLogin(rs.getInt(12));	
 				dto.setLoginIP(rs.getString(13));
 				dto.setRegisteredIP(rs.getString(14));
 				dto.setCreatedBy(rs.getString(15));
@@ -237,7 +236,7 @@ public class UserModelJDBCImpl implements UserModelInt {
 		UserDTO dto = null;
 		try {
 			con = JDBCDataSource.getConnection();
-			ps = con.prepareStatement("select * from st_user where login=?");
+			ps = con.prepareStatement("select * from ST_USER where LOGIN=?");
 			ps.setString(1, login);
 			ResultSet rs = ps.executeQuery();
 			while (rs.next()) {
@@ -252,8 +251,8 @@ public class UserModelJDBCImpl implements UserModelInt {
 				dto.setLogin(rs.getString(8));
 				dto.setPassword(rs.getString(9));
 				dto.setConfirmPassword(rs.getString(10));
-				dto.setLastLogin(rs.getTimestamp(11));
-				dto.setUnSuccessfullLogin(rs.getInt(12));
+				dto.setLastLogin(rs.getTimestamp(11));	
+				dto.setUnSuccessfullLogin(rs.getInt(12));	
 				dto.setLoginIP(rs.getString(13));
 				dto.setRegisteredIP(rs.getString(14));
 				dto.setCreatedBy(rs.getString(15));
@@ -283,7 +282,7 @@ public class UserModelJDBCImpl implements UserModelInt {
 		PreparedStatement ps = null;
 		ArrayList array = null;
 		UserDTO dto = null;
-		StringBuffer sql = new StringBuffer("select * from st_user where 1=1");
+		StringBuffer sql = new StringBuffer("select * from ST_USER where 1=1");
 		if (pageSize > 0) {
 			pageNo = (pageNo - 1) * pageSize;
 			sql.append("limit" + pageNo + "," + pageSize);
@@ -304,8 +303,8 @@ public class UserModelJDBCImpl implements UserModelInt {
 				dto.setLogin(rs.getString(8));
 				dto.setPassword(rs.getString(9));
 				dto.setConfirmPassword(rs.getString(10));
-				dto.setLastLogin(rs.getTimestamp(11));
-				dto.setUnSuccessfullLogin(rs.getInt(12));
+				dto.setLastLogin(rs.getTimestamp(11));	
+				dto.setUnSuccessfullLogin(rs.getInt(12));	
 				dto.setLoginIP(rs.getString(13));
 				dto.setRegisteredIP(rs.getString(14));
 				dto.setCreatedBy(rs.getString(15));
@@ -331,7 +330,7 @@ public class UserModelJDBCImpl implements UserModelInt {
 		Connection con = null;
 		PreparedStatement ps = null;
 		ArrayList array = null;
-		StringBuffer sql = new StringBuffer("select * from st_user where 1=1");
+		StringBuffer sql = new StringBuffer("select * from ST_USER where 1=1");
 		if (dto != null) {
 			if (dto.getId() > 0) {
 				sql.append(" AND ID = " + dto.getId());
@@ -394,8 +393,8 @@ public class UserModelJDBCImpl implements UserModelInt {
 				dto.setLogin(rs.getString(8));
 				dto.setPassword(rs.getString(9));
 				dto.setConfirmPassword(rs.getString(10));
-				dto.setLastLogin(rs.getTimestamp(11));
-				dto.setUnSuccessfullLogin(rs.getInt(12));
+				dto.setLastLogin(rs.getTimestamp(11));	
+				dto.setUnSuccessfullLogin(rs.getInt(12));	
 				dto.setLoginIP(rs.getString(13));
 				dto.setRegisteredIP(rs.getString(14));
 				dto.setCreatedBy(rs.getString(15));
@@ -424,10 +423,10 @@ public class UserModelJDBCImpl implements UserModelInt {
 	}
 
 	/*
-	 * public boolean changePassword(long id, String newPassword, int oldPassword)
-	 * throws RecordNotFoundException, ApplicationException {
-	 * log.debug("user changePassword method start"); boolean flag = false; UserDTO
-	 * existDto = null; existDto = findByPK(id); if (existDto != null &&
+	 * public boolean changePassword(long id, String newPassword, int
+	 * oldPassword) throws RecordNotFoundException, ApplicationException {
+	 * log.debug("user changePassword method start"); boolean flag = false;
+	 * UserDTO existDto = null; existDto = findByPK(id); if (existDto != null &&
 	 * existDto.getPassword().equals(oldPassword)) {
 	 * existDto.setPassword(newPassword); try { update(existDto); } catch
 	 * (DuplicateRecordException e) { log.error(e); throw new
@@ -458,7 +457,7 @@ public class UserModelJDBCImpl implements UserModelInt {
 		log.debug("user model authenticate method start");
 		UserDTO dto = null;
 		Connection con = null;
-		StringBuffer sql = new StringBuffer("select * from st_user where login=? and password=?");
+		StringBuffer sql = new StringBuffer("select * from ST_USER where login=? and password=?");
 		try {
 			con = JDBCDataSource.getConnection();
 			PreparedStatement pstmt = con.prepareStatement(sql.toString());
@@ -477,8 +476,8 @@ public class UserModelJDBCImpl implements UserModelInt {
 				dto.setLogin(rs.getString(8));
 				dto.setPassword(rs.getString(9));
 				dto.setConfirmPassword(rs.getString(10));
-				dto.setLastLogin(rs.getTimestamp(11));
-				dto.setUnSuccessfullLogin(rs.getInt(12));
+				dto.setLastLogin(rs.getTimestamp(11));	
+				dto.setUnSuccessfullLogin(rs.getInt(12));	
 				dto.setLoginIP(rs.getString(13));
 				dto.setRegisteredIP(rs.getString(14));
 				dto.setCreatedBy(rs.getString(15));
@@ -527,37 +526,39 @@ public class UserModelJDBCImpl implements UserModelInt {
 
 	/*
 	 * public boolean forgetPassword(String login) throws ApplicationException,
-	 * RecordNotFoundException { // TODO Auto-generated method stub UserDTO userData
-	 * = findByLogin(login); boolean flag = false;
+	 * RecordNotFoundException { // TODO Auto-generated method stub UserDTO
+	 * userData = findByLogin(login); boolean flag = false;
 	 * 
 	 * if (userData == null) { throw new RecordNotFoundException(
 	 * "Email Id Does not matched.");
 	 * 
 	 * }
 	 * 
-	 * HashMap<String, String> map = new HashMap<String, String>(); map.put("login",
-	 * userData.getLogin()); map.put("password", userData.getPassword());
-	 * map.put("firstName", userData.getFirstName()); map.put("lastName",
-	 * userData.getLastName()); String message =
+	 * HashMap<String, String> map = new HashMap<String, String>();
+	 * map.put("login", userData.getLogin()); map.put("password",
+	 * userData.getPassword()); map.put("firstName", userData.getFirstName());
+	 * map.put("lastName", userData.getLastName()); String message =
 	 * EmailBuilder.getForgetPasswordMessage(map); EmailMessage msg = new
 	 * EmailMessage(); msg.setTo(login); msg.setSubject(
 	 * "SUNARYS ORS Password reset"); msg.setMessage(message);
-	 * msg.setMessageType(EmailMessage.HTML_MSG); EmailUtility.sendMail(msg); flag =
-	 * true;
+	 * msg.setMessageType(EmailMessage.HTML_MSG); EmailUtility.sendMail(msg);
+	 * flag = true;
 	 * 
 	 * return flag; }
 	 * 
 	 * public boolean resetPassword(UserDTO dto) throws ApplicationException,
 	 * RecordNotFoundException { // TODO Auto-generated method stub String
-	 * newPassword = String.valueOf(new Date().getTime()).substring(0, 4); UserDTO
-	 * userData = findByPK(dto.getId()); userData.setPassword(newPassword);
+	 * newPassword = String.valueOf(new Date().getTime()).substring(0, 4);
+	 * UserDTO userData = findByPK(dto.getId());
+	 * userData.setPassword(newPassword);
 	 * 
-	 * try { update(userData); } catch (DuplicateRecordException e) { return false;
-	 * }
+	 * try { update(userData); } catch (DuplicateRecordException e) { return
+	 * false; }
 	 * 
-	 * HashMap<String, String> map = new HashMap<String, String>(); map.put("login",
-	 * dto.getLogin()); map.put("password", dto.getPassword()); map.put("firstName",
-	 * dto.getFirstName()); map.put("lastName", dto.getLastName());
+	 * HashMap<String, String> map = new HashMap<String, String>();
+	 * map.put("login", dto.getLogin()); map.put("password", dto.getPassword());
+	 * map.put("firstName", dto.getFirstName()); map.put("lastName",
+	 * dto.getLastName());
 	 * 
 	 * String message = EmailBuilder.getForgetPasswordMessage(map);
 	 * 
@@ -574,8 +575,8 @@ public class UserModelJDBCImpl implements UserModelInt {
 	 * DuplicateRecordException { log.debug("model register start"); long pk =
 	 * add(dto);
 	 * 
-	 * HashMap<String, String> map = new HashMap<String, String>(); map.put("login",
-	 * dto.getLogin()); map.put("password", dto.getPassword());
+	 * HashMap<String, String> map = new HashMap<String, String>();
+	 * map.put("login", dto.getLogin()); map.put("password", dto.getPassword());
 	 * 
 	 * String message = EmailBuilder.getUserRegistrationMessage(map);
 	 * 
@@ -590,26 +591,28 @@ public class UserModelJDBCImpl implements UserModelInt {
 	 * }
 	 * 
 	 * public List getRoles(UserDTO dto) throws ApplicationException { // TODO
-	 * Auto-generated method stub log.debug("Model get roles Started"); StringBuffer
-	 * sql = new StringBuffer( "SELECT * FROM ST_USER WHERE role_Id=?"); Connection
-	 * conn = null; List list = new ArrayList(); try {
+	 * Auto-generated method stub log.debug("Model get roles Started");
+	 * StringBuffer sql = new StringBuffer(
+	 * "SELECT * FROM ST_USER WHERE role_Id=?"); Connection conn = null; List
+	 * list = new ArrayList(); try {
 	 * 
 	 * conn = JDBCDataSource.getConnection(); PreparedStatement pstmt =
 	 * conn.prepareStatement(sql.toString()); pstmt.setLong(1, dto.getRoleId());
-	 * ResultSet rs = pstmt.executeQuery(); while (rs.next()) { dto = new UserDTO();
-	 * dto.setId(rs.getLong(1)); dto.setFirstName(rs.getString(2));
+	 * ResultSet rs = pstmt.executeQuery(); while (rs.next()) { dto = new
+	 * UserDTO(); dto.setId(rs.getLong(1)); dto.setFirstName(rs.getString(2));
 	 * dto.setLastName(rs.getString(3)); dto.setLogin(rs.getString(4));
-	 * dto.setPassword(rs.getString(5)); dto.setConfirmPassword(rs.getString(6));
-	 * dto.setDob(rs.getDate(7)); dto.setMobileNo(rs.getString(8));
+	 * dto.setPassword(rs.getString(5));
+	 * dto.setConfirmPassword(rs.getString(6)); dto.setDob(rs.getDate(7));
+	 * dto.setMobileNo(rs.getString(8));
 	 * dto.setUnSuccessfullLogin(rs.getInt(9)); dto.setGender(rs.getString(10));
 	 * dto.setRoleId(rs.getLong(11)); dto.setLastLogin(rs.getTimestamp(12));
 	 * dto.setLoginIP(rs.getString(13)); dto.setRegisteredIP(rs.getString(14));
 	 * dto.setLock(rs.getString(15)); dto.setCreatedBy(rs.getString(16));
 	 * dto.setModifiedBy(rs.getString(17));
 	 * dto.setCreatedDatetime(rs.getTimestamp(18));
-	 * dto.setModifiedDatetime(rs.getTimestamp(19)); list.add(dto); } rs.close(); }
-	 * catch (Exception e) { log.error("Database Exception..", e); throw new
-	 * ApplicationException("Exception : Exception in get roles");
+	 * dto.setModifiedDatetime(rs.getTimestamp(19)); list.add(dto); }
+	 * rs.close(); } catch (Exception e) { log.error("Database Exception..", e);
+	 * throw new ApplicationException("Exception : Exception in get roles");
 	 * 
 	 * } finally { JDBCDataSource.closeConnection(conn); } log.debug(
 	 * "Model get roles End"); return list; }

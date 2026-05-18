@@ -1,7 +1,7 @@
 package in.co.rays.project_3.exception;
 
 /**
- * @author Niraj Chopra
+ * @author Anand Choudhary
  */
 public class ApplicationException extends Exception {
    

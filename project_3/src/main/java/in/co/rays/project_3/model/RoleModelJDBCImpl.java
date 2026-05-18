@@ -16,7 +16,7 @@ import in.co.rays.project_3.util.JDBCDataSource;
 
 /**
  * JDBC implements of Role model
- * @author Niraj Chopra
+ * @author Anand Choudhary
  *
  */
 public class RoleModelJDBCImpl implements RoleModelInt{
@@ -33,7 +33,7 @@ public class RoleModelJDBCImpl implements RoleModelInt{
 		long pk = 0;
 		try {
 			con = JDBCDataSource.getConnection();
-			PreparedStatement ps = con.prepareStatement("select max(id) from st_role");
+			PreparedStatement ps = con.prepareStatement("select max(ID) from st_role");
 			ResultSet r = ps.executeQuery();
 			while (r.next()) {
 				pk = (int) r.getLong(1);
@@ -103,7 +103,7 @@ public class RoleModelJDBCImpl implements RoleModelInt{
 
 			con = JDBCDataSource.getConnection();
 			con.setAutoCommit(false);
-			PreparedStatement ps = con.prepareStatement("delete from st_role where id=?");
+			PreparedStatement ps = con.prepareStatement("delete from st_role where ID=?");
 			ps.setLong(1, rdto.getId());
 			System.out.println("Delete data successfully");
 			ps.executeUpdate();
@@ -141,7 +141,7 @@ public class RoleModelJDBCImpl implements RoleModelInt{
 			con = JDBCDataSource.getConnection();
 			con.setAutoCommit(false);
 			PreparedStatement ps = con.prepareStatement(
-					"update st_role set name=?,description=?,created_by=?,modified_by=?,created_datetime=?,modified_datetime=? where id=?");
+					"update st_role set NAME=?,DESCRIPTION=?,CREATED_BY=?,MODIFIED_BY=?,CREATED_DATETIME=?,MODIFIED_DATETIME=? where ID=?");
 			ps.setString(1, rdto.getName());
 			ps.setString(2, rdto.getDescription());
 			ps.setString(3, rdto.getCreatedBy());
@@ -234,7 +234,7 @@ public class RoleModelJDBCImpl implements RoleModelInt{
 		try {
 
 			con = JDBCDataSource.getConnection();
-			PreparedStatement ps = con.prepareStatement("select * from st_role where id=?");
+			PreparedStatement ps = con.prepareStatement("select * from st_role where ID=?");
 			ps.setLong(1, pk);
 			ResultSet rs = ps.executeQuery();
 			while (rs.next()) {
@@ -271,7 +271,7 @@ public class RoleModelJDBCImpl implements RoleModelInt{
 		try {
 
 			con = JDBCDataSource.getConnection();
-			PreparedStatement ps = con.prepareStatement("select * from st_role where name=?");
+			PreparedStatement ps = con.prepareStatement("select * from st_role where NAME=?");
 			ps.setString(1, name);
 			ResultSet rs = ps.executeQuery();
 			while (rs.next()) {

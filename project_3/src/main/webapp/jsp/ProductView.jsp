@@ -7,7 +7,7 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-<title>College View</title>
+<title>Product View</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
 <style type="text/css">
@@ -51,13 +51,13 @@ i.css {
 							<%
 								long id = DataUtility.getLong(request.getParameter("id"));
 
-								if (dto.getId() != null) {
+								if (dto.getId() != null && dto.getId() > 0) {
 							%>
-							<h3 class="text-center text-primary">Update College</h3>
+							<h3 class="text-center text-primary">Update Product</h3>
 							<%
 								} else {
 							%>
-							<h3 class="text-center text-primary">Add College</h3>
+							<h3 class="text-center text-primary">Add Product</h3>
 							<%
 								}
 							%>
@@ -149,7 +149,7 @@ i.css {
 											</div>
 										</div>
 										<input type="text" name="productCategory" class="form-control"
-											placeholder="Enter State"
+											placeholder="Enter Category"
 											value="<%=DataUtility.getStringData(dto.getProductCategory())%>">
 									</div>
 								</div>
@@ -164,7 +164,7 @@ i.css {
 												<i class="fa fa-calendar grey-text" style="font-size: 1rem;"></i>
 											</div>
 										</div>
-										<input type="text" id="datepicker2" name="purchaseDate"
+										<input type="text" id="datepicker3" name="purchaseDate"
 											class="form-control" placeholder="PurchaseDate"
 											readonly="readonly"
 											value="<%=DataUtility.getDateString(dto.getPurchaseDate())%>">
@@ -174,7 +174,7 @@ i.css {
 							</div>
 							</br>
 							<%
-								if (id > 0) {
+								if (dto.getId() != null && dto.getId() > 0) {
 							%>
 							<div class="text-center">
 

@@ -16,7 +16,7 @@ import in.co.rays.project_3.util.JDBCDataSource;
 
 /**
  * JDBC implements of Course model
- * @author Niraj Chopra
+ * @author Anand Choudhary
  *
  */
 public class CourseModelJDBCImpl implements CourseModelInt {
@@ -120,8 +120,8 @@ public class CourseModelJDBCImpl implements CourseModelInt {
 
 		try {
 			con = JDBCDataSource.getConnection();
-			ps = con.prepareStatement("update st_course set course_name=?,description=?,duration=?"
-					+ ",created_by=?,modified_by=?,created_datetime=?," + "modified_datetime=? where id=?");
+			ps = con.prepareStatement("UPDATE st_course SET COURSE_NAME=?,DESCRIPTION=?,DURATION=?"
+					+ ",CREATED_BY=?,MODIFIED_BY=?,CREATED_DATETIME=?," + "MODIFIED_DATETIME=? WHERE ID=?");
 			con.setAutoCommit(false);
 
 			ps.setString(1, dto.getCourseName());
@@ -151,7 +151,7 @@ public class CourseModelJDBCImpl implements CourseModelInt {
 	 */
 	public void delete(CourseDTO b) throws ApplicationException {
 		log.debug("model delete start");
-		String query = " delete  from st_course where id=?";
+		String query = " delete  from st_course where ID=?";
 		try {
 			con = JDBCDataSource.getConnection();
 			con.setAutoCommit(false);
@@ -321,7 +321,7 @@ public class CourseModelJDBCImpl implements CourseModelInt {
 		CourseDTO dto = null;
 		try {
 			Connection con = JDBCDataSource.getConnection();
-			PreparedStatement ps = con.prepareStatement("select * from st_course where id=?");
+			PreparedStatement ps = con.prepareStatement("select * from st_course where ID=?");
 			ps.setLong(1, pk);
 			ResultSet rs = ps.executeQuery();
 			while (rs.next()) {
@@ -358,7 +358,7 @@ public class CourseModelJDBCImpl implements CourseModelInt {
 	 */
 	public CourseDTO findByName(String Name) throws ApplicationException {
 		// log.debug("Model findByPk Start");
-		StringBuffer sql = new StringBuffer("select * from st_course where course_name=?");
+		StringBuffer sql = new StringBuffer("SELECT * FROM st_course WHERE COURSE_NAME=?");
 		CourseDTO dto = null;
 		Connection conn = null;
 

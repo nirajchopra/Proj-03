@@ -24,7 +24,7 @@ import in.co.rays.project_3.util.ServletUtility;
 
 /**
  * subject functionality controller.to perform add,delete and update operation.
- * @author Niraj Chopra
+ * @author Anand Choudhary
  *
  */
 
@@ -124,8 +124,9 @@ public class SubjectCtl extends BaseCtl {
 					
 					model.update(dto);
 					ServletUtility.setSuccessMessage("Data in successfully Update", request);
+					ServletUtility.setDto(dto, request);
+
 				}else{
-					System.out.println("kkkkk+"+id);
 					long pk;
 					try{
 					pk=	model.add(dto);
@@ -140,7 +141,6 @@ public class SubjectCtl extends BaseCtl {
 					}
 
 				}
-				ServletUtility.setDto(dto, request);
 				
 			}catch (ApplicationException e) {
 				log.error(e);

@@ -23,7 +23,7 @@ import in.co.rays.project_3.util.ServletUtility;
 
 /**
  * faculty list functionality ctl.To perform show,search and delete operation
- * @author Niraj Chopra
+ * @author Anand Choudhary
  *
  */
 @WebServlet(name = "FacultyListCtl", urlPatterns = { "/ctl/FacultyListCtl" })

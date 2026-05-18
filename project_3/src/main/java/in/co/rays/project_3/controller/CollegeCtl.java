@@ -21,7 +21,7 @@ import in.co.rays.project_3.util.ServletUtility;
 
 /**
  * college functionality ctl. To perform add,delete ,update operation
- * @author Niraj Chopra
+ * @author Anand Choudhary
  * 
  */
 
@@ -131,7 +131,7 @@ public class CollegeCtl extends BaseCtl {
 							model.add(dto);
 					ServletUtility.setSuccessMessage("Record Successfully Saved", request);
 				}
-				ServletUtility.setDto(dto, request);
+				//ServletUtility.setDto(dto, request);
 			} catch (ApplicationException e) {
 				e.printStackTrace();
 				log.error(e);

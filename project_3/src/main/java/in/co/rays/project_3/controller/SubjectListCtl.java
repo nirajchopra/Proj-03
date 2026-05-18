@@ -22,7 +22,7 @@ import in.co.rays.project_3.util.ServletUtility;
 
 /**
  * subject functionality controller.perfrom search and show list operation
- * @author Niraj Chopra
+ * @author Anand Choudhary
  *
  */
 @WebServlet(name = "SubjectListCtl", urlPatterns = { "/ctl/SubjectListCtl" })
@@ -155,7 +155,6 @@ public class SubjectListCtl extends BaseCtl {
 			ServletUtility.setList(list, request);
 			
 			if (list == null || list.size() == 0&&!OP_DELETE.equalsIgnoreCase(op)) {
-				System.out.println("last endpopopop"+list);
 				ServletUtility.setErrorMessage("No record found ", request);
 			}if (next == null || next.size() == 0) {
 				request.setAttribute("nextListSize", 0);

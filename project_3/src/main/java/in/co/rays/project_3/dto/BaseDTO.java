@@ -6,7 +6,7 @@ import java.sql.Timestamp;
 /**
  * Parent class of all Dto in application. It contains generic attributes.
  * 
- * @author Niraj Chopra
+ * @author Anand Choudhary
  *
  */
 

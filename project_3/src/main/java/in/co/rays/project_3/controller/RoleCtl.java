@@ -22,7 +22,7 @@ import in.co.rays.project_3.util.ServletUtility;
 
 /**
  * role functionality controller.to perform add,delete ,update operation
- * @author Niraj Chopra
+ * @author Anand Choudhary
  *
  */
 @WebServlet(urlPatterns = { "/ctl/RoleCtl" })
@@ -95,12 +95,11 @@ public class RoleCtl extends BaseCtl {
 		if (OP_SAVE.equalsIgnoreCase(op) || OP_UPDATE.equalsIgnoreCase(op)) {
 
 			RoleDTO dto = (RoleDTO) populateDTO(request);
-			System.out.println("kkkkkkkkkkkk"+dto);
-          //  System.out.println("kkkkk"+dto.getName()+"sdf"+dto.getDescription());
 			try {
 				if (id > 0) {
 					model.update(dto);
 					ServletUtility.setSuccessMessage("Successfully Updated", request);
+					ServletUtility.setDto(dto, request);
 				} else {
 					try {
 						//long pk = 
@@ -117,7 +116,7 @@ public class RoleCtl extends BaseCtl {
 
 				}
 
-				ServletUtility.setDto(dto, request);
+				//
 
 			} catch (ApplicationException e) {
 				log.error(e);

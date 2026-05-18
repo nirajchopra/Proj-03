@@ -21,7 +21,7 @@ import in.co.rays.project_3.util.ServletUtility;
 
 /**
  *college list ctl.to perform search and show list operation
- * @author Niraj Chopra
+ * @author Anand Choudhary
  *
  */
 @WebServlet(name = "CollegeListCtl", urlPatterns = { "/ctl/CollegeListCtl" })
@@ -29,7 +29,7 @@ public class CollegeListCtl extends BaseCtl {
 	private static Logger log = Logger.getLogger(CollegeListCtl.class);
      
 	protected void preload(HttpServletRequest request){
-		CollegeModelInt model=ModelFactory.getInstance().getCollegeModel();
+		CollegeModelInt model=ModelFactory.getInstance().getCollegeModel(); 
 		try {
 			List list=model.list();
 			request.setAttribute("collegeList", list);

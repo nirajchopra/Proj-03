@@ -17,7 +17,7 @@ import in.co.rays.project_3.util.JDBCDataSource;
 
 /**
  * JDBC implements of College model
- * @author Niraj Chopra
+ * @author Anand Choudhary
  *
  */
 public class CollegeModelJDBCImpl implements CollegeModelInt {
@@ -29,7 +29,7 @@ public class CollegeModelJDBCImpl implements CollegeModelInt {
 		long pk = 0;
 		try {
 			con = JDBCDataSource.getConnection();
-			PreparedStatement ps = con.prepareStatement("select max(id) from st_college");
+			PreparedStatement ps = con.prepareStatement("select max(id) from ST_COLLEGE");
 			ResultSet rs = ps.executeQuery();
 			while (rs.next()) {
 				pk = rs.getLong(1);
@@ -58,7 +58,7 @@ public class CollegeModelJDBCImpl implements CollegeModelInt {
 			conn = JDBCDataSource.getConnection();
 			pk = nextPK();
 			conn.setAutoCommit(false);
-			PreparedStatement ps = conn.prepareStatement("insert into st_college values(?,?,?,?,?,?,?,?,?,?)");
+			PreparedStatement ps = conn.prepareStatement("INSERT INTO ST_COLLEGE VALUES(?,?,?,?,?,?,?,?,?,?)");
 
 			ps.setLong(1, pk);
 			ps.setString(2, dto.getName());
@@ -96,7 +96,7 @@ public class CollegeModelJDBCImpl implements CollegeModelInt {
 
 			conn = JDBCDataSource.getConnection();
 			conn.setAutoCommit(false);
-			PreparedStatement ps = conn.prepareStatement("delete from st_college where id=?");
+			PreparedStatement ps = conn.prepareStatement("DELETE FROM ST_COLLEGE WHERE ID=?");
 			ps.setLong(1, dto.getId());
 			conn.commit();
 			ps.close();
@@ -128,7 +128,7 @@ public class CollegeModelJDBCImpl implements CollegeModelInt {
 		try {
 			conn = JDBCDataSource.getConnection();
 			PreparedStatement ps = conn.prepareStatement(
-					"update st_college set name=?,address=?,state=?,city=?,phone_no=?,created_by=?,modified_by=?,created_datetime=?,modified_datetime=? where id=?");
+					"UPDATE ST_COLLEGE SET NAME=?,ADDRESS=?,STATE=?,CITY=?,PHONE_NO=?,CREATED_BY=?,MODIFIED_BY=?,CREATED_DATETIME=?,MODIFIED_DATETIME=? WHERE ID=?");
 			ps.setString(1, dto.getName());
 			ps.setString(2, dto.getAddress());
 			ps.setString(3, dto.getState());
@@ -165,7 +165,7 @@ public class CollegeModelJDBCImpl implements CollegeModelInt {
 	public List list(int pageNo, int pageSize) throws ApplicationException {
 		// TODO Auto-generated method stub
 		ArrayList list = new ArrayList();
-		StringBuffer sql = new StringBuffer("select * from st_college6");
+		StringBuffer sql = new StringBuffer("select * from ST_COLLEGE");
 		// if page size is greater than zero then apply pagination
 		if (pageSize > 0) {
 			// Calculate start record index
@@ -214,7 +214,7 @@ public class CollegeModelJDBCImpl implements CollegeModelInt {
 		// TODO Auto-generated method stub
 
 		ArrayList array = new ArrayList();
-		StringBuffer sql = new StringBuffer("select * from st_college where 1=1");
+		StringBuffer sql = new StringBuffer("SELECT * FROM ST_COLLEGE WHERE 1=1");
 		if (dto != null) {
 			if (dto.getId() > 0) {
 				sql.append(" AND id = " + dto.getId());
@@ -282,7 +282,7 @@ public class CollegeModelJDBCImpl implements CollegeModelInt {
 		CollegeDTO dto = null;
 		try {
 			conn = JDBCDataSource.getConnection();
-			PreparedStatement ps = conn.prepareStatement("select * from st_college where id=?");
+			PreparedStatement ps = conn.prepareStatement("SELECT * FROM ST_COLLEGE WHERE ID=?");
 			ps.setLong(1, pk);
 			ResultSet rs = ps.executeQuery();
 			while (rs.next()) {
@@ -316,7 +316,7 @@ public class CollegeModelJDBCImpl implements CollegeModelInt {
 		CollegeDTO dto = null;
 		try {
 			conn = JDBCDataSource.getConnection();
-			PreparedStatement ps = conn.prepareStatement("select * from st_college where name=? ");
+			PreparedStatement ps = conn.prepareStatement("SELECT * FROM ST_COLLEGE WHERE NAME=? ");
 			ps.setString(1, name);
 			ResultSet rs = ps.executeQuery();
 			while (rs.next()) {

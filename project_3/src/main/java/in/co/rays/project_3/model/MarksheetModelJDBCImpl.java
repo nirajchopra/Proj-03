@@ -9,6 +9,7 @@ import java.util.List;
 import org.apache.log4j.Logger;
 
 import in.co.rays.project_3.dto.MarksheetDTO;
+import in.co.rays.project_3.dto.StudentDTO;
 import in.co.rays.project_3.exception.ApplicationException;
 import in.co.rays.project_3.exception.DatabaseException;
 import in.co.rays.project_3.exception.DuplicateRecordException;
@@ -16,8 +17,7 @@ import in.co.rays.project_3.util.JDBCDataSource;
 
 /**
  * JDBC implements of Marksheet model
- * 
- * @author Niraj Chopra
+ * @author Anand Choudhary
  *
  */
 public class MarksheetModelJDBCImpl implements MarksheetModelInt {
@@ -26,7 +26,6 @@ public class MarksheetModelJDBCImpl implements MarksheetModelInt {
 
 	/**
 	 * add new id
-	 * 
 	 * @return pk
 	 * @throws DatabaseException
 	 */
@@ -35,7 +34,7 @@ public class MarksheetModelJDBCImpl implements MarksheetModelInt {
 		Connection conn = null;
 		try {
 			conn = JDBCDataSource.getConnection();
-			PreparedStatement ps = conn.prepareStatement("select max(id)from st_marksheet");
+			PreparedStatement ps = conn.prepareStatement("SELECT MAX(ID)FROM st_marksheet");
 			ResultSet rs = ps.executeQuery();
 			while (rs.next()) {
 				nextPK = rs.getLong(1);
@@ -53,7 +52,6 @@ public class MarksheetModelJDBCImpl implements MarksheetModelInt {
 
 	/**
 	 * add new marksheet
-	 * 
 	 * @param dto
 	 * @return pk
 	 * @throws ApplicationException
@@ -63,16 +61,15 @@ public class MarksheetModelJDBCImpl implements MarksheetModelInt {
 		long pk = 0;
 		Connection conn = null;
 		System.out.println("----kkkkk" + dto);
+		
+	  /*StudentModelInt sModel = ModelFactory.getInstance().getStudentModel();
+		StudentDTO studentdto = sModel.findByPK(dto.getStudentId());
+		dto.setName(studentdto.getFirstName() + " " + studentdto.getLastName());
+		MarksheetDTO duplicateMarksheet = findByRollNo(dto.getRollNo());
 
-		/*
-		 * StudentModelInt sModel = ModelFactory.getInstance().getStudentModel();
-		 * StudentDTO studentdto = sModel.findByPK(dto.getStudentId());
-		 * dto.setName(studentdto.getFirstName() + " " + studentdto.getLastName());
-		 * MarksheetDTO duplicateMarksheet = findByRollNo(dto.getRollNo());
-		 * 
-		 * if (duplicateMarksheet != null) { throw new
-		 * DuplicateRecordException("Roll Number already exists"); }
-		 */
+		if (duplicateMarksheet != null) {
+			throw new DuplicateRecordException("Roll Number already exists");
+		}*/
 
 		try {
 			pk = nextPK();
@@ -94,7 +91,7 @@ public class MarksheetModelJDBCImpl implements MarksheetModelInt {
 			System.out.println("hhlllll");
 			conn.commit();
 			ps.close();
-
+			
 		} catch (Exception e) {
 			log.error("Database Exception..", e);
 			try {
@@ -102,7 +99,7 @@ public class MarksheetModelJDBCImpl implements MarksheetModelInt {
 			} catch (Exception ex) {
 				throw new ApplicationException("Exception : add rollback exception " + ex.getMessage());
 			}
-			throw new ApplicationException("Exception : Exception in add Student" + e);
+			throw new ApplicationException("Exception : Exception in add Student"+e);
 		} finally {
 			JDBCDataSource.closeConnection(conn);
 		}
@@ -112,7 +109,6 @@ public class MarksheetModelJDBCImpl implements MarksheetModelInt {
 
 	/**
 	 * update marksheet information
-	 * 
 	 * @param dto
 	 * @throws ApplicationException
 	 * @throws DuplicateRecordException
@@ -121,19 +117,18 @@ public class MarksheetModelJDBCImpl implements MarksheetModelInt {
 		Connection conn = null;
 		MarksheetDTO dtoExist = findByRollNo(dto.getRollNo());
 
-		/*
-		 * if (dtoExist != null && dtoExist.getId() != dto.getId()) { throw new
-		 * DuplicateRecordException("Roll No is already exist"); } StudentModelInt
-		 * sModel = ModelFactory.getInstance().getStudentModel();
-		 * 
-		 * StudentDTO studentdto = sModel.findByPK(dto.getStudentId());
-		 * dto.setName(studentdto.getFirstName() + " " + studentdto.getLastName());
-		 */
+	/*	if (dtoExist != null && dtoExist.getId() != dto.getId()) {
+			throw new DuplicateRecordException("Roll No is already exist");
+		}
+		StudentModelInt sModel = ModelFactory.getInstance().getStudentModel();
+		
+		StudentDTO studentdto = sModel.findByPK(dto.getStudentId());
+		dto.setName(studentdto.getFirstName() + " " + studentdto.getLastName());*/
 		try {
 			conn = JDBCDataSource.getConnection();
 			conn.setAutoCommit(false);
 			PreparedStatement ps = conn.prepareStatement(
-					"update st_marksheet set roll_no=?, student_id=?, name=?, physics=?, chemistry=?, maths=?,created_by=?,modified_by=?,created_datetime=?,modified_datetime=? where id=? ");
+					"update st_marksheet set ROLL_NO=?, STUDENT_ID=?, NAME=?, PHYSICS=?, CHEMISTRY=?, MATHS=?,CREATED_BY=?,MODIFIED_BY=?,CREATED_DATETIME=?,MODIFIED_DATETIME=? where ID=? ");
 			ps.setString(1, dto.getRollNo());
 			ps.setLong(2, dto.getStudentId());
 			ps.setString(3, dto.getName());
@@ -161,9 +156,9 @@ public class MarksheetModelJDBCImpl implements MarksheetModelInt {
 		}
 	}
 
+	
 	/**
 	 * delete marksheet information
-	 * 
 	 * @param dto
 	 * @throws ApplicationException
 	 */
@@ -173,7 +168,7 @@ public class MarksheetModelJDBCImpl implements MarksheetModelInt {
 		try {
 			conn = JDBCDataSource.getConnection();
 			conn.setAutoCommit(false);
-			PreparedStatement ps = conn.prepareStatement("delete from st_marksheet where id=?");
+			PreparedStatement ps = conn.prepareStatement("delete from st_marksheet where ID=?");
 			ps.setLong(1, dto.getId());
 			ps.execute();
 			ps.close();
@@ -192,9 +187,9 @@ public class MarksheetModelJDBCImpl implements MarksheetModelInt {
 		log.debug("Model delete Started");
 	}
 
+	
 	/**
 	 * find information with the help of pk
-	 * 
 	 * @param pk
 	 * @return dto
 	 * @throws ApplicationException
@@ -206,7 +201,7 @@ public class MarksheetModelJDBCImpl implements MarksheetModelInt {
 		try {
 
 			con = JDBCDataSource.getConnection();
-			PreparedStatement ps = con.prepareStatement("select * from st_marksheet where id=?");
+			PreparedStatement ps = con.prepareStatement("select * from st_marksheet where ID=?");
 			ps.setLong(1, pk);
 			ResultSet rs = ps.executeQuery();
 			while (rs.next()) {
@@ -239,7 +234,6 @@ public class MarksheetModelJDBCImpl implements MarksheetModelInt {
 
 	/**
 	 * find information with the help of rollno
-	 * 
 	 * @param rollNO
 	 * @return dto
 	 * @throws ApplicationException
@@ -251,7 +245,7 @@ public class MarksheetModelJDBCImpl implements MarksheetModelInt {
 		try {
 
 			con = JDBCDataSource.getConnection();
-			PreparedStatement ps = con.prepareStatement("select * from st_marksheet where roll_no=?");
+			PreparedStatement ps = con.prepareStatement("select * from st_marksheet where ROLL_NO=?");
 			ps.setString(1, rollNO);
 			ResultSet rs = ps.executeQuery();
 			while (rs.next()) {
@@ -281,13 +275,12 @@ public class MarksheetModelJDBCImpl implements MarksheetModelInt {
 
 	}
 
-	public List search(MarksheetDTO dto) throws ApplicationException {
+	public List search(MarksheetDTO dto) throws ApplicationException  {
 		return search(dto, 0, 0);
 	}
 
 	/**
 	 * get merit list
-	 * 
 	 * @param pageNo
 	 * @param pageSize
 	 * @return list
@@ -295,18 +288,19 @@ public class MarksheetModelJDBCImpl implements MarksheetModelInt {
 	 */
 	public List getMeritList(int pageNo, int pageSize) throws ApplicationException {
 		log.debug("marksheet model get merit list start");
-
+		
 		ArrayList list = new ArrayList();
 		StringBuffer sql = new StringBuffer(
-				"select id,roll_no,name,physics,chemistry,maths (physics+chemistry+maths)as total from st_marksheet order by total desc ");
-		if (pageSize > 0) {
-			pageNo = (pageNo - 1) * pageSize;
-			sql.append(" limit " + pageNo + "," + pageSize);
+				"select ID,ROLL_NO,NAME,PHYSICS,CHEMISTRY,MATHS (PHYSICS+CHEMISTRY+MATHS)as Total from st_marksheet order by Total desc ");
+		if(pageSize>0){
+			pageNo=(pageNo-1)*pageSize;
+			sql.append(" limit "+pageNo+","+pageSize);
 		}
-
+		
 		Connection con = null;
-		MarksheetDTO dto = null;
+		MarksheetDTO dto =null;
 		try {
+			
 
 			con = JDBCDataSource.getConnection();
 
@@ -327,23 +321,26 @@ public class MarksheetModelJDBCImpl implements MarksheetModelInt {
 				dto.setModifiedBy(rs.getString(9));
 				dto.setModifiedDatetime(rs.getTimestamp(10));
 				dto.setModifiedDatetime(rs.getTimestamp(11));
-				System.out.println("heiuiujiou" + dto.getId() + "jj" + dto.getChemistry() + "..." + dto.getPhysics()
-						+ "df" + dto.getName() + "jj" + dto.getRollNo());
+				System.out.println("heiuiujiou"+dto.getId()+"jj"+dto.getChemistry()+"..."+dto.getPhysics()+"df"+dto.getName()+"jj"+dto.getRollNo());
 				list.add(dto);
 			}
-		} catch (Exception e) {
-			log.error(e);
-			throw new ApplicationException("Exception in getting merit list of Marksheet");
-		} finally {
-			JDBCDataSource.closeConnection(con);
-		}
-		log.debug("Model  MeritList End");
-		return list;
-	}
+		}catch (Exception e) {
+            log.error(e);
+            throw new ApplicationException(
+                    "Exception in getting merit list of Marksheet");
+        } finally {
+            JDBCDataSource.closeConnection(con);
+        }
+        log.debug("Model  MeritList End");
+        return list;
+    } 
+		
+		
+		
+		
 
 	/**
 	 * search marksheet
-	 * 
 	 * @param marksheet
 	 * @param pageNo
 	 * @param pageSize
@@ -352,14 +349,14 @@ public class MarksheetModelJDBCImpl implements MarksheetModelInt {
 	 */
 	public List search(MarksheetDTO marksheet, int pageNo, int pageSize) throws ApplicationException {
 		Connection con = null;
-		System.out.println("<<>>>>>>>>>>>>>" + marksheet.getRollNo());
+         System.out.println("<<>>>>>>>>>>>>>"+marksheet.getRollNo());
 		StringBuffer sql = new StringBuffer("select * from st_marksheet where 1=1");
 		if (marksheet != null) {
 			if (marksheet.getId() > 0) {
 				sql.append(" AND ID = " + marksheet.getId());
 			}
 			if ((marksheet.getRollNo() != null) && (marksheet.getRollNo().length() > 0)) {
-
+				
 				sql.append(" AND ROLL_NO like '" + marksheet.getRollNo() + "%'");
 			}
 			if (marksheet.getStudentId() > 0) {
@@ -412,8 +409,8 @@ public class MarksheetModelJDBCImpl implements MarksheetModelInt {
 		} catch (Exception e) {
 			e.printStackTrace();
 			log.error("Database Exception..", e);
-
-			// throw new ApplicationException("Exception : Exception in search time table");
+			
+			//throw new ApplicationException("Exception : Exception in search time table");
 		} finally {
 			JDBCDataSource.closeConnection(con);
 		}
@@ -432,8 +429,10 @@ public class MarksheetModelJDBCImpl implements MarksheetModelInt {
 	 * get List of Marksheet with pagination
 	 *
 	 * @return list : List of Marksheets
-	 * @param pageNo   : Current Page No.
-	 * @param pageSize : Size of Page
+	 * @param pageNo
+	 *            : Current Page No.
+	 * @param pageSize
+	 *            : Size of Page
 	 * @throws DatabaseException
 	 */
 
@@ -484,4 +483,5 @@ public class MarksheetModelJDBCImpl implements MarksheetModelInt {
 
 	}
 
+	
 }
