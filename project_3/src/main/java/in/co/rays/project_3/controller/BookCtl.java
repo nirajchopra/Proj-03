@@ -75,7 +75,7 @@ public class BookCtl extends BaseCtl {
 		long id = DataUtility.getLong(request.getParameter("id"));
 		BookModelInt model = ModelFactory.getInstance().getBookModel();
 		if (id > 0 || op != null) {
-			ProductDTO dto;
+			BookDTO dto;
 			try {
 				dto = model.findByPK(id);
 				ServletUtility.setDto(dto, request);

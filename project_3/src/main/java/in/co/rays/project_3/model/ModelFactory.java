@@ -130,6 +130,22 @@ public final class ModelFactory {
 		return courseModel;
 	}
 
+
+	public BookModelInt getBookModel() {
+		BookModelInt bookModel = (BookModelInt) modelCache.get("bookModel");
+		if (bookModel == null) {
+			if ("Hibernate".equals(DATABASE)) {
+				bookModel = new BookModelHibImpl();
+			}
+			if ("JDBC".equals(DATABASE)) {
+				bookModel = new BookModelHibImpl();
+			}
+			modelCache.put("bookModel", bookModel);
+		}
+
+		return bookModel;
+	}
+
 	public TimetableModelInt getTimetableModel() {
 
 		TimetableModelInt timetableModel = (TimetableModelInt) modelCache.get("timetableModel");
