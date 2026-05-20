@@ -18,7 +18,7 @@ public class EventModelHibImp implements EventModelInt {
 
     /**
      * Hibernate implementation of Event model
-     * @author Anand Choudhary
+     * @author Niraj Chopra
      */
 
     private static Logger log = Logger.getLogger(EventModelHibImp.class.getName());

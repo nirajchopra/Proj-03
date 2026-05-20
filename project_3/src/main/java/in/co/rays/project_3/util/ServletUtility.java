@@ -16,7 +16,7 @@ import in.co.rays.project_3.dto.BaseDTO;
 /**
  * ServletUtility provides the servlet util services
  * 
- * @author Anand Choudhary
+ * @author Niraj Chopra
  *
  */
 public class ServletUtility {

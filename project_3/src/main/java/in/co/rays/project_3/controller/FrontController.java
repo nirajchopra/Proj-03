@@ -18,7 +18,7 @@ import in.co.rays.project_3.util.ServletUtility;
 /**
  * Front Functionality ctl. to perform session checking and logging operation 
  * It prevent any user to access application without login 
- * @author Anand Choudhary
+ * @author Niraj Chopra
  *
  */
 @WebFilter(urlPatterns={"/ctl/*","/doc/*"})

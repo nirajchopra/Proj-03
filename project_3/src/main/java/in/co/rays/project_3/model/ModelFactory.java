@@ -6,7 +6,7 @@ import java.util.ResourceBundle;
 /**
  * ModelFactory decides which model implementation run
  * 
- * @author Anand Choudhary
+ * @author Niraj Chopra
  */
 public final class ModelFactory {
 
@@ -68,6 +68,21 @@ public final class ModelFactory {
 		}
 		return collegeModel;
 	}
+	
+	public ECommerceModelInt getECommerceModel() {
+		ECommerceModelInt ecommerceModel = (ECommerceModelInt) modelCache.get("ecommerceModel");
+		if (ecommerceModel == null) {
+			if ("Hibernate".equals(DATABASE)) {
+				ecommerceModel = new ECommerceModelHibImpl();
+
+			}
+			if ("JDBC".equals(DATABASE)) {
+				ecommerceModel = new ECommerceModelHibImpl();
+			}
+			modelCache.put("ecommerceModel", ecommerceModel);
+		}
+		return ecommerceModel;
+	}
 
 	public RoleModelInt getRoleModel() {
 		RoleModelInt roleModel = (RoleModelInt) modelCache.get("roleModel");
@@ -98,6 +113,22 @@ public final class ModelFactory {
 		}
 
 		return userModel;
+	}
+	
+	public NetworkMonitorModelInt getNetworkMonitorModel() {
+
+		NetworkMonitorModelInt networkMonitorModel = (NetworkMonitorModelInt) modelCache.get("networkMonitorModel");
+		if (networkMonitorModel == null) {
+			if ("Hibernate".equals(DATABASE)) {
+				networkMonitorModel = new NetworkMonitorModelHibImpl();
+			}
+			if ("JDBC".equals(DATABASE)) {
+				networkMonitorModel = new NetworkMonitorModelHibImpl();
+			}
+			modelCache.put("networkMonitorModel", networkMonitorModel);
+		}
+
+		return networkMonitorModel;
 	}
 
 	public StudentModelInt getStudentModel() {
@@ -161,6 +192,23 @@ public final class ModelFactory {
 		}
 
 		return timetableModel;
+	}
+	
+	public SettingModelInt getSettingModel() {
+
+		SettingModelInt settingModel = (SettingModelInt) modelCache.get("settingModel");
+
+		if (settingModel == null) {
+			if ("Hibernate".equals(DATABASE)) {
+				settingModel = new SettingModelHibImpl();
+			}
+			if ("JDBC".equals(DATABASE)) {
+				settingModel = new SettingModelJDBCImpl();
+			}
+			modelCache.put("timetableModel", settingModel);
+		}
+
+		return settingModel;
 	}
 
 	public SubjectModelInt getSubjectModel() {

@@ -5,7 +5,7 @@ import java.util.ResourceBundle;
 
 /**
  * PropertyReader is used to read the property from properties file
- * @author Anand Choudhary
+ * @author Niraj Chopra
  *
  */
 public class PropertyReader {

@@ -17,7 +17,7 @@ import in.co.rays.project_3.util.ServletUtility;
 /**
  * Base controller class of project. It contain (1) Generic operations (2)
  * Generic constants (3) Generic work flow
- * @author Anand Choudhary
+ * @author Niraj Chopra
  *
  */
 public abstract class BaseCtl extends HttpServlet{

@@ -18,7 +18,7 @@ public class SalaryModelHibImp implements SalaryModelInt {
 
     /**
      * Hibernate implementation of Salary model
-     * @author Anand Choudhary
+     * @author Niraj Chopra
      */
 
     private static Logger log = Logger.getLogger(SalaryModelHibImp.class.getName());

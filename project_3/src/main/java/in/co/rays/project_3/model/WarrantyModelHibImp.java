@@ -18,7 +18,7 @@ public class WarrantyModelHibImp implements WarrantyModelInt {
 
     /**
      * Hibernate implementation of Warranty model
-     * @author Anand Choudhary
+     * @author Niraj Chopra
      */
 
     private static Logger log = Logger.getLogger(WarrantyModelHibImp.class.getName());

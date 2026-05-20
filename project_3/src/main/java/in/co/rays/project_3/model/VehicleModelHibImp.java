@@ -18,7 +18,7 @@ public class VehicleModelHibImp implements VehicleModelInt {
 
     /**
      * Hibernate implementation of Vehicle model
-     * @author Anand Choudhary
+     * @author Niraj Chopra
      */
 
     private static Logger log = Logger.getLogger(VehicleModelHibImp.class.getName());

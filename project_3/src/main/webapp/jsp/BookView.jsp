@@ -1,3 +1,4 @@
+<%@page import="in.co.rays.project_3.controller.BookCtl"%>
 <%@page import="in.co.rays.project_3.controller.ProductCtl"%>
 <%@page import="in.co.rays.project_3.util.DataUtility"%>
 <%@page import="in.co.rays.project_3.util.ServletUtility"%>
@@ -166,7 +167,7 @@ i.css {
 										</div>
 										<input type="text" name="status"
 											class="form-control" placeholder="Status"
-											value="<%=DataUtility.getDateString(dto.getStatus)%>">
+											value="<%=DataUtility.getStringData(dto.getStatus())%>">
 									</div>
 								</div>
 								<font color="red" class="pl-sm-5"> <%=ServletUtility.getErrorMessage("status", request)%></font></br>

@@ -20,8 +20,8 @@
 
 
 
-	<!--<property name="hibernate.cache.provider_class"> org.hibernate.cache.EhCacheProvider</property> 
-		<property name="hibernate.cache.use_second_level_cache"> true</property> -->
+		<!--<property name="hibernate.cache.provider_class"> org.hibernate.cache.EhCacheProvider</property> 
+			<property name="hibernate.cache.use_second_level_cache"> true</property> -->
 
 		<!-- hibernate DCP c3p0 Configuration -->
 		<property name="hibernate.c3p0.min_size">10</property>
@@ -81,11 +81,18 @@
 			resource="in/co/rays/project_3/hbm/PortfolioDTO.hbm.xml" />
 
 		<mapping resource="in/co/rays/project_3/hbm/SecretDTO.hbm.xml" />
-		
-		<mapping resource="in/co/rays/project_3/hbm/CustomerDTO.hbm.xml" />
-		
-		<mapping resource="in/co/rays/project_3/hbm/ListenerDTO.hbm.xml" />
-		<mapping resource="in/co/rays/project_3/hbm/BookDTO.hbm.xml" />
+
+		<mapping
+			resource="in/co/rays/project_3/hbm/CustomerDTO.hbm.xml" />
+
+		<mapping
+			resource="in/co/rays/project_3/hbm/ListenerDTO.hbm.xml" />
+
+		<mapping
+			resource="in/co/rays/ptoject_3/hbm/NetwrokMonitorDTO.hbm.xml" />
+		<mapping
+			resource="in/co/rays/ptoject_3/hbm/ECommerceDTO.hbm.xml" />
+
 
 
 

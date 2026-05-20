@@ -1,7 +1,7 @@
 package in.co.rays.project_3.exception;
 
 /**
- * @author Anand Choudhary
+ * @author Niraj Chopra
  */
 public class DatabaseException extends ApplicationException{
 	

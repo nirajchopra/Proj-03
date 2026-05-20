@@ -18,7 +18,7 @@ public class PortfolioModelHibImpl implements PortfolioModelInt {
 
     /**
      * Hibernate implementation of Portfolio model
-     * @author Anand Choudhary
+     * @author Niraj Chopra
      */
 
     private static Logger log = Logger.getLogger(PortfolioModelHibImpl.class.getName());

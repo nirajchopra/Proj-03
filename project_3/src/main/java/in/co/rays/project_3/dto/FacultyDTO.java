@@ -4,7 +4,7 @@ import java.util.Date;
 
 /**
  *  faculty JavaDto encapsulates faculty attributes
- * @author Anand Choudhary
+ * @author Niraj Chopra
  *
  */
 

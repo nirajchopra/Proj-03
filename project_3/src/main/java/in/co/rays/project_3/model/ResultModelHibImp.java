@@ -18,7 +18,7 @@ public class ResultModelHibImp implements ResultModelInt {
 
     /**
      * Hibernate implementation of Result model
-     * @author Anand Choudhary
+     * @author Niraj Chopra
      */
 
     private static Logger log = Logger.getLogger(ResultModelHibImp.class.getName());

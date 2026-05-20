@@ -18,7 +18,7 @@ public class LanguageModelHibImp implements LanguageModelInt {
 
     /**
      * Hibernate implementation of Language model
-     * @author Anand Choudhary
+     * @author Niraj Chopra
      */
 
     private static Logger log = Logger.getLogger(LanguageModelHibImp.class.getName());

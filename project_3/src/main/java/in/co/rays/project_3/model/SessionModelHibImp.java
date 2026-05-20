@@ -18,7 +18,7 @@ public class SessionModelHibImp implements SessionModelInt {
 
     /**
      * Hibernate implementation of Session model
-     * @author Anand Choudhary
+     * @author Niraj Chopra
      */
 
     private static Logger log = Logger.getLogger(SessionModelHibImp.class.getName());

@@ -158,6 +158,19 @@
 							href="<%=ORSView.COLLEGE_LIST_CTL%>"><i
 							class="fa fa-building"></i>College List</a>
 					</div></li>
+					
+					<li class="nav-item dropdown"><a
+					class="nav-link dropdown-toggle" href="#" data-toggle="dropdown"
+					style="color: white;">ECommerec</a>
+					<div class="dropdown-menu">
+						<a class="dropdown-item" href="<%=ORSView.ECOMMERCE_CTL%>"><i
+							class="fa fa-university"></i>Add ECommerce</a> <a class="dropdown-item"
+							href="<%=ORSView.ECOMMERCE_LIST_CTL%>"><i
+							class="fa fa-building"></i>ECommerce List</a>
+					</div></li>
+					
+
+
 
 				<li class="nav-item dropdown"><a
 					class="nav-link dropdown-toggle" href="#" data-toggle="dropdown"
@@ -207,6 +220,16 @@
 							class="fa fa-calculator"></i>Add Subject</a> <a class="dropdown-item"
 							href="<%=ORSView.SUBJECT_LIST_CTL%>"><i
 							class="fa fa-sort-amount-down"></i>Subject List</a>
+					</div></li>
+					
+					<li class="nav-item dropdown"><a
+					class="nav-link dropdown-toggle" href="#" data-toggle="dropdown"
+					style="color: white;">NetworkMonitor</a>
+					<div class="dropdown-menu">
+						<a class="dropdown-item" href="<%=ORSView.NETWORK_MONITOR_CTL%>"><i
+							class="fa fa-calculator"></i>Add NetworkMonitor</a> <a class="dropdown-item"
+							href="<%=ORSView.NETWORK_MONITOR_LIST_CTL%>"><i
+							class="fa fa-sort-amount-down"></i>NetworkMonitor List</a>
 					</div></li>
 
 				<li class="nav-item dropdown"><a

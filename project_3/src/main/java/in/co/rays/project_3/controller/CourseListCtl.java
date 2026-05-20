@@ -21,7 +21,7 @@ import in.co.rays.project_3.util.ServletUtility;
 
 /**
  * course list functionality ctl.Toperform search and delete,show list operation
- * @author Anand Choudhary
+ * @author Niraj Chopra
  *
  */
 @WebServlet(name = "CourseListCtl", urlPatterns = { "/ctl/CourseListCtl" })

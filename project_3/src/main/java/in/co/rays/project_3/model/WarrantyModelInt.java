@@ -9,7 +9,7 @@ import in.co.rays.project_3.exception.DuplicateRecordException;
 /**
  * Interface of Warranty model
  * 
- * @author Anand Choudhary
+ * @author Niraj Chopra
  *
  */
 public interface WarrantyModelInt {

@@ -20,7 +20,7 @@ import in.co.rays.project_3.util.HibDataSource;
 public class ProfileModelHibImpl implements ProfileModelInt{
 	/**
 	 * Hibernate implements of Profile model
-	 * @author Anand Choudhary
+	 * @author Niraj Chopra
 	 *
 	 */
 

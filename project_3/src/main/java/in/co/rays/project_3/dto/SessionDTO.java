@@ -5,7 +5,7 @@ import java.util.Date;
 
 /**
  * SessionDTO JavaDto encapsulates session attributes
- * @author Anand Choudhary
+ * @author Niraj Chopra
  *
  */
 

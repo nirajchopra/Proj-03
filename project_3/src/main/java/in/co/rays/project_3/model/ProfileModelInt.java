@@ -10,7 +10,7 @@ public interface ProfileModelInt {
 	
 	/**
 	 * Interface of Profile model
-	 * @author Anand Choudhary
+	 * @author Niraj Chopra
 	 *
 	 */
 	public long add(ProfileDTO dto)throws DatabaseException,DuplicateRecordException;

@@ -1,3 +1,5 @@
+<%@page import="in.co.rays.project_3.controller.BookListCtl"%>
+<%@page import="in.co.rays.project_3.dto.BookDTO"%>
 <%@page import="in.co.rays.project_3.dto.ProductDTO"%>
 <%@page import="in.co.rays.project_3.controller.ProductListCtl"%>
 <%@page import="java.util.Iterator"%>
@@ -152,8 +154,8 @@
 							<td align="center"><input type="checkbox" class="checkbox"
 								name="ids" value="<%=dto.getId()%>"></td>
 							<td class="text"><%=index++%></td>
-							<td class="text"><%=dto.getBookName%></td>
-							<td class="text"><%=dto.getBookPrice%></td>
+							<td class="text"><%=dto.getBookName()%></td>
+							<td class="text"><%=dto.getBookPrice()%></td>
 							<td class="text"><%=dto.getLibraryName()%></td>
 							<td class="text"><%=dto.getStatus()%></td>
 							<td class="text"><a href="BookCtl?id=<%=dto.getId()%>">Edit</a></td>

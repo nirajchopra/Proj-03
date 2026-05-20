@@ -26,7 +26,7 @@ import in.co.rays.project_3.util.ServletUtility;
 
 /**
  * faculty functionality ctl.To perform add,delete and update operation
- * @author Anand Choudhary
+ * @author Niraj Chopra
  *
  */
 @WebServlet(urlPatterns={"/ctl/FacultyCtl"})

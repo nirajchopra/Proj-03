@@ -18,7 +18,7 @@ public class InventoryModelHibImp implements InventoryModelInt {
 
     /**
      * Hibernate implementation of Inventory model
-     * @author Anand Choudhary
+     * @author Niraj Chopra
      */
 
     private static Logger log = Logger.getLogger(InventoryModelHibImp.class.getName());
